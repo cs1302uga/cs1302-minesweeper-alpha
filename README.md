@@ -33,7 +33,7 @@ command while inside of your project directory.
 
 This first project is meant to ensure that you are able to apply and extend
 your prerequisite knowledge as well as introduce you to developing and testing
-a Java 7 application in a Linux environment (i.e., the Nike development
+a Java application in a Linux environment (i.e., the Nike development
 server). Many aspects of this project will be new to you. You will be asked
 to do things that you have never been given explicit directions for before.
 This is just a part of software development. Sometimes you need to research
