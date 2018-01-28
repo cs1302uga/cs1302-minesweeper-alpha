@@ -2,8 +2,7 @@
  * 
  * Copyright © 2018 Michael E. Cotterell and the University of Georgia. This work is licensed under a 
  * Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License to students and 
- * the public. The content and opinions expressed here do not necessarily reflect the views of nor are 
- * they endorsed by the University of Georgia or the University System of Georgia.
+ * the public.
  */
 
 package cs1302.p1;
