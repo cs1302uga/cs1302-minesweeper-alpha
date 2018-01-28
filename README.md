@@ -1,13 +1,15 @@
 
-# CSCI 1302 - Minesweeper Alpha v2017.f
+# CSCI 1302 - Minesweeper Alpha v2018.s
 
-**DUE FRI 2017-09-15 (Sep 15) @ 11:55 PM**
+**DUE SUN 2018-02-18 (Feb 18) @ 11:55 PM**
 
 This repository contains the skeleton code for the Minesweeper Alpha project
-assigned to the students in the Fall 2017 CSCI 1302 classes
+assigned to the students in the Spring 2018 CSCI 1302 classes
 at the University of Georgia. 
 
-**Please read the entirety of this file before beginning your project.** 
+**Please read the entirety of this file before beginning your project.**
+
+**Seriously. Read this entire file *before* starting.**
 
 ## Academic Honesty
 
@@ -16,20 +18,12 @@ course website. In accordance with this notice, I must caution you to **not**
 fork this repository on GitHub if you have an account. Doing so will more than
 likely make your copy of the project publicly visible. Please follow the 
 instructions contained in the Resources section below in order to do your 
-development on nike.
+development on nike. Furthermore, you must adhere to the copyright notice and 
+licensing information at the bottom of this document.
 
 ## Updates
 
 Updates will be posted here.
-
- * **T2017-09-05:** *Clarifying requirement.* When random mines are generated, 
-   the number of mines should be ```n = Math.ceil(rows * cols * 0.25)``` where 
-   ```rows``` and ```cols``` represent the number of rows and columns in the 
-   minefield, respectively. 
-   
- * **T2017-09-05:** *Clarifying requirement.* To win the game, the user needs
-   to have all mines marked and the number of marks needs to equal the number
-   of mines.
 
 If there has been an update and you have already cloned the project to Nike, 
 then you can update your copy of the project using the <code>$ git pull</code>
@@ -100,13 +94,13 @@ The game is won when all of the mines are located (i.e., all squares
 containing a mine are marked by the user as containing a mine) and the number 
 of marked squares equals the number of mines. At the end of the game the player 
 is presented with a score. 
-Let <code>rows</code>, <code>cols</code>, <code>mines</code>, and 
-<code>rounds</code> denote the number of rows in the grid, columns in the grid,
-total number of mines, and number of rounds completed, respectively. The 
-player's score is calculated as follows:
+Let <code>rows</code>, <code>cols</code>, <code>mines</code>, <code>guesses</code>
+and  <code>rounds</code> denote the number of rows in the grid, columns in the grid,
+total number of mines, total number of "guess" locations, and number of rounds 
+completed, respectively. The player's score is calculated as follows:
 
 ```java
-score = (rows * cols) - mines - rounds;
+score = (rows * cols) + (mines - guesses) / rounds;
 ```
 
 The higher the score, the better. Negative scores are possible.
@@ -122,7 +116,7 @@ once and only once:
  /    \| | '_ \ / _ \/ __\ \ /\ / / _ \/ _ \ '_ \ / _ \ '__|
 / /\/\ \ | | | |  __/\__ \\ V  V /  __/  __/ |_) |  __/ |
 \/    \/_|_| |_|\___||___/ \_/\_/ \___|\___| .__/ \___|_|
-                             ALPHA EDITION |_| v2017.f
+                             ALPHA EDITION |_| v2018.s
 ```
 
 Take care when printing this message out to the screen. You will probably need
@@ -839,4 +833,14 @@ $ mutt -s "[cs1302] cs1302-minesweeper-alpha" -a cs1302-minesweeper-alpha.tar.gz
 If you have any problems submitting your project then please email your
 instructor as soon as possible. However, emailing him about something like this
 the day or night the project is due is probably not the best idea.
+
+<hr/>
+
+[![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by-nc-nd/4.0/)
+
+<small>
+Copyright &copy; 2018 Michael E. Cotterell and the University of Georgia.
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a> to students and the public.
+The content and opinions expressed on this Web page do not necessarily reflect the views of nor are they endorsed by the University of Georgia or the University System of Georgia.
+</small>
 
