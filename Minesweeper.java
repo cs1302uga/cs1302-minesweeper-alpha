@@ -36,7 +36,7 @@ public class Minesweeper {
      * <code>rows</code> and <code>cols</code> values as the game grid's number
      * of rows and columns respectively. Additionally, the number of positions
      * in the grid that will be set as a mine should equal the ceiling of 
-     * <code>2.0 * rows * cols / 3.0</code>, casted to an <code>int</code>. These
+     * <code>1.0 * rows * cols / 3.0</code>, casted to an <code>int</code>. These
      * mine positions should be assigned randomly.
      *
      * @param rows the number of rows in the game grid
