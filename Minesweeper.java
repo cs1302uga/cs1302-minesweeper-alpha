@@ -23,7 +23,6 @@ public class Minesweeper {
      * file.
      *
      * @param seedFile the seed file used to construct the game
-     * @see            <a href="https://github.com/mepcotterell-cs1302/cs1302-minesweeper-alpha/blob/master/README.md#seed-files">README.md#seed-files</a>
      */
     public Minesweeper(File seedFile) {
 
@@ -35,8 +34,10 @@ public class Minesweeper {
     /**
      * Constructs an object instance of the {@link Minesweeper} class using the
      * <code>rows</code> and <code>cols</code> values as the game grid's number
-     * of rows and columns respectively. Additionally, One quarter (rounded up) 
-     * of the squares in the grid will will be assigned mines, randomly.
+     * of rows and columns respectively. Additionally, the number of positions
+     * in the grid that will be set as a mine should equal the ceiling of 
+     * <code>2.0 * rows * cols / 3.0</code>, casted to an <code>int</code>. These
+     * mine positions should be assigned randomly.
      *
      * @param rows the number of rows in the game grid
      * @param cols the number of cols in the game grid
