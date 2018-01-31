@@ -63,12 +63,12 @@ public class Minesweeper {
      * The entry point into the program. This main method does implement some
      * logic for handling command line arguments. If two integers are provided
      * as arguments, then a Minesweeper game is created and started with a 
-     * grid size corresponding to the integers provided and with 10% (rounded
-     * up) of the squares containing mines, placed randomly. If a single word 
-     * string is provided as an argument then it is treated as a seed file and 
-     * a Minesweeper game is created and started using the information contained
-     * in the seed file. If none of the above applies, then a usage statement
-     * is displayed and the program exits gracefully. 
+     * grid size corresponding to the integers provided and with a number of 
+     * squares containing mines, placed randomly, as determined by the overloaded
+     * constructor. If a single word string is provided as an argument then it is 
+     * treated as a seed file and a Minesweeper game is created and started using 
+     * the information contained in the seed file. If none of the above applies, 
+     * then a usage statement is displayed and the program exits gracefully. 
      *
      * @param args the shell arguments provided to the program
      */
