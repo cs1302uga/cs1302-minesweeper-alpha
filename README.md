@@ -25,6 +25,12 @@ licensing information at the bottom of this document.
 
 Updates will be posted here.
 
+* **2018-01-31:** *Clarification on the number of random mines.* When a random
+  game is played, the number of positions in the mine field (i.e., the grid) 
+  that will be set as a mine should equal the ceiling of 
+  <code>2.0 * rows * cols / 3.0</code>, casted to an <code>int</code>. These
+  mine positions should be assigned randomly. 
+
 If there has been an update and you have already cloned the project to Nike, 
 then you can update your copy of the project using the <code>$ git pull</code>
 command while inside of your project directory.
