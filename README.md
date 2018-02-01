@@ -29,7 +29,8 @@ Updates will be posted here.
   game is played, the number of positions in the mine field (i.e., the grid) 
   that will be set as a mine should equal the ceiling of 
   <code>1.0 * rows * cols / 3.0</code>, casted to an <code>int</code>. These
-  mine positions should be assigned randomly. 
+  mine positions should be assigned randomly. In the skeleton code, the only
+  changes that were made were to the Javadoc comments. 
 
 If there has been an update and you have already cloned the project to Nike, 
 then you can update your copy of the project using the <code>$ git pull</code>
