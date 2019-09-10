@@ -1,5 +1,5 @@
 
-# CSCI 1302 - Minesweeper Alpha v2018.s
+# CSCI 1302 - Minesweeper Alpha v2019f
 
 **DUE SUN 2018-02-18 (Feb 18) @ 11:55 PM**
 
