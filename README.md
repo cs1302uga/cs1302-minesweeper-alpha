@@ -54,7 +54,7 @@ game programming.
 In Minesweeper, the player is initially presented with a grid of 
 undifferentiated squares. Either some randomly-selected squares or seed-selected
 squares (more on seeds later) are designated to contain mines. Typically, the
-size of the grid and the number of mines are set in advance by the user or by a
+size of the grid and the number of mines are set in advance by a
 seed file. The ratio of the number of mines to the grid size is often used as a
 measure of an individual game's difficulty. The grid size can also be
 represented in terms of the number of rows and columns in the grid.
