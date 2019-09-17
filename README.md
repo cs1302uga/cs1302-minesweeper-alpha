@@ -118,32 +118,24 @@ once and only once:
 Take care when printing this message out to the screen. You will probably need
 to escape some of the characters in order for them to show up correctly.
 
-In this Minesweeper game, **the size of the grid is restricted to no more than `10`
-rows and `10` columns.** The number of rows and columns need not be the same. To be
-more precise, the number of rows must be strictly greater than `0` and less than
-or equal to `10`. The number of columns must also be strictly greater than `0` and
-less than or equal to `10`. Rows and columns are indexed starting at `0`. Therefore,
-in a `10`-by-`10` (rows-by-columns), the first row is indexed as `0` and the last row is
-indexed as `9` (similarly for columns).
+In this Minesweeper game, **the size of the grid is restricted to at least `5`
+rows and `5` columns**, but may be greater. The number of rows and columns need not be the same. 
+Rows and columns are indexed starting at `0`. Therefore, in a `10`-by-`10` (rows-by-columns), 
+the first row is indexed as `0` and the last row is indexed as `9` (similarly for columns).
 
-Let's assume we are, in fact, playing a `10`-by-`10` game of Minesweeper. When the game
+Let's assume we are, in fact, playing a `5`-by-`5` game of Minesweeper. When the game
 starts, the interface should look like this:
 
 ```
 
  Rounds Completed: 0
 
- 0 |   |   |   |   |   |   |   |   |   |   |
- 1 |   |   |   |   |   |   |   |   |   |   |
- 2 |   |   |   |   |   |   |   |   |   |   |
- 3 |   |   |   |   |   |   |   |   |   |   |
- 4 |   |   |   |   |   |   |   |   |   |   |
- 5 |   |   |   |   |   |   |   |   |   |   |
- 6 |   |   |   |   |   |   |   |   |   |   |
- 7 |   |   |   |   |   |   |   |   |   |   |
- 8 |   |   |   |   |   |   |   |   |   |   |
- 9 |   |   |   |   |   |   |   |   |   |   |
-     0   1   2   3   4   5   6   7   8   9
+ 0 |   |   |   |   |   |
+ 1 |   |   |   |   |   |
+ 2 |   |   |   |   |   |
+ 3 |   |   |   |   |   |
+ 4 |   |   |   |   |   |
+     0   1   2   3   4
 
 minesweeper-alpha: 
 ```
@@ -152,7 +144,8 @@ Please note that the first, third, and second-to-last lines are blank. All other
 lines, except the last line containing the prompt, start with one blank space. 
 The line containing the prompt contains an extra space after the <code>$</code> 
 so that **when the user types in a command, the text does not touch the 
-<code>:</code>.**
+<code>:</code>.** Multiple output examples are provided in the Appendix of this
+project description for you to compare your output to. 
 
 The possible commands that can be entered into the prompt as well as their
 syntax are listed in the subsections below. Commands with leading or trailing
@@ -913,7 +906,7 @@ round, then here is an example of what that scenario might look like:
  9 |   |   |   |   |   |   |   |   |   |   |
      0   1   2   3   4   5   6   7   8   9
 
-minesweeper-alpha$ 
+minesweeper-alpha: 
 ```
 
 Note: This command should **not** be listed when the <code>help</code> command
@@ -960,7 +953,6 @@ to keep track of the game grid. One of the arrays could be a two-dimensional
 boolean array that indicates mine locations. The other array could be a 
 two-dimensional char or String array that holds the blanks, numbers, and other
 characters for each square. 
-
 
 ## How to Download the Project
 
