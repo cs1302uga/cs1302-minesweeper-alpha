@@ -1003,6 +1003,19 @@ If you have any problems submitting your project then please email your
 instructor as soon as possible. However, emailing him about something like this
 the day or night the project is due is probably not the best idea.
 
+## Appendix
+
+### Minefield Output Examples
+
+```
+ 0 | ? |   |   |   |   |
+ 1 |   |   |   |   |   |
+ 2 |   |   | F |<F>|   |
+ 3 |   |   |< >| 2 |   |
+ 4 |   |   |   |   |   |
+     0   1   2   3   4
+```
+
 <hr/>
 
 [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by-nc-nd/4.0/)
