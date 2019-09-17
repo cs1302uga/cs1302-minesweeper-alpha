@@ -123,7 +123,9 @@ rows and `5` columns**, but may be greater. The number of rows and columns need 
 Rows and columns are indexed starting at `0`. Therefore, in a `10`-by-`10` (rows-by-columns), 
 the first row is indexed as `0` and the last row is indexed as `9` (similarly for columns).
 
-Let's assume we are, in fact, playing a `5`-by-`5` game of Minesweeper. When the game
+#### The Grid
+
+Let's assume we are playing a `5`-by-`5` game of Minesweeper. When the game
 starts, the interface should look like this:
 
 ```
@@ -140,12 +142,112 @@ starts, the interface should look like this:
 minesweeper-alpha: 
 ```
 
-Please note that the first, third, and second-to-last lines are blank. All other 
-lines, except the last line containing the prompt, start with one blank space. 
+Let's assume we are playing a `10`-by-`10` game of Minesweeper. When the game
+starts, the interface should look like this:
+
+```
+
+ Rounds Completed: 0
+
+ 0 |   |   |   |   |   |   |   |   |   |   |
+ 1 |   |   |   |   |   |   |   |   |   |   |
+ 2 |   |   |   |   |   |   |   |   |   |   |
+ 3 |   |   |   |   |   |   |   |   |   |   |
+ 4 |   |   |   |   |   |   |   |   |   |   |
+ 5 |   |   |   |   |   |   |   |   |   |   |
+ 6 |   |   |   |   |   |   |   |   |   |   |
+ 7 |   |   |   |   |   |   |   |   |   |   |
+ 8 |   |   |   |   |   |   |   |   |   |   |
+ 9 |   |   |   |   |   |   |   |   |   |   |
+     0   1   2   3   4   5   6   7   8   9
+
+minesweeper-alpha: 
+```
+
+Please note that the in either example, the first, third, and second-to-last lines are blank. 
+All other lines, except the last line containing the prompt, start with one blank space. 
 The line containing the prompt contains an extra space after the <code>$</code> 
 so that **when the user types in a command, the text does not touch the 
 <code>:</code>.** Multiple output examples are provided in the Appendix of this
 project description for you to compare your output to. 
+
+The output is a little tricky when either the number of rows or the number of
+columns becomes multiple digits. In this case, padding should be added so that
+row numbers, column numbers, and mine field contents are padded with whitespace
+in a way that accomodates the multiple digit index values. Additionally, when
+padding is performed, **all affected index values an mine field contents are 
+to be right aligned**. For example, let's assume we are playing a `12`-by-`5` 
+game of Minesweeper. When the game starts, the interface should look like this:
+
+```
+
+ Rounds Completed: 0
+
+  0 |   |   |   |   |   |
+  1 |   |   |   |   |   |
+  2 |   |   |   |   |   |
+  3 |   |   |   |   |   |
+  4 |   |   |   |   |   |
+  5 |   |   |   |   |   |
+  6 |   |   |   |   |   |
+  7 |   |   |   |   |   |
+  8 |   |   |   |   |   |
+  9 |   |   |   |   |   |
+ 10 |   |   |   |   |   |
+ 11 |   |   |   |   |   |
+      0   1   2   3   4
+
+minesweeper-alpha: 
+```
+
+In this example, the row numbers needed to be padded to accomodate the `10` and `11` index
+values, however, the column numbers and mine field contents did not require any padding.
+
+Now let's assume we are playing a `5`-by-`12` game of Minesweeper. When the game starts, 
+the interface should look like this:
+
+```
+
+ Rounds Completed: 0
+
+ 0 |    |    |    |    |    |    |    |    |    |    |    |    |
+ 1 |    |    |    |    |    |    |    |    |    |    |    |    |
+ 2 |    |    |    |    |    |    |    |    |    |    |    |    |
+ 3 |    |    |    |    |    |    |    |    |    |    |    |    |
+ 4 |    |    |    |    |    |    |    |    |    |    |    |    |
+      0    1    2    3    4    5    6    7    8    9   10   11
+
+minesweeper-alpha: 
+```
+
+In this example, the col numbers and mine field contented needed to be padded 
+due to column index values `10` and `11`, however, the row did not require any 
+padding.
+
+Finally, let's assume we are playing a `11`-by-`11` game of Minesweeper. When the
+game starts, the interface should look like this:
+
+```
+
+ Rounds Completed: 0
+
+  0 |    |    |    |    |    |    |    |    |    |    |    |
+  1 |    |    |    |    |    |    |    |    |    |    |    |
+  2 |    |    |    |    |    |    |    |    |    |    |    |
+  3 |    |    |    |    |    |    |    |    |    |    |    |
+  4 |    |    |    |    |    |    |    |    |    |    |    |
+  5 |    |    |    |    |    |    |    |    |    |    |    |
+  6 |    |    |    |    |    |    |    |    |    |    |    |
+  7 |    |    |    |    |    |    |    |    |    |    |    |
+  8 |    |    |    |    |    |    |    |    |    |    |    |
+  9 |    |    |    |    |    |    |    |    |    |    |    |
+ 10 |    |    |    |    |    |    |    |    |    |    |    |
+       0    1    2    3    4    5    6    7    8    9   10
+
+minesweeper-alpha: 
+```
+
+#### The User Interface
 
 The possible commands that can be entered into the prompt as well as their
 syntax are listed in the subsections below. Commands with leading or trailing
@@ -1053,6 +1155,28 @@ the day or night the project is due is probably not the best idea.
   9 |    |    |    |    |    |    |    |    |    |    |    |
  10 |    |    |    |    |    |    |    |    |    |    |    |
        0    1    2    3    4    5    6    7    8    9   10
+```
+
+### Using `printf` for Padding
+
+You can use `%Nd` or `%Ns` to set the amount of padding that is used by `printf`.
+For example, consider the following code snippet:
+
+```java
+private static makeFormat(String pre, int numChars, String spec, String post) {
+    return pre + "%" + numChars + spec + post;
+} // makeFormat
+```
+
+```java
+int max = 10000;                     // upper bound for loop
+int p = Math.ceil(Math.log10(max));  // number of digits in numbers less than max
+for (int i = 10; i < 10000; i *= 10) {
+    int x = i - 2;                   // make an interesting number
+    String format = makeFormat(".", p, "d", ".\n");
+    System.out.printf(format, x);
+} // for
+
 ```
 
 <hr/>
