@@ -491,6 +491,44 @@ After the player correctly entered the command <code>g 1 2</code>, the state of
 the game updates (e.g., number of rounds completed, the grid, etc.), and the
 next round happens.
 
+#### No Fog Command
+
+This command removes, for the next round only, what is often
+referred to as the, "fog of war." Squares containing mines, whether unrevealed, 
+marked, or guessed, will be displayed with less-than and greater-than symbols on
+either side of the square's center (as apposed to white space). Using the
+<code>nofog</code> command **does** use up a round.
+In order to issue this command, the `nofog` command is used.
+The syntax format for this 
+command is as follows: <code>-["nofog"]-</code>.
+
+Let's go back to our `10`-by-`10` example. Suppose that we secretly know that there is
+a mine in squares (1,1) and (1,3). If the player marked square (1,1) during the
+first round and then used the <code>nofog</code> command during the second
+round, then here is an example of what that scenario might look like:
+
+```
+
+ Rounds Completed: 2
+
+ 0 |   |   |   |   |   |   |   |   |   |   |
+ 1 |   |<F>|   |< >|   |   |   |   |   |   |
+ 2 |   |   |   |   |   |   |   |   |   |   |
+ 3 |   |   |   |   |   |   |   |   |   |   |
+ 4 |   |   |   |   |   |   |   |   |   |   |
+ 5 |   |   |   |   |   |   |   |   |   |   |
+ 6 |   |   |   |   |   |   |   |   |   |   |
+ 7 |   |   |   |   |   |   |   |   |   |   |
+ 8 |   |   |   |   |   |   |   |   |   |   |
+ 9 |   |   |   |   |   |   |   |   |   |   |
+     0   1   2   3   4   5   6   7   8   9
+
+minesweeper-alpha: 
+```
+
+Note: This command should **not** be listed when the <code>help</code> command
+is used. Think of it as a cheat code! It should also be useful for debugging.
+
 #### Help Command
 
 In order to show the help menu, the <code>help</code> or <code>h</code> command
@@ -691,7 +729,7 @@ error message is displayed, and the next round happens.
 This game can also be setup using seed files. Seed files have the following
 format:
 
- * The two tokens are two integers (separated by white-space) indicating the 
+ * The first two tokens are two integers (separated by white-space) indicating the 
    number of <code>rows</code> and <code>cols</code>, respectively, for the size 
    of the mine board. 
 
@@ -974,48 +1012,6 @@ description of each extra credit that should be checked.
   If this extra credit is mentioned in `EXTRA.md`, then it will be tested
   using five simple test cases. 
 
-## Extra Credit Tasks
-
-You may earn up to 5 extra credit points for implementing the following command
-in addition to the five that are already required:
-
-#### No Fog Command
-
-You might find this extra credit command to be useful for debugging. 
-Essentially, this command removes, for the next round only, what is often
-referred to as the "fog of war." Squares containing mines, whether unrevealed, 
-marked, or guessed, will be displayed with less-than and greater-than symbols on
-either side of the square's center (as apposed to white space). Using the
-<code>nofog</code> command **does** use up a round.
-
-Let's go back to our 10*10 example. Suppose that we secretly know that there is
-a mine in squares (1,1) and (1,3). If the player marked square (1,1) during the
-first round and then used the <code>nofog</code> command during the second
-round, then here is an example of what that scenario might look like:
-```
-
- Rounds Completed: 2
-
- 0 |   |   |   |   |   |   |   |   |   |   |
- 1 |   |<F>|   |< >|   |   |   |   |   |   |
- 2 |   |   |   |   |   |   |   |   |   |   |
- 3 |   |   |   |   |   |   |   |   |   |   |
- 4 |   |   |   |   |   |   |   |   |   |   |
- 5 |   |   |   |   |   |   |   |   |   |   |
- 6 |   |   |   |   |   |   |   |   |   |   |
- 7 |   |   |   |   |   |   |   |   |   |   |
- 8 |   |   |   |   |   |   |   |   |   |   |
- 9 |   |   |   |   |   |   |   |   |   |   |
-     0   1   2   3   4   5   6   7   8   9
-
-minesweeper-alpha: 
-```
-
-Note: This command should **not** be listed when the <code>help</code> command
-is used. Also, it should be implemented in a similar fashion to the way the
-other commands are implemented. You will need to add extra methods and
-instance variables to accomplish this.
-
 ## Suggestions
 
 This project will be a lot easier if you structure your code properly. There is
@@ -1163,20 +1159,28 @@ You can use `%Nd` or `%Ns` to set the amount of padding that is used by `printf`
 For example, consider the following code snippet:
 
 ```java
-private static makeFormat(String pre, int numChars, String spec, String post) {
+private static StringmakeFormat(String pre, int numChars, String spec, String post) {
     return pre + "%" + numChars + spec + post;
 } // makeFormat
 ```
 
 ```java
+// elsewhere, in a method ...
 int max = 10000;                     // upper bound for loop
 int p = Math.ceil(Math.log10(max));  // number of digits in numbers less than max
-for (int i = 10; i < 10000; i *= 10) {
-    int x = i - 2;                   // make an interesting number
+for (int i = 10; i < max; i *= 10) {
+    int x = i + 2;                   // make an interesting number
     String format = makeFormat(".", p, "d", ".\n");
     System.out.printf(format, x);
 } // for
 
+```
+
+**OUTPUT:**
+```
+.  12.
+. 102.
+.1002.
 ```
 
 <hr/>
