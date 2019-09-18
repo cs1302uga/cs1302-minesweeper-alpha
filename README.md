@@ -54,7 +54,7 @@ If you are not familiar with Minesweeper as a game, then please consult the
 for the game, ignoring any mentions of recursion. Once you're familiar
 with the basic gameplay, then continue reading this project description.
 
-## No Recursion
+### No Recursion
 
 In a traditional game of Minesweeper, when the player "reveals" a square
 that does not contain a mine, **two** things happen:
