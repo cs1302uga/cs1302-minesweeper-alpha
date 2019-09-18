@@ -1155,25 +1155,22 @@ the day or night the project is due is probably not the best idea.
 
 ### Using `printf` for Padding
 
-You can use `%Nd` or `%Ns` to set the amount of padding that is used by `printf`.
-For example, consider the following method, which you are free to use:
+You can use `%Nd` or `%Ns` to set the amount of padding that is used by `printf`
+and `String.format}. For example, consider the following method, which you are free to use
+(included in `src/cs1302/game/MinesweeperUtility.java`):
 
 ```java
-/**
- * Returns a padded format string suitable for {@code printf}. Specifically, this
- * method containing {@code "%NS"} where {@code N} is the number of characters to
- * pad specified by {@code numChars} and {@code S} is the format specification
- * specified by {@code spec} (use {@code "d"} for integers and {@code "s"} for 
- * strings). Additionally, the strings specified by {@code pre} and {@code post}
- * are prepended and appended to the returned string, respectively.
- *
- * <p>
- * <h3>Examples</h3>
- */
-private static StringmakeFormat(String pre, int numChars, String spec, String post) {
-    return pre + "%" + numChars + spec + post;
+// see src/cs1302/game/MinesweeperUtility.java for Javadoc comment
+public static String makeFormat(String pre, int numChars, String spec, String post) {
+    if (numChars > 0) {
+        return pre + "%" + numChars + spec + post;
+    } else {
+        return pre + "%" + spec + post;
+    } // if
 } // makeFormat
 ```
+
+This allows us to construct format strings with ease:
 
 ```java
 // elsewhere, likely in a method ...
@@ -1187,6 +1184,7 @@ for (int i = 10; i < max; i *= 10) {
 ```
 
 **OUTPUT:**
+
 ```
 .  12.
 . 102.
@@ -1198,7 +1196,7 @@ for (int i = 10; i < max; i *= 10) {
 [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by-nc-nd/4.0/)
 
 <small>
-Copyright &copy; 2018 Michael E. Cotterell and the University of Georgia.
+Copyright &copy; Michael E. Cotterell and the University of Georgia.
 This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a> to students and the public.
 The content and opinions expressed on this Web page do not necessarily reflect the views of nor are they endorsed by the University of Georgia or the University System of Georgia.
 </small>
