@@ -852,31 +852,31 @@ The actual functionality is tested using test cases.
 
     1. Handle command-line arguments. There are only two variations
        of command-line arguments that are allowed for this program:
-       
+
        1. `--seed PATH_TO_SEEDFILE`<br>
           In this scenario, there are exactly two command-line arguments
           supplied. The second command-line argument should be interpreted
           as a `String` referred to by `seed` and supplied to
           a `MinesweeperGame` object by passing `seed` into the constructor.
           After constructing the `MinesweeperGame` object, you should invoke
-          the object's `play` method. 
-          
+          the object's `play` method.
+
        1. `--gen PATH_TO_SEEDFILE ROWS COLS MINES`<br>
           Please see the extra credit for information on how to parse these
           command-line arguments. If you choose to not do the extra
-          credit, then your program should print the following 
+          credit, then your program should print the following
           message when `--gen` is supplied as the first argument,
           then exit with `System.exit(2)`:
-          
+
           ```
           Seedfile generation not supported.
           ```
-          
+
        1. If your program cannot interpret or should not interpret the
           supplied command-line arguments (except in the case of not
-          supporting the `--gen` option), then your program should print 
+          supporting the `--gen` option), then your program should print
           the following, then exit with `System.exit(1)`:
-          
+
           ```
           Unable to interpret supplied command-line arguments.
           ```
@@ -1247,7 +1247,12 @@ can be found [here](https://docs.oracle.com/javase/8/docs/api/java/util/Formatte
 
 ### Number of Digits
 
+Given an `int` value `n`, we know that `n` is less than <code>10<sup>p</sup></code>
+for certain values of `p`. That is:
 
+<code>n &lt; 10<sup>p</sup></code>
+
+To find the smallest such `p`, we can take the logarithm of both sides:
 
 <hr/>
 
