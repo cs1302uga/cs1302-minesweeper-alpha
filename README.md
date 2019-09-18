@@ -1247,12 +1247,53 @@ can be found [here](https://docs.oracle.com/javase/8/docs/api/java/util/Formatte
 
 ### Number of Digits
 
-Given an `int` value `n`, we know that `n` is less than <code>10<sup>p</sup></code>
-for certain values of `p`. That is:
+We can use mathematics to help us find the number of digits in a base 10 (decimal)
+number. Given an `int` value `n`, we know that <code>n &lt; 10<sup>p</sup></code> for certain
+values of `p`. To find the smallest such `p`, we can take the logarithm of both sides:
+<code>p &gt; Math.log10(n)</code>. Let's take a look at the values we get for different
+values of `n`:
 
-<code>n &lt; 10<sup>p</sup></code>
+```java
+for (int n = 2; n < 10000; n = n * 10 + 1) {
+    double p = Math.log10(n);
+    System.out.printf("%.4f\n", p);
+} // for
+```
 
-To find the smallest such `p`, we can take the logarithm of both sides:
+Here is the output:
+
+```
+n =    2; p = 0.3010
+n =   21; p = 1.3222
+n =  211; p = 2.3243
+n = 2111; p = 3.3245
+```
+
+As you can see, the values for `p` almost tell us the number of digits. Using `Math.ceil`,
+you can find the _smallest_ integers that are `>=` each number:
+
+```java
+for (int n = 2; n < 10000; n = n * 10 + 1) {
+    double p = Math.ceil(Math.log10(n));
+    System.out.printf("%.4f\n", p);
+} // for
+```
+
+Here is the output:
+
+```
+n =    2; p = 1.0000
+n =   21; p = 2.0000
+n =  211; p = 3.0000
+n = 2111; p = 4.0000
+```
+
+And there it is! We know have the number of digits for each number. This could
+be useful for determining a desired _width_ for a format string variable (of course,
+you would need to make the number an `int` before it's usable there).
+
+**There is one value that breaks this formula: `n = 1`.** Check out it and see
+if you can figure out how to deal with that edge case, if needed.
 
 <hr/>
 
