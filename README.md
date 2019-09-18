@@ -1116,6 +1116,10 @@ the day or night the project is due is probably not the best idea.
      0   1   2   3   4
 ```
 
+See also: [`examples/5-by-5.txt`](examples/5-by-5.txt)
+
+#### 5-by-11 Example
+
 ```
  0 |  ? |    |    |    |    |    |    |    |    |    |    |
  1 |    |    |    |    |    |    |    |    |    |    |    |
@@ -1124,6 +1128,10 @@ the day or night the project is due is probably not the best idea.
  4 |    |    |    |    |    |    |    |    |    |    |    |
       0    1    2    3    4    5    6    7    8    9   10
 ```
+
+See also: [`examples/5-by-11.txt`](examples/5-by-11.txt)
+
+#### 11-by-5 Example
 
 ```
   0 | ? |   |   |   |   |
@@ -1140,6 +1148,10 @@ the day or night the project is due is probably not the best idea.
       0   1   2   3   4
 ```
 
+See also: [`examples/11-by-5.txt`](examples/11-by-5.txt)
+
+#### 11-by-11 Example
+
 ```
   0 |  ? |    |    |    |    |    |    |    |    |    |    |
   1 |    |    |    |    |    |    |    |    |    |    |    |
@@ -1154,6 +1166,8 @@ the day or night the project is due is probably not the best idea.
  10 |    |    |    |    |    |    |    |    |    |    |    |
        0    1    2    3    4    5    6    7    8    9   10
 ```
+
+See also: [`examples/11-by-11.txt`](examples/11-by-11.txt)
 
 ### Using `printf` for Padding
 
