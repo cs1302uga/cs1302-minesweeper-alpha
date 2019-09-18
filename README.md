@@ -889,7 +889,7 @@ The actual functionality is tested using test cases.
   $ java -cp bin cs1302.game.MinesweeperDriver some/path/to/seed.txt < some/path/to/input.txt
   ```
   ```
-  $ cat some/path/to/input.txt | java -cp bin cs1302.game.LatinSquaresDriver some/path/to/seed.txt
+  $ cat some/path/to/input.txt | java -cp bin cs1302.game.MinesweeperDriver some/path/to/seed.txt
   ```
   In this example, the shell forces the program to interpret standard input
   as the file `input.txt`. Instead of halting for user input, any method
