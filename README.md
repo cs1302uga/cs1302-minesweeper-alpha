@@ -1105,6 +1105,8 @@ the day or night the project is due is probably not the best idea.
 
 ### Minefield Output Examples
 
+#### 5-by-5 Example
+
 ```
  0 | ? |   |   |   |   |
  1 |   |   |   |   |   |
