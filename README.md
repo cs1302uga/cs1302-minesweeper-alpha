@@ -1156,7 +1156,7 @@ the day or night the project is due is probably not the best idea.
 ### Using `printf` for Padding
 
 You can use `%Nd` or `%Ns` to set the amount of padding that is used by `printf`
-and `String.format}. For example, consider the following method, which you are free to use
+and `String.format`. For example, consider the following method, which you are free to use
 (included in `src/cs1302/game/MinesweeperUtility.java`):
 
 ```java
