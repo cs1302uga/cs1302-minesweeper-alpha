@@ -1169,43 +1169,60 @@ See also: [`examples/11-by-5.txt`](examples/11-by-5.txt)
 
 See also: [`examples/11-by-11.txt`](examples/11-by-11.txt)
 
-### Using `printf` for Padding
+### Format Strings
 
-You can use `%Nd` or `%Ns` to set the amount of padding that is used by `printf`
-and `String.format`. For example, consider the following method, which you are free to use
-(included in `src/cs1302/game/MinesweeperUtility.java`):
-
-```java
-// see src/cs1302/game/MinesweeperUtility.java for Javadoc comment
-public static String makeFormat(String pre, int numChars, String spec, String post) {
-    if (numChars > 0) {
-        return pre + "%" + numChars + spec + post;
-    } else {
-        return pre + "%" + spec + post;
-    } // if
-} // makeFormat
-```
-
-This allows us to construct format strings with ease:
+The `System.out.printf` and `String.format` methods are really powerful tools when it comes to
+formatting output and strings. You may be familar with the variable resplacement capabilities
+that they both provide. Each `%` variable in the supplied format string is replaced by
+a parameter supplied to the method. Here are two examples.
 
 ```java
-// elsewhere, likely in a method ...
-int max = 10000;                                    // upper bound for loop
-int p = Math.ceil(Math.log10(max));                 // number of digits in numbers less than max
-for (int i = 10; i < max; i *= 10) {
-    int x = i + 2;                                  // make an interesting number
-    String format = makeFormat(".", p, "d", ".\n"); // "d" means decimal (base 10) integer
-    System.out.printf(format, x);                   // replace "%d" with x when printing
-} // for
+String name = "Bill";
+int age = 22;
+String format = "Person names %s is %d years old.";
+String str = String.format(format, name, age);
+System.out.println(str);
 ```
 
-**OUTPUT:**
+```java
+String name = "Bill";
+int age = 22;
+System.out.printf("Person names %s is %d years old.\n", name, age);
+```
+
+The output to either example is:
 
 ```
-.  12.
-. 102.
-.1002.
+Person named Bill is 22 years old.
 ```
+
+Each `%` variable is followed by a _conversion character_ indicating how the variable should be formatted.
+Here are some common conversion characters:
+
+| Conversion | Description |
+|------------|-------------|
+| `s`        | If the argument arg is `null`, then the result is "null". Otherwise, the result is obtained by calling `toString()`. |
+| `d`        | The result is formatted as a decimal integer. |
+| `f`        | The result is formatted as a decimal number.  |
+| `%`        | The result is a literal `%`. |
+
+You can also include a _width_, a positive decimal integer indicating the minimum number of
+characters to be written to the output, between the `%` and the conversion character.
+Here are some examples that use `%3d` (width is `3` and conversion is `d`):
+
+```java
+String format = "!%3d!\n";
+System.out.printf(format, 42);  // "! 42!" (but without the quotes)
+System.out.printf(format, 312); // "!312!"
+System.out.printf(format, 7);   // "!  7!"
+```
+
+You can do a lot with format strings! The full Java specification for format strings
+can be found [here](https://docs.oracle.com/javase/8/docs/api/java/util/Formatter.html).
+
+### Number of Digits
+
+
 
 <hr/>
 
