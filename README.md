@@ -42,12 +42,32 @@ the material included in this document should hopefully answer the majority
 of your questions.
 
 Your goal is to develop a non-recursive, non-GUI (GUI = Graphical User
-Interface) version of the game called Minesweeper. The code for this game will
+Interface) version of the game called **Minesweeper**. The code for this game will
 be organized in such a way that the recursive elements of Minesweeper can
-be added at a later point in time. It will also be organized so that you can
-add a GUI to it later as well. Interestingly, the organization of some of the
+be added at a later point in time, if desired. It will also be organized so that
+you can add a GUI to it later as well. Interestingly, the organization of some of the
 classes in this project will also introduce you to some elementary aspects of
 game programming.
+
+If you are not familiar with Minesweeper as a game, then please consult the
+[Wikipedia entry](https://en.wikipedia.org/wiki/Minesweeper_(video_game))
+for the game, ignoring any mentions of recursion. Once you're familiar
+with the basic gameplay, then continue reading this project description.
+
+In a traditional game of Minesweeper, when the player "reveals" a square
+that does not contain a mine, **two** things happen:
+
+1. A number representing the number of mines in the (up to) eight
+   adjacent squares is placed in the revealed square; and
+
+1. If the number of adjacent mines is zero, then game goes ahead
+   and "reveals" all of the (up to) eight adjacent squares.
+
+The second part mentioned above can cause one reveal made by the user
+to result in multiple reveals in the minefield. **This behavior is what
+the literature is referring to when it talks about recursion in Mineweeper.**
+Your game does not need to support this behavior. If the user reveals
+one square, then, at most, one square is revealed in the minefield.
 
 ### Minesweeper Overview
 
