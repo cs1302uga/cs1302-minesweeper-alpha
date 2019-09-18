@@ -850,11 +850,36 @@ The actual functionality is tested using test cases.
   * `void main(String[] args)`: This public, static method should
     do the following :
 
-    1. Interpret `args[0]` as `seed`, a string that specifies the
-       path to some file that provides a starting configuration.
-    2. Create a `MinesweeperGame` object by passing `seed` into
-       the constructor.
-    3. Invoke the `play` method on the `MinesweeperGame` object.
+    1. Handle command-line arguments. There are only two variations
+       of command-line arguments that are allowed for this program:
+       
+       1. `--seed PATH_TO_SEEDFILE`<br>
+          In this scenario, there are exactly two command-line arguments
+          supplied. The second command-line argument should be interpreted
+          as a `String` referred to by `seed` and supplied to
+          a `MinesweeperGame` object by passing `seed` into the constructor.
+          After constructing the `MinesweeperGame` object, you should invoke
+          the object's `play` method. 
+          
+       1. `--gen PATH_TO_SEEDFILE ROWS COLS MINES`<br>
+          Please see the extra credit for information on how to parse these
+          command-line arguments. If you choose to not do the extra
+          credit, then your program should print the following 
+          message when `--gen` is supplied as the first argument,
+          then exit with `System.exit(2)`:
+          
+          ```
+          Seedfile generation not supported.
+          ```
+          
+       1. If your program cannot interpret or should not interpret the
+          supplied command-line arguments (except in the case of not
+          supporting the `--gen` option), then your program should print 
+          the following, then exit with `System.exit(1)`:
+          
+          ```
+          Unable to interpret supplied command-line arguments.
+          ```
 
     For the purposes of this assignment, you may safely assume that
     valid input will be provided for the driver's command line
@@ -872,7 +897,7 @@ The actual functionality is tested using test cases.
   When a regular user plays the game, they specify a file with the
   starting configuration, e.g.,
   ```
-  $ java -cp bin cs1302.game.MinesweeperDriver some/path/to/seed.txt
+  $ java -cp bin cs1302.game.MinesweeperDriver --seed some/path/to/seed.txt
   ```
   In this scenario, the user enters their commands into standard input
   and the game prints its output to standard output.
@@ -886,10 +911,10 @@ The actual functionality is tested using test cases.
   input redirection operator `<` or pipe `|`. For example, the grader
   might type either of the following to accomplish the same thing:
   ```
-  $ java -cp bin cs1302.game.MinesweeperDriver some/path/to/seed.txt < some/path/to/input.txt
+  $ java -cp bin cs1302.game.MinesweeperDriver --seed some/path/to/seed.txt < some/path/to/input.txt
   ```
   ```
-  $ cat some/path/to/input.txt | java -cp bin cs1302.game.MinesweeperDriver some/path/to/seed.txt
+  $ cat some/path/to/input.txt | java -cp bin cs1302.game.MinesweeperDriver --seed some/path/to/seed.txt
   ```
   In this example, the shell forces the program to interpret standard input
   as the file `input.txt`. Instead of halting for user input, any method
@@ -984,7 +1009,7 @@ description of each extra credit that should be checked.
   specifiy random, valid seed file configurations by specifying a `--gen`
   option to the driver class. Here is a synopsis that should be followed:
   ```
-  $ java -cp bin cs1302.game.MinesweeperDriver --gen file m n k
+  $ java -cp bin cs1302.game.MinesweeperDriver --gen PATH_TO_SEEDFILE ROWS COLS MINES
   ```
   where
 
@@ -992,11 +1017,11 @@ description of each extra credit that should be checked.
     of the game's default package is `bin`,
   * `cs1302.game.MinesweeperDriver` denotes the fully qualified name of
     the game's driver class,
-  * `file` is the path to a text file to which the starting configuration
+  * `PATH_TO_SEEDFILE` is the path to a text file to which the starting configuration
     will be written,
-  * `m` denotes the number of rows in the mine field,
-  * `n` denotes the number of columns in the mine field,
-  * `k` denotes the number of pre-determined mine locations to generate.
+  * `ROWS` denotes the number of rows in the mine field,
+  * `COLS` denotes the number of columns in the mine field,
+  * `MINES` denotes the number of pre-determined mine locations to generate.
 
   You may assume the order of the command-line arguments as presented
   above. Additionally, you may assume valid input of command-line arguments
