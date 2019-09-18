@@ -1156,24 +1156,34 @@ the day or night the project is due is probably not the best idea.
 ### Using `printf` for Padding
 
 You can use `%Nd` or `%Ns` to set the amount of padding that is used by `printf`.
-For example, consider the following code snippet:
+For example, consider the following method, which you are free to use:
 
 ```java
+/**
+ * Returns a padded format string suitable for {@code printf}. Specifically, this
+ * method containing {@code "%NS"} where {@code N} is the number of characters to
+ * pad specified by {@code numChars} and {@code S} is the format specification
+ * specified by {@code spec} (use {@code "d"} for integers and {@code "s"} for 
+ * strings). Additionally, the strings specified by {@code pre} and {@code post}
+ * are prepended and appended to the returned string, respectively.
+ *
+ * <p>
+ * <h3>Examples</h3>
+ */
 private static StringmakeFormat(String pre, int numChars, String spec, String post) {
     return pre + "%" + numChars + spec + post;
 } // makeFormat
 ```
 
 ```java
-// elsewhere, in a method ...
-int max = 10000;                     // upper bound for loop
-int p = Math.ceil(Math.log10(max));  // number of digits in numbers less than max
+// elsewhere, likely in a method ...
+int max = 10000;                                    // upper bound for loop
+int p = Math.ceil(Math.log10(max));                 // number of digits in numbers less than max
 for (int i = 10; i < max; i *= 10) {
-    int x = i + 2;                   // make an interesting number
-    String format = makeFormat(".", p, "d", ".\n");
-    System.out.printf(format, x);
+    int x = i + 2;                                  // make an interesting number
+    String format = makeFormat(".", p, "d", ".\n"); // "d" means decimal (base 10) integer
+    System.out.printf(format, x);                   // replace "%d" with x when printing
 } // for
-
 ```
 
 **OUTPUT:**
