@@ -73,55 +73,73 @@ one square, then, at most, one square is revealed in the minefield.
 
 ### Minesweeper Overview
 
-In Minesweeper, the player is initially presented with a grid of
+In your Minesweeper, the player is initially presented with a grid of
 undifferentiated squares. Either some randomly-selected squares or seed-selected
-squares (more on seeds later) are designated to contain mines. Typically, the
+squares (more on seeds later) are designated to contain mines. The
 size of the grid and the number of mines are set in advance by a
-seed file. The ratio of the number of mines to the grid size is often used as a
+seed file that the user specifies as a command-line argument to your
+program. The ratio of the number of mines to the grid size is often used as a
 measure of an individual game's difficulty. The grid size can also be
 represented in terms of the number of rows and columns in the grid.
+In this project description, we may refer to the _grid_ or to the
+_minefield_. Both of these terms mean the same thing. Furthermore,
+we will use the term _square_ to denote a location in the minefield, even
+in situations where a location may be visually rectangular instead
+of perfectly square.
 
 The game is played in rounds. During each round, the player is presented with
 the grid, the number of rounds completed so far, as well as a prompt. The player
-has the option to do 5 different things:
+has the option to do 5 different things, each of which is briefly listed
+below and explained in great detail in later sections:
 
  1. Reveal a square on the grid.
  2. Mark a square as potentially containing a mine.
  3. Mark a square as definitely containing a mine.
- 4. Display help information.
- 5. Quit the game.
+ 4. Lift the fog of war (cheat code).
+ 5. Display help information.
+ 6. Quit the game.
 
-When the player reveals a square of the grid, different things can happen. If
-the revealed square contains a mine, then the player loses the game. If the
-revealed square does not contain a mine, then a digit is instead displayed in
-the square, indicating how many adjacent squares contain mines (in the
-recursive implementation, if no mines are adjacent, then the square becomes
-blank). Typically, there are 8 squares adjacent to any given square, unless
-the square lies on an edge or corner of the grid.
+When the player reveals a square of the grid, different things can happen:
 
-The player uses this information to deduce the contents of other squares, and
-may perform any of the first three options in the list presented above. When the
-player marks a square as potentially containing a mine, a `?` is
-displayed in the square. When the player marks the square as definitely
-containing a mine, a flag, represented as `F` is displayed in the
-square. The player can mark or reveal any square in the grid, even squares that
-have already been marked or revealed. The logic for determining what happens
-to the square is always the same.
+* If the revealed square contains a mine, then the player loses the game.
 
-The game is won when all of the mines are located (i.e., all squares
-containing a mine are marked by the user as containing a mine) and the number
-of marked squares equals the number of mines. At the end of the game the player
-is presented with a score.
-Let `rows`, `cols`, `mines`, `guesses`
-and  `rounds` denote the number of rows in the grid, columns in the grid,
-total number of mines, total number of "guess" locations, and number of rounds
-completed, respectively. The player's score is calculated as follows:
+* If the revealed square does not contain a mine, then a digit is instead displayed
+  in the square, indicating how many adjacent squares contain mines. Typically,
+  there are 8 squares adjacent to any given square, unless the square lies on an
+  edge or corner of the grid. The player uses this information to deduce the contents
+  of other squares, and may perform any of the first three options in the list presented above.
+
+* When the player marks a square as potentially containing a mine, a `?` is displayed
+  in the square. This provides the user with a way to note those places that they
+  believe may contain a mine but are not sure enough to mark as definitely containing
+  a mine.
+
+* When the player marks a square as definitely containing a mine, a flag, denoted
+  by the character `F`, is displayed in the square.
+
+To simplift the game mechanics, **the player may mark or reveal any square in the grid,
+even squares that have already been marked or revealed.** The logic for determining what
+happens to the square is always the same.
+
+The game is won when **all** of the following conditions are met:
+
+* All squares containing a mine are marked as _definitely_ containing a mine; and
+
+* All squares not containing a mine are revealed.
+
+At the end of the game, the player is presented with a score. Let `rows`, `cols`,
+and  `rounds` denote the number of rows in the grid, columns in the grid, and
+number of rounds completed, respectively. The player's score is calculated as follows:
 
 ```java
-score = (rows * cols) + (mines - guesses) / rounds;
+score = 100.0 * rows * cols / rounds;
 ```
 
-The higher the score, the better. Negative scores are possible.
+A score of `100` would denote a perfect game. In this version of Mineweeper, it should
+not be possible for the player to win the game in less than `(rows * cols)`-many rounds.
+Therefore, any game in which the player exceeds that many rounds would resuly in a score
+that is less thatn `100`. When displaying the score, the number should always be printed
+with two digits following the decimal point.
 
 ### The Grid and Interface
 
@@ -190,14 +208,14 @@ Please note that the in either example, the first, third, and second-to-last lin
 All other lines, except the last line containing the prompt, start with one blank space.
 The line containing the prompt contains an extra space after the `$`
 so that **when the user types in a command, the text does not touch the
-`:`.** Multiple output examples are provided in the Appendix of this
-project description for you to compare your output to.
+`:`.** Multiple output examples are provided in the [Appendix](#minefield-output-examples)
+of this project description for your convenience.
 
 The output is a little tricky when either the number of rows or the number of
 columns becomes multiple digits. In this case, padding should be added so that
 row numbers, column numbers, and mine field contents are padded with whitespace
 in a way that accomodates the multiple digit index values. Additionally, when
-padding is performed, **all affected index values an mine field contents are
+padding is performed, **all affected index values and square contents are
 to be right aligned**. For example, let's assume we are playing a `12`-by-`5`
 game of Minesweeper. When the game starts, the interface should look like this:
 
@@ -223,7 +241,7 @@ minesweeper-alpha:
 ```
 
 In this example, the row numbers needed to be padded to accomodate the `10` and `11` index
-values, however, the column numbers and mine field contents did not require any padding.
+values, however, the column numbers and square contents did not require any padding.
 
 Now let's assume we are playing a `5`-by-`12` game of Minesweeper. When the game starts,
 the interface should look like this:
@@ -242,9 +260,9 @@ the interface should look like this:
 minesweeper-alpha:
 ```
 
-In this example, the col numbers and mine field contented needed to be padded
-due to column index values `10` and `11`, however, the row did not require any
-padding.
+In this example, the column numbers and square contents needed to be padded
+due to column index values `10` and `11`, however, the row index values did
+not require any padding.
 
 Finally, let's assume we are playing a `11`-by-`11` game of Minesweeper. When the
 game starts, the interface should look like this:
@@ -269,9 +287,17 @@ game starts, the interface should look like this:
 minesweeper-alpha:
 ```
 
+In this example, padding was required for the row index values, column index
+values, and the square contents.
+
+**Before you start writing the code to format your output,** please
+read the [Format Strings](#format-strings) and [Number of Digits](#number-of-digits)
+sections in the Appendix. They provide some code examples that should be
+helpful.
+
 #### The User Interface
 
-The possible commands that can be entered into the prompt as well as their
+The possible commands that can be entered into the game's prompt as well as their
 syntax are listed in the subsections below. Commands with leading or trailing
 white space are to be interpreted as if there were no leading or trailing
 whitespace. For example, the following two examples should be interpreted the
@@ -281,6 +307,11 @@ same:
 minesweeper-alpha: help
 minesweeper-alpha:         help
 ```
+
+Although it's hard to see in the example above, trailing whitespace should
+also be ignored. That is, if the user types ` ` one or more times before
+pressing the `RET` (return) key, then those extra whitespaces should be
+ignored.
 
 The different parts of a command are known as tokens. The `help`
 command, for example, only has one token. Other commands, such as the
@@ -304,6 +335,8 @@ minesweeper-alpha: mark     0  0
 minesweeper-alpha:     mark 0 0
 minesweeper-alpha:   mark     0  0
 ```
+
+As a reminder, trailing whitespace is ignored.
 
 #### Command Syntax Format
 
@@ -548,7 +581,7 @@ round, then here is an example of what that scenario might look like:
 minesweeper-alpha:
 ```
 
-Note: This command should **not** be listed when the `help` command
+**NOTE:** This command should **not** be listed when the `help` command
 is used. Think of it as a cheat code! It should also be useful for debugging.
 
 #### Help Command
@@ -610,7 +643,7 @@ help menu is displayed, and the next round happens.
 In order to quit the game, the `quit` or `q` command
 is used. The syntax format for this command is as follows: `-["quit"/"q"]-`.
 
-Let's go back to our 10*10 example. Suppose that the player wants to quit the
+Let's go back to our `10`-by-`10` example. Suppose that the player wants to quit the
 game. Here is an example of what that might look like.
 
 ```
@@ -631,8 +664,7 @@ game. Here is an example of what that might look like.
 
 minesweeper-alpha: q
 
-ლ(ಠ_ಠლ)
-Y U NO PLAY MORE?
+Quitting the game...
 Bye!
 
 ```
@@ -666,7 +698,7 @@ to the player and the game should exit gracefully:
  ░░▀▄▒▒▒▒▒▒▒▒▒▒▒░▒░▒░▒▄▒▒▒▒▌░░
  ░░░░▀▄▒▒▒▒▒▒▒▒▒▒▄▄▄▀▒▒▒▒▄▀░░░ CONGRATULATIONS!
  ░░░░░░▀▄▄▄▄▄▄▀▀▀▒▒▒▒▒▄▄▀░░░░░ YOU HAVE WON!
- ░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▀▀░░░░░░░░ SCORE: 15
+ ░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▀▀░░░░░░░░ SCORE: 82.30
 
 
 ```
@@ -680,23 +712,23 @@ needs to equal the number of mines.
 
 #### Displaying Errors
 
-In the constructor, if the number of rows and columns is not in proper bounds,
+If the number of rows and columns specified in a seed file is not in proper bounds,
 then the following message should be displayed and the program should exit
-gracefully:
+using `System.exit(3)`:
 
 ```
 
-ಠ_ಠ says, "Cannot create a mine field with that many rows and/or columns!"
+Seedfile Value Error: Cannot create a mine field with that many rows and/or columns!
 ```
 
 Note that the first line is blank.
 
-If a command is not recognized, then the following message should be displayed
-to the player and one round should be consumed:
+If a command entered by the player is incorrect or not recognized, then the following
+message should be displayed to the player **and one round should be consumed**:
 
 ```
 
-ಠ_ಠ says, "Command not recognized!"
+Input Error: Command not recognized!"
 ```
 
 Note that the first line is blank.
@@ -723,7 +755,7 @@ Here is an example of what that might look like.
 
 minesweeper-alpha: meh
 
-ಠ_ಠ says, "Command not recognized!"
+Input Error: Command not recognized!"
 
  Rounds Completed: 1
 
@@ -762,10 +794,10 @@ format:
    indicating the location of each mine.
 
 **If a seed file is not formatted correctly, then then the program should exit
-with exit status `1` and the following message should be displayed:**
+with exit `System.exit(1)` and the following message should be displayed:**
 
 ```
-Cannot create game with FILENAME, because it is not formatted correctly.
+Seedfile Format Error: Cannot create game with FILENAME, because it is not formatted correctly.
 ```
 
 Note that the second line is empty. Also, be sure to replace `FILENAME` with
@@ -780,7 +812,7 @@ your program with the seed file, you should be able to use the following
 command:
 
 ```
-$ java -cp cs1302.game.MinesweeperDriver tests/seed1.txt
+$ java -cp cs1302.game.MinesweeperDriver --seed tests/seed1.txt
 ```
 
 To read the file, let us assume that we have the path to the file
