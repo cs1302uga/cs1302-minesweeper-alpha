@@ -919,7 +919,7 @@ The actual functionality is tested using test cases.
           Please see the extra credit for information on how to parse these
           command-line arguments. If you choose to not do the extra
           credit, then your program should print the following
-          message when `--gen` is supplied as the first argument,
+          message to _standard error_ when `--gen` is supplied as the first argument,
           then exit with `System.exit(2)`:
 
           ```
@@ -929,7 +929,7 @@ The actual functionality is tested using test cases.
        1. If your program cannot interpret or should not interpret the
           supplied command-line arguments (except in the case of not
           supporting the `--gen` option), then your program should print
-          the following, then exit with `System.exit(1)`:
+          the following to _standard error_, then exit with `System.exit(1)`:
 
           ```
           Unable to interpret supplied command-line arguments.
