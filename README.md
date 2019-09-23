@@ -486,8 +486,9 @@ For example, the following snippet will accomplish this:
 System.exit(0);
 ```
 
-If your program exits with any return codes other than zero (e.g., if your game
-crashes), then some points will be deducted.
+If your program exits from a "game over" with any return codes other than zero 
+(e.g., if your game crashes), then some points will be deducted. After the program 
+terminates, a user should be able to confirm the exit status of `0` using `echo $?`.
 
 #### Mark Command
 
@@ -757,7 +758,8 @@ needs to equal the number of mines.
 
 If the number of rows and columns specified in a seed file is not in proper bounds,
 then the following message should be displayed and the program should exit
-using `System.exit(3)`:
+using `System.exit(3)` (after the program terminates, a user should be able to confirm the 
+exit status of `3` using `echo $?`.):
 
 ```
 
@@ -838,6 +840,8 @@ format:
 
 **If a seed file is not formatted correctly, then then the program should exit
 with exit `System.exit(1)` and the following message should be displayed:**
+After the program terminates, a user should be able to confirm the exit
+status of `1` using `echo $?`.
 
 ```
 Seedfile Format Error: Cannot create game with FILENAME, because it is not formatted correctly.
@@ -852,7 +856,7 @@ the grid, and if a mine location is specified as being outside of the grid.
 
 An example seed file is present in the project materials. In order to run
 your program with the seed file, you should be able to use the following
-command:
+command (actual filename may differ):
 
 ```
 $ java -cp cs1302.game.MinesweeperDriver --seed tests/seed1.txt
@@ -928,9 +932,9 @@ The actual functionality is tested using test cases.
     are met to win or lose the game, respectively, as defined earlier in
     this document.
 
-  * **(5 points) `void printWin()`:** This method should print
-    the win message to standard output, as described earler in
-    this document.
+  * **(5 points) `void printWin()` and ``void printLoss()``:** These 
+    methods should print the win and game over emssages to standard 
+    output, respectively, as described earler in this document.
 
   * **(5 points) `void play()`:** This method should provide the
     main game loop by invoking other instance methods, as needed.
@@ -968,6 +972,9 @@ The actual functionality is tested using test cases.
           ```
           Seedfile generation not supported.
           ```
+          
+          After the program terminates, a user should be able to confirm the exit
+          status of `2` using `echo $?`.
 
        1. If your program cannot interpret or should not interpret the
           supplied command-line arguments (except in the case of not
@@ -977,6 +984,9 @@ The actual functionality is tested using test cases.
           ```
           Unable to interpret supplied command-line arguments.
           ```
+          
+          After the program terminates, a user should be able to confirm the exist
+          status of `1` using `echo $?`.
 
     For the purposes of this assignment, you may safely assume that
     valid input will be provided for the driver's command line
