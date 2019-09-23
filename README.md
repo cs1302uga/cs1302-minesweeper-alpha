@@ -3,9 +3,12 @@
 
 **DUE TUE 2019-11-26 (Nov 26) @ 11:55 PM. No Late Submission Accepted.**
 
-This repository contains the skeleton code for the **make-up project**,
+This repository contains the skeleton code for the optional **make-up project**,
 "Minesweeper Alpha", that is made available to students in the Fall 2019
-CSCI 1302 classes at the University of Georgia.
+CSCI 1302 classes at the University of Georgia. Please see the
+[Grade Replacement](#grade-replacement) section of this document for 
+details related to how this project can be used to replace a grade 
+for the **cs1302-latin-squares** project. 
 
 **Please read the entirety of this file before beginning your project.**
 
