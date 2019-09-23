@@ -1,7 +1,7 @@
 
 # CSCI 1302 - Minesweeper Alpha v2019.fa
 
-**DUE TUE 2019-11-26 (Nov 26) @ 11:55 PM**
+**DUE TUE 2019-11-26 (Nov 26) @ 11:55 PM. No Late Submission Accepted.**
 
 This repository contains the skeleton code for the **make-up project**,
 "Minesweeper Alpha", that is made available to students in the Fall 2019
@@ -15,8 +15,34 @@ CSCI 1302 classes at the University of Georgia.
 
 * [Academic Honesty](#academic-honesty)
 * [Updates](#updates)
+* [Grade Replacement](#grade-replacement)
 * [Project Description](#project-description)
-* 
+  * [Note Concerning No Recursion](#note-concerning-no-recursion) 
+  * [Minesweeper Overview](#minesweeper-overview)
+  * [The Grid and Interface](#the-grid-and-interface)
+    * [The Grid](#the-grid)
+    * [The User Interface](#thed-user-interface)
+    * [Command Syntax Format](#command-syntax-format)
+    * [Revealing a Square](#revealing-a-square)
+    * [Mark Command](#mark-command)
+    * [Guess Command](#guess-command)
+    * [No Fog Command](#no-fog-command)
+    * [Help Command](#help-command)
+    * [Quit Command](#quit-command)
+    * [Player Wins](#player-wins)
+    * [Displaying Errors](#displaying-errors)
+  * [Seed Files](#seed-files)
+* [Project Requirements & Grading](#project-requirements--grading)
+  * [Functional Requirements](#functional-requirements)
+  * [Non-Functional Requirements](#non-functional-requirements)
+  * [Extra Credit Requirements](extra-credit-requirements)
+* [Suggestions](#suggestions)
+* [How to Download the Project](#how-to-download-the-project)
+* [Submission Instructions](#submission-instructions)
+* [Appendix](#appendix)
+  * [Minefield Output Examples](#minefield-output-examples)
+  * [Format Strings](#format-strings)
+  * [Number of Digits](#number-of-digits)
 
 ## Academic Honesty
 
@@ -34,6 +60,13 @@ Updates will be posted here.
 If there has been an update and you have already cloned the project to Nike,
 then you can update your copy of the project using the `$ git pull`
 command while inside of your project directory.
+
+## Grade Replacement
+
+Students may use the grade they earn on this **make-up project** to replace 
+the grade they earned on their **cs1302-latin-squares** project. Under no
+circumstance will a grade replacement opportunity be made available for any
+other project in **Fall 2019**. 
 
 ## Project Description
 
