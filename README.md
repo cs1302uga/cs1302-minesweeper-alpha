@@ -1,7 +1,7 @@
 
 # CSCI 1302 - Minesweeper Alpha v2019.fa
 
-**DUE SUN 2018-02-18 (Feb 18) @ 11:55 PM**
+**DUE TUE 2019-11-26 (Nov 26) @ 11:55 PM**
 
 This repository contains the skeleton code for the **make-up project**,
 "Minesweeper Alpha", that is made available to students in the Fall 2019
@@ -10,6 +10,13 @@ CSCI 1302 classes at the University of Georgia.
 **Please read the entirety of this file before beginning your project.**
 
 **Seriously. Read this entire file *before* starting.**
+
+## Table of Contents
+
+* [Academic Honesty](#academic-honesty)
+* [Updates](#updates)
+* [Project Description](#project-description)
+* 
 
 ## Academic Honesty
 
@@ -54,7 +61,7 @@ If you are not familiar with Minesweeper as a game, then please consult the
 for the game, ignoring any mentions of recursion. Once you're familiar
 with the basic gameplay, then continue reading this project description.
 
-### No Recursion
+### Note Concerning No Recursion
 
 In a traditional game of Minesweeper, when the player "reveals" a square
 that does not contain a mine, **two** things happen:
