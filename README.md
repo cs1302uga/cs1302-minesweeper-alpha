@@ -1080,7 +1080,7 @@ point total. That is, they are all or nothing (no partial credit).
   All of the individual code style guidelines listed in that document are part
   of this single non-functional requirement. Like the other non-functional
   requirements, this requirement is all or nothing. **Please note that this is
-  worth more than Code Style Guidelines non-functional requirement in the
+  worth more than the Code Style Guidelines non-functional requirement in the
   Latin Squares project.**
 
   **NOTE:** The [CS1302 Code Style Guide](https://github.com/cs1302uga/cs1302-styleguide)
