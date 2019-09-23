@@ -1021,10 +1021,7 @@ The actual functionality is tested using test cases.
   output for that test case.
 
   You can test your program manually or using a similar automating procedure
-  as described above. All of the examples provided in the
-  [Appendix](#appendix---example-games) are test cases. Their associated
-  test case files are located in the `tests` directory provided with
-  this project.
+  as described above.
 
 ### Non-Functional Requirements
 
