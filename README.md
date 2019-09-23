@@ -67,8 +67,13 @@ command while inside of your project directory.
 ## Grade Replacement
 
 Students may use the grade they earn on this **make-up project** to replace 
-the grade they earned on their **cs1302-latin-squares** project. Under no
-circumstance will a grade replacement opportunity be made available for any
+the grade they earned on their **cs1302-latin-squares** project. After the
+deadline, a grader will look for your submission and, if found, grade it.
+If the grade you earn is greater than the grade you earned on cs1302-latin-squares,
+then your grade for cs1302-latin-squares will be replaced with the higher grade.
+Feedback will be provided via eLC gradebook comments. 
+
+Under no circumstance will a grade replacement opportunity be made available for any
 other project in **Fall 2019**. 
 
 ## Project Description
