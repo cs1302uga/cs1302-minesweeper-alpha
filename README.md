@@ -778,7 +778,7 @@ message should be displayed to the player **and one round should be consumed**:
 
 ```
 
-Input Error: Command not recognized!"
+Input Error: Command not recognized!
 ```
 
 Note that the first line is blank.
