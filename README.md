@@ -1134,7 +1134,7 @@ description of each extra credit that should be checked.
 
   You may assume the order of the command-line arguments as presented
   above. Additionally, you may assume valid input of command-line arguments
-  and that the value of `k` will be strictly less than `m * n`.
+  and that the value of `MINES` will be strictly less than `m * n`.
 
   Use of the
   [`PrintWriter`](https://docs.oracle.com/javase/8/docs/api/java/io/PrintWriter.html)
