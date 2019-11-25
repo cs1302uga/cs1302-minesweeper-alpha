@@ -864,7 +864,7 @@ your program with the seed file, you should be able to use the following
 command (actual filename may differ):
 
 ```
-$ java -cp cs1302.game.MinesweeperDriver --seed tests/seed1.txt
+$ java -cp bin cs1302.game.MinesweeperDriver --seed tests/seed1.txt
 ```
 
 To read the file, let us assume that we have the path to the file
