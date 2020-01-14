@@ -842,9 +842,12 @@ Seedfile Format Error: Cannot create game with FILENAME, because it is not forma
 Note that the second line is empty. Also, be sure to replace `FILENAME` with
 the actual name of the file.
 
-A seed file is also considered to be malformed if the grid size is not an
-acceptable grid size, if the number of mines exceeds the number of squares in
+If a seed file not malformed but is also considered to be malformed 
+if the number of mines exceeds the number of squares in
 the grid, and if a mine location is specified as being outside of the grid.
+If the grid size is not an acceptable grid size, then use the error and
+exit status specified in the [Displaying Errors](#displaying-errors)
+section instead of the message and exit status above.
 
 An example seed file is present in the project materials. In order to run
 your program with the seed file, you should be able to use the following
@@ -983,6 +986,10 @@ The actual functionality is tested using test cases.
           
           After the program terminates, a user should be able to confirm the exist
           status of `1` using `echo $?`.
+          
+       You may find it useful to consult the 
+       [Command-Line Arguments Tutorial](https://github.com/cs1302uga/cs1302-tutorials/blob/master/cla/cla.md)
+       from the required reading.
 
     For the purposes of this assignment, you may safely assume that
     valid input will be provided for the driver's command line
@@ -1039,9 +1046,10 @@ The actual functionality is tested using test cases.
   **NOTE:**
   Please take special care that your program works using the command-line
   arguments described in [this section](#test-cases). Including the `--seed` 
-  and `--gen` command-line options is mandatory. If your program does not 
-  work with these command-line arguments, then it will fail most of the
-  test cases.
+  and `--gen` command-line options as described in this project description
+  is mandatory. If your program does not  work with these command-line arguments, 
+  then it will fail most of the test cases. **The graders will not adjust the commands
+  when running your program to accomodate a different set of options.**
 
 ### Non-Functional Requirements
 
