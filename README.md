@@ -1004,6 +1004,8 @@ The actual functionality is tested using test cases.
     Additional code may be required if you are attempting one of the
     extra credit requirements listed later in this document.
 
+<a id="test-cases"/>
+
 * **(60 points) Test Cases**: The bulk of this project will be graded
   based on 30 test cases, each worth 2 points. A single test case can
   be described by three things: i) some starting configuration; ii) a
@@ -1012,9 +1014,11 @@ The actual functionality is tested using test cases.
 
   When a regular user plays the game, they specify a file with the
   starting configuration, e.g.,
+  
   ```
   $ java -cp bin cs1302.game.MinesweeperDriver --seed some/path/to/seed.txt
   ```
+  
   In this scenario, the user enters their commands into standard input
   and the game prints its output to standard output.
 
@@ -1026,12 +1030,15 @@ The actual functionality is tested using test cases.
   instead of keyboard input. This is accomplished using the shell
   input redirection operator `<` or pipe `|`. For example, the grader
   might type either of the following to accomplish the same thing:
+  
   ```
   $ java -cp bin cs1302.game.MinesweeperDriver --seed some/path/to/seed.txt < some/path/to/input.txt
   ```
+  
   ```
   $ cat some/path/to/input.txt | java -cp bin cs1302.game.MinesweeperDriver --seed some/path/to/seed.txt
   ```
+  
   In this example, the shell forces the program to interpret standard input
   as the file `input.txt`. Instead of halting for user input, any method
   calls to your program's `Scanner` object for `System.in` return immediately
@@ -1041,6 +1048,13 @@ The actual functionality is tested using test cases.
 
   You can test your program manually or using a similar automating procedure
   as described above.
+  
+  **NOTE:**
+  Please take special care that your program works using the command-line
+  arguments described in [this section](#test-cases). Including the `--seed` 
+  and `--gen` command-line options is mandatory. If your program does not 
+  work with these command-line arguments, then it will fail most of the
+  test cases.
 
 ### Non-Functional Requirements
 
@@ -1059,14 +1073,17 @@ point total. That is, they are all or nothing (no partial credit).
   If you follow this structure, then you would type the following to compile
   your code, assuming you are in the top-level project
   directory `cs1302-minesweeper-alpha`:
+  
   ```
   $ javac -cp bin -d bin src/cs1302/game/MinesweeperGame.java
   $ javac -cp bin -d bin src/cs1302/game/MinesweeperDriver.java
   ```
-  Remember, when you compile `.java` files individually, there might be
-  dependencies between the files. In such cases, the order in which you
-  compile the code matters.
-
+  
+  The class path may be omitted in the first command if there are
+  no other dependencies. Remember, when you compile `.java` files individually, 
+  there might be dependencies between the files. In such cases, the order in which 
+  you compile the code and whether or not you specify the class path matters.
+ 
   **NOTE:** If your grader needs to modify your directory structure or
   any of your filenames to compile your code, then the 10 point version
   of this penalty will apply. If, however, your grader is unable to compile
@@ -1082,8 +1099,8 @@ point total. That is, they are all or nothing (no partial credit).
 
 * **(100 points) One Scanner for Standard Input:** Only one `Scanner`
   object for `System.in` (i.e., for standard input) should be created.
-  You are free to make `Scanner` objects for other input sources as
-  needed. Please note that if you create a new  `Scanner` object at
+  **You are free to make `Scanner` objects for other input sources as needed.** 
+  Please note that if you create a new  `Scanner` object at
   the beginning of a method or loop, then more than one object will
   be created if the method is called more than once or if the loop
   iterates more than once.
@@ -1242,6 +1259,12 @@ the day or night the project is due is probably not the best idea.
 ## Appendix
 
 ### Minefield Output Examples
+
+All of the examples provided in this appendix are also test cases. Their associated
+test case files are located in the `tests` directory provided with this project.
+Please read the [Functional Requirements](#functional-requirements) and 
+[Test Cases](#test-cases) sections for information on how to automate the running
+of test cases. 
 
 #### 5-by-5 Example
 
