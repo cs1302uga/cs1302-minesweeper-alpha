@@ -1,6 +1,10 @@
 
 # CSCI 1302 - Minesweeper Alpha v2019.fa
 
+![Approved for: Fall 2019](https://img.shields.io/badge/Approved%20for-Fall%202019-brightgreen)
+
+![Unrelated image of mine."](mine.jpg)
+
 **DUE TUE 2019-11-26 (Nov 26) @ 11:55 PM. No Late Submission Accepted.**
 
 This repository contains the skeleton code for the Minesweeper Alpha project
