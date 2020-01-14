@@ -19,7 +19,6 @@ at the University of Georgia.
 
 * [Academic Honesty](#academic-honesty)
 * [Updates](#updates)
-* [Grade Replacement](#grade-replacement)
 * [Project Description](#project-description)
   * [Note Concerning No Recursion](#note-concerning-no-recursion) 
   * [Minesweeper Overview](#minesweeper-overview)
