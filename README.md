@@ -1,5 +1,5 @@
 
-# CSCI 1302 - Minesweeper Alpha v2019.fa
+# CSCI 1302 - Minesweeper Alpha v2020.sp
 
 ![Approved for: Fall 2019](https://img.shields.io/badge/Approved%20for-Fall%202019-brightgreen)
 
@@ -188,7 +188,7 @@ once and only once:
  /    \| | '_ \ / _ \/ __\ \ /\ / / _ \/ _ \ '_ \ / _ \ '__|
 / /\/\ \ | | | |  __/\__ \\ V  V /  __/  __/ |_) |  __/ |
 \/    \/_|_| |_|\___||___/ \_/\_/ \___|\___| .__/ \___|_|
-                 A L P H A   E D I T I O N |_| v2019.fa
+                 A L P H A   E D I T I O N |_| v2020.sp
 ```
 
 Take care when printing this message out to the screen. You will probably need
