@@ -907,41 +907,43 @@ There will be no partial credit for any of the requirements that simply
 require the presence of a method related a particular functionality.
 The actual functionality is tested using test cases.
 
-* **(35 points) `cs1302.game.MinesweeperGame` Class**: Instances of
+#### (40 points) Required Classes
+
+* **`cs1302.game.MinesweeperGame` Class**: Instances of
   this class represent a game of Minesweeper Alpha. You need to implement
   all of the methods listed below. Unless stated otherwise, each
   method is assumed to have public visibility.
 
-  * **(5 points) `MinesweeperGame(String seed)`**: In this constructor,
+  * **`MinesweeperGame(String seed)`**: In this constructor,
     you should read the contents of the file whose path is stored in `seed`
     and initialize variables, as needed, to setup the game according
     to the seed file configuration specified by the file.
 
-  * **(5 points) `void printWelcome()`:** This method should print
+  * **`void printWelcome()`:** This method should print
     the welcome banner to standard output, as described earler in
     this document.
 
-  * **(5 points) `void printMineField()`:** This method should print
+  * **`void printMineField()`:** This method should print
     the current contents of the mine field to standard output, as
     described earlier in this document.
 
-  * **(5 points) `void promptUser()`:** This method should print
+  * **`void promptUser()`:** This method should print
     the game prompt to standard output and interpret user input
     from standard input, as described earlier in this document.
     Instead of writing the code to check the mine field in this method,
     you should call the `isWon` and `isLost` methods described in these
     requirements instead.
 
-  * **(5 points) `boolean isWon()` and `boolean isLost()`:** These
+  * **`boolean isWon()` and `boolean isLost()`:** These
     methods should return `true` if, and only if, all the conditions
     are met to win or lose the game, respectively, as defined earlier in
     this document.
 
-  * **(5 points) `void printWin()` and ``void printLoss()``:** These 
+  * **`void printWin()` and ``void printLoss()``:** These 
     methods should print the win and game over emssages to standard 
     output, respectively, as described earler in this document.
 
-  * **(5 points) `void play()`:** This method should provide the
+  * **`void play()`:** This method should provide the
     main game loop by invoking other instance methods, as needed.
 
   **NOTE:** Please see the [Suggestions](#suggestions) section of this
@@ -950,7 +952,7 @@ The actual functionality is tested using test cases.
   **NOTE:** You are not only free but encouraged to implement other methods,
   as needed, to help with readability, code reuse, etc.
 
-* **(5 points) `cs1302.game.MinesweeperDriver` Class**: This class
+* **`cs1302.game.MinesweeperDriver` Class**: This class
   should only contain the `main` method:
 
   * `void main(String[] args)`: This public, static method should
