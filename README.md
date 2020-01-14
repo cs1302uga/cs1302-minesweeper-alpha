@@ -3,12 +3,9 @@
 
 **DUE TUE 2019-11-26 (Nov 26) @ 11:55 PM. No Late Submission Accepted.**
 
-This repository contains the skeleton code for the optional **make-up project**,
-"Minesweeper Alpha", that is made available to students in the Fall 2019
-CSCI 1302 classes at the University of Georgia. Please see the
-[Grade Replacement](#grade-replacement) section of this document for 
-details related to how this project can be used to replace a grade 
-for the **cs1302-latin-squares** project. 
+This repository contains the skeleton code for the Minesweeper Alpha project
+assigned to the students in the Spring 2020 CSCI 1302 classes
+at the University of Georgia. 
 
 **Please read the entirety of this file before beginning your project.**
 
@@ -62,27 +59,14 @@ to the copyright notice and licensing information at the bottom of this document
 Updates will be posted here.
 If there has been an update and you have already cloned the project to Nike,
 then you can update your copy of the project using the `$ git pull`
-command while inside of your project directory.
-
-## Grade Replacement
-
-Students may use the grade they earn on this **make-up project** to replace 
-the grade they earned on their **cs1302-latin-squares** project. After the
-deadline, a grader will look for your submission and, if found, grade it.
-If the grade you earn is greater than the grade you earned on cs1302-latin-squares,
-then your grade for cs1302-latin-squares will be replaced with the higher grade.
-Feedback will be provided via eLC gradebook comments. 
-
-Under no circumstance will a grade replacement opportunity be made available for any
-other project in **Fall 2019**. 
+command while inside of your project directory. 
 
 ## Project Description
 
-This **make-up project** is meant to ensure that you are able to apply and extend
+This first project is meant to ensure that you are able to apply and extend
 your prerequisite knowledge as well as introduce you to developing and testing
 a Java application in a Linux environment (i.e., the Nike development
-server). **Having already attempted "Latin Squares",** many aspects of this
-project should be familiar to you. Nevertheless, you will be asked to do things
+server). Many aspects of this project may be new to you. You will be asked to do things
 that you have never been given explicit directions for before.
 This is just a part of software development. Sometimes you need to research
 how to solve a problem in order to implement a solution. That being said,
@@ -102,7 +86,7 @@ If you are not familiar with Minesweeper as a game, then please consult the
 for the game, ignoring any mentions of recursion. Once you're familiar
 with the basic gameplay, then continue reading this project description.
 
-### Note Concerning No Recursion
+### Note Concerning "No Recursion"
 
 In a traditional game of Minesweeper, when the player "reveals" a square
 that does not contain a mine, **two** things happen:
