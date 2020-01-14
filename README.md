@@ -961,7 +961,8 @@ The actual functionality is tested using test cases.
     1. Handle command-line arguments. There are only two variations
        of command-line arguments that are allowed for this program:
 
-       1. `--seed PATH_TO_SEEDFILE`<br>
+       1. `--seed PATH_TO_SEEDFILE`
+       
           In this scenario, there are exactly two command-line arguments
           supplied. The second command-line argument should be interpreted
           as a `String` referred to by `seed` and supplied to
@@ -969,7 +970,8 @@ The actual functionality is tested using test cases.
           After constructing the `MinesweeperGame` object, you should invoke
           the object's `play` method.
 
-       1. `--gen PATH_TO_SEEDFILE ROWS COLS MINES`<br>
+       1. `--gen PATH_TO_SEEDFILE ROWS COLS MINES`
+       
           Please see the extra credit for information on how to parse these
           command-line arguments. If you choose to not do the extra
           credit, then your program should print the following
