@@ -170,10 +170,9 @@ The game is won when **all** of the following conditions are met:
 At the end of the game, the player is presented with a score. Let `rows`, `cols`,
 and  `rounds` denote the number of rows in the grid, columns in the grid, and
 number of rounds completed, respectively. A round is defined as one successful
-iteration of the main game loop. The idea is that a round is one iteration of 
-the game loop. Therefore, only valid commands result in a round being consumed.
-To be clear, _rounds_ is not quite the same as the number of commands entered;
-however, it should be less than or equal to that number.
+iteration of the main game loop. Therefore, only valid commands result in a round 
+being consumed. To be clear, _rounds_ is not quite the same as the number of commands 
+entered (some may be invalid); however, it should be less than or equal to that number.
 
 The player's score is calculated as follows:
 
