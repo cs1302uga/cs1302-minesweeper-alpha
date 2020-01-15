@@ -155,7 +155,11 @@ When the player reveals a square of the grid, different things can happen:
 To simplify the game mechanics, **the player may mark, guess, or reveal any square in the grid,
 even squares that have already been marked or revealed.** For example, the player may issue a 
 command to mark, guess, or reveal a square, regardless of its current state. The logic for 
-determining what happens to the square is always the same.
+determining what happens to the square is always the same. For example, if a square has been 
+revealed and the user marks it as definitely containing a mine then a round is consumed and the
+square should be marked. The user would then have to reveal this square again later. This may
+not be consistent with how you've played Minesweeper in the past but it will make it easier
+to code.
 
 The game is won when **all** of the following conditions are met:
 
