@@ -152,7 +152,7 @@ When the player reveals a square of the grid, different things can happen:
 * When the player marks a square as definitely containing a mine, a flag, denoted
   by the character `F`, is displayed in the square.
 
-To simplift the game mechanics, **the player may mark or reveal any square in the grid,
+To simplify the game mechanics, **the player may mark or reveal any square in the grid,
 even squares that have already been marked or revealed.** The logic for determining what
 happens to the square is always the same.
 
@@ -172,8 +172,8 @@ score = 100.0 * rows * cols / rounds;
 
 A score of `100` would denote a perfect game. In this version of Mineweeper, it should
 not be possible for the player to win the game in less than `(rows * cols)`-many rounds.
-Therefore, any game in which the player exceeds that many rounds would resuly in a score
-that is less thatn `100`. When displaying the score, the number should always be printed
+Therefore, any game in which the player exceeds that many rounds would result in a score
+that is less than `100`. When displaying the score, the number should always be printed
 with two digits following the decimal point.
 
 ### The Grid and Interface
@@ -239,9 +239,10 @@ starts, the interface should look like this:
 minesweeper-alpha:
 ```
 
-Please note that the in either example, the first, third, and second-to-last lines are blank.
+Please note that the in either example, the first, third, and second-to-last lines are blank 
+(the lines before and after "Rounds Completed" and the line before the prompt).
 All other lines, except the last line containing the prompt, start with one blank space.
-The line containing the prompt contains an extra space after the `$`
+The line containing the prompt contains an extra space after the `:`
 so that **when the user types in a command, the text does not touch the
 `:`.** Multiple output examples are provided in the [Appendix](#minefield-output-examples)
 of this project description for your convenience.
