@@ -335,7 +335,7 @@ helpful.
 
 The possible commands that can be entered into the game's prompt as well as their
 syntax are listed in the subsections below. Commands with leading or trailing
-white space are to be interpreted as if there were no leading or trailing
+whitespace are to be interpreted as if there were no leading or trailing
 whitespace. For example, the following two examples should be interpreted the
 same:
 
@@ -450,8 +450,8 @@ minesweeper-alpha:
 After the player correctly entered the command `r 1 2`, the state of
 the game updates (e.g., number of rounds completed, the grid, etc.), and the
 next round happens. Since there was no mine in square (1,2), the player does not
-lose the game. Also, since the number of mines adjacent to square (1,2) is 2, the
-number 2 is now placed in that cell.
+lose the game. Also, since the total number of mines in the 8 cells directly 
+adjacent to square (1,2) is 2, the number 2 is now placed in that cell.
 
 If the player reveals a square containing a mine, then the following message
 should be displayed and the program should terminate gracefully:
@@ -744,7 +744,7 @@ Note that the first and last lines are blank and that the beginning of the
 other lines contain a single white space. You should replace the score in the
 output with the actual calculated score (mentioned above).
 
-To the game, the user needs to have all mines marked and the number of marks
+To win the game, the user needs to have all mines marked and the number of marks
 needs to equal the number of mines.
 
 #### Displaying Errors
@@ -831,7 +831,7 @@ format:
  * Subsequent pairs of tokens are integers (separated by white space)
    indicating the location of each mine.
 
-**If a seed file is not formatted correctly, then then the program should exit
+**If a seed file is not formatted correctly, then the program should exit
 with exit `System.exit(1)` and the following message should be displayed:**
 After the program terminates, a user should be able to confirm the exit
 status of `1` using `echo $?`.
@@ -843,7 +843,7 @@ Seedfile Format Error: Cannot create game with FILENAME, because it is not forma
 Note that the second line is empty. Also, be sure to replace `FILENAME` with
 the actual name of the file.
 
-If a seed file not malformed but is also considered to be malformed 
+A seed file is also considered to be malformed 
 if the number of mines exceeds the number of squares in
 the grid, and if a mine location is specified as being outside of the grid.
 If the grid size is not an acceptable grid size, then use the error and
@@ -852,11 +852,16 @@ section instead of the message and exit status above.
 
 An example seed file is present in the project materials. In order to run
 your program with the seed file, you should be able to use the following
-command (actual filename may differ):
+command (actual seed filename may differ):
 
 ```
 $ java -cp bin cs1302.game.MinesweeperDriver --seed tests/seed1.txt
 ```
+
+**Note:** The command you use to run your file from your main project directory 
+(the directory containing `src` and `bin`) should **exactly match** the command above
+if you are passing in a seed file called `seed1.txt` containined in a `tests` directory 
+located directly within your main project directory.
 
 To read the file, let us assume that we have the path to the file
 stored in a `String` object referred to with a variable called
@@ -941,7 +946,8 @@ The actual functionality is tested using test cases.
   document before writing the code to implement these methods.
 
   **NOTE:** You are not only free but encouraged to implement other methods,
-  as needed, to help with readability, code reuse, etc.
+  as needed, to help with readability, code reuse, etc. In some cases, you may 
+  need to add other methods to meet the style requirement for method length.
 
 * **`cs1302.game.MinesweeperDriver` Class**: This class
   should only contain the `main` method:
