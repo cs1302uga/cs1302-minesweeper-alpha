@@ -1366,7 +1366,7 @@ Here are some common conversion characters:
 |------------|-------------|
 | `s`        | If the argument arg is `null`, then the result is "null". Otherwise, the result is obtained by calling `toString()`. |
 | `d`        | The result is formatted as a decimal integer. |
-| `f`        | The result is formatted as a decimal number.  |
+| `f`        | The result is formatted as a floating point number.  |
 | `%`        | The result is a literal `%`. |
 
 You can also include a _width_, a positive decimal integer indicating the minimum number of
