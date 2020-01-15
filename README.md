@@ -845,6 +845,7 @@ status of `1` using `echo $?`.
 
 ```
 Seedfile Format Error: Cannot create game with FILENAME, because it is not formatted correctly.
+
 ```
 
 Note that the second line is empty. Also, be sure to replace `FILENAME` with
