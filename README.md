@@ -24,7 +24,7 @@ at the University of Georgia.
   * [Minesweeper Overview](#minesweeper-overview)
   * [The Grid and Interface](#the-grid-and-interface)
     * [The Grid](#the-grid)
-    * [The User Interface](#thed-user-interface)
+    * [The User Interface](#the-user-interface)
     * [Command Syntax Format](#command-syntax-format)
     * [Revealing a Square](#revealing-a-square)
     * [Mark Command](#mark-command)
