@@ -841,25 +841,43 @@ format:
  * Subsequent pairs of tokens are integers (separated by white space)
    indicating the location of each mine.
 
-**If a seed file is not formatted correctly, then the program should exit
-with exit `System.exit(1)` and the following message should be displayed:**
-After the program terminates, a user should be able to confirm the exit
-status of `1` using `echo $?`.
+#### Errors Related to Seed Files
 
-```
-Seedfile Format Error: Cannot create game with FILENAME, because it is not formatted correctly.
+There are some errors that can occur with seed files. For the errors listed
+below, then the program should exit with exit `System.exit(1)` and the associated 
+error message should be displayed to standard error (i.e., using `System.err` instead
+of `System.out`). After the program terminates, a user should be able to confirm the exit
+status of `1` using the `echo $?` command.
+   
+* **If a seed file cannot be read because it cannot be found or cannot be read due to permission,** 
+   then use the following error message just before termination:
 
-```
+   ```
+   Seedfile Not Found Error: Cannot create game with FILENAME, because it cannot be be found
+                             or cannot be read due to permission.
 
-Note that the second line is empty. Also, be sure to replace `FILENAME` with
-the actual name of the file.
+   ```
 
-A seed file is also considered to be malformed 
-if the number of mines exceeds the number of squares in
-the grid, and if a mine location is specified as being outside of the grid.
-If the grid size is not an acceptable grid size, then use the error and
-exit status specified in the [Displaying Errors](#displaying-errors)
-section instead of the message and exit status above.
+   Note that there are three lines and the third line is empty. Also, be sure to replace `FILENAME` with
+   the actual name of the file.
+
+ * **If a seed file is not formatted correctly,** then use the following
+   error message just before termination:
+
+   ```
+   Seedfile Format Error: Cannot create game with FILENAME, because it is not formatted correctly.
+
+   ```
+
+   Note that the second line is empty. Also, be sure to replace `FILENAME` with
+   the actual name of the file.
+
+   A seed file is also considered to be malformed 
+   if the number of mines exceeds the number of squares in
+   the grid, and if a mine location is specified as being outside of the grid.
+   If the grid size is not an acceptable grid size, then use the error and
+   exit status specified in the [Displaying Errors](#displaying-errors)
+   section instead of the message and exit status above.
 
 An example seed file is present in the project materials. In order to run
 your program with the seed file, you should be able to use the following
@@ -1011,7 +1029,11 @@ The actual functionality is tested using test cases.
 
     For the purposes of this assignment, you may safely assume that
     valid input will be provided for the driver's command line
-    arguments.
+    arguments. For the purposes of this assignment, valid input
+    got the command line arguments includes using a path to a file
+    that does not exist or cannot be read due to permission, since
+    there is output that your program is expected to produce in those
+    scenarios.
 
     Additional code may be required if you are attempting one of the
     extra credit requirements listed later in this document.
