@@ -828,7 +828,7 @@ error message is displayed, and the next round happens.
 
 ### Seed Files
 
-This game can also be setup using seed files. Seed files have the following
+Each game is setup using seed files. Seed files have the following
 format:
 
  * The first two tokens are two integers (separated by white-space) indicating the
