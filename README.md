@@ -934,6 +934,8 @@ The actual functionality is tested using test cases.
 
 #### (40 points) Required Classes
 
+![UML Class Diagram](uml_diagram.png)
+
 * **`cs1302.game.MinesweeperGame` Class**: Instances of
   this class represent a game of Minesweeper Alpha. You need to implement
   all of the methods listed below. Unless stated otherwise, each
