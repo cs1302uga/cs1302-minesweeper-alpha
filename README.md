@@ -38,7 +38,7 @@ at the University of Georgia.
 * [Project Requirements & Grading](#project-requirements--grading)
   * [Functional Requirements](#functional-requirements)
   * [Non-Functional Requirements](#non-functional-requirements)
-  * [Extra Credit Requirements](extra-credit-requirements)
+  * [Extra Credit Requirements](#extra-credit-requirements)
 * [Suggestions](#suggestions)
 * [How to Download the Project](#how-to-download-the-project)
 * [Submission Instructions](#submission-instructions)
