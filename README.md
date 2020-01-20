@@ -1011,9 +1011,10 @@ The actual functionality is tested using test cases.
           After the program terminates, a user should be able to confirm the exit
           status of `2` using `echo $?`.
 
-       1. If your program cannot interpret or should not interpret the
+       1. Only the command-line options and their associated argumented just mentioned are supported.
+          If your program cannot interpret or should not interpret the
           supplied command-line arguments (except in the case of not
-          supporting the `--gen` option), then your program should print
+          supporting the `--gen` option; see note below), then your program should print
           the following to _standard error_, then exit with `System.exit(1)`:
 
           ```
@@ -1022,6 +1023,9 @@ The actual functionality is tested using test cases.
           
           After the program terminates, a user should be able to confirm the exist
           status of `1` using `echo $?`.
+          
+          NOTE: If `--gen` is not supported, then you are not required to check the
+          validity of any arguments that follow.
           
        You may find it useful to consult the 
        [Command-Line Arguments Tutorial](https://github.com/cs1302uga/cs1302-tutorials/blob/master/cla/cla.md)
