@@ -602,7 +602,7 @@ next round happens.
 This command removes, for the next round only, what is often
 referred to as the, "fog of war." Squares containing mines, whether unrevealed,
 marked, or guessed, will be displayed with less-than and greater-than symbols on
-either side of the square's center (as apposed to white space). Using the
+either side of the square's center (as opposed to white space). Using the
 `nofog` command **does** use up a round.
 In order to issue this command, the `nofog` command is used.
 The syntax format for this
