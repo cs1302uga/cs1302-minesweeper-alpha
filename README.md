@@ -64,6 +64,10 @@ If there has been an update and you have already cloned the project to Nike,
 then you can update your copy of the project using the `$ git pull`
 command while inside of your project directory. 
 
+* **2020-01-20:** (RE: [Displaying Errors](#displaying-errors))
+  If a command entered by the player is incorrect or not recognized, then
+  a round should NOT be consumed.
+
 ## Project Description
 
 This first project is meant to ensure that you are able to apply and extend
@@ -772,7 +776,7 @@ Seedfile Value Error: Cannot create a mine field with that many rows and/or colu
 Note that the first line is blank.
 
 If a command entered by the player is incorrect or not recognized, then the following
-message should be displayed to the player **and one round should be consumed**:
+message should be displayed to the player **and a round should NOT be consumed**:
 
 ```
 
