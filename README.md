@@ -844,6 +844,11 @@ format:
 
  * Subsequent pairs of tokens are integers (separated by white space)
    indicating the location of each mine.
+   
+**NOTE:** In Java, the term _white-space_ refers to one or more characters in a sequence that
+each satisfy the conditions outlined in [`Character.isWhitespace`](https://docs.oracle.com/javase/8/docs/api/java/lang/Character.html#isWhitespace-char-).
+You do not need to check these conditions specifically nor use this method
+if you use you use the built-in tokenizing provided by the `Scanner` class.
 
 #### Errors Related to Seed Files
 
