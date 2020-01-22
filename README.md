@@ -858,7 +858,7 @@ end of a seed file.
 #### Errors Related to Seed Files
 
 There are some errors that can occur with seed files. For the errors listed
-below, then the program should exit with exit `System.exit(1)` and the associated 
+below, the program should exit with exit `System.exit(1)` and the associated 
 error message should be displayed to standard error (i.e., using `System.err` instead
 of `System.out`). After the program terminates, a user should be able to confirm the exit
 status of `1` using the `echo $?` command.
