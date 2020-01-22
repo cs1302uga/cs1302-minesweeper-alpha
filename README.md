@@ -850,7 +850,7 @@ format:
 **NOTE:** In Java, the term _white-space_ refers to one or more characters in a sequence that
 each satisfy the conditions outlined in [`Character.isWhitespace`](https://docs.oracle.com/javase/8/docs/api/java/lang/Character.html#isWhitespace-char-).
 You do not need to check these conditions specifically nor use this method
-if you use you use the built-in tokenizing provided by the `Scanner` class.
+if you use the built-in tokenizing provided by the `Scanner` class.
 
 **NOTE:** It is acceptable for white-space to occur both at the beginning and 
 end of a seed file.  
