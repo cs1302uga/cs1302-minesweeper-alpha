@@ -64,6 +64,8 @@ If there has been an update and you have already cloned the project to Nike,
 then you can update your copy of the project using the `$ git pull`
 command while inside of your project directory. 
 
+* **2020-01-22:** (RE [Seed Files](#seed-files)) Clarified the term _white-space_.
+
 * **2020-01-20:** (RE: [Displaying Errors](#displaying-errors))
   If a command entered by the player is incorrect or not recognized, then
   a round should NOT be consumed.
@@ -849,6 +851,9 @@ format:
 each satisfy the conditions outlined in [`Character.isWhitespace`](https://docs.oracle.com/javase/8/docs/api/java/lang/Character.html#isWhitespace-char-).
 You do not need to check these conditions specifically nor use this method
 if you use you use the built-in tokenizing provided by the `Scanner` class.
+
+**NOTE:** It is acceptable for white-space to occur both at the beginning and 
+end of a seed file.  
 
 #### Errors Related to Seed Files
 
