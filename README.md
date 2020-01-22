@@ -853,7 +853,25 @@ You do not need to check these conditions specifically nor use this method
 if you use the built-in tokenizing provided by the `Scanner` class.
 
 **NOTE:** It is acceptable for white-space to occur both at the beginning and 
-end of a seed file.  
+end of a seed file.
+
+The following seed files are valid and contain the same information:
+
+```
+10 10 2 0 0 1 1
+```
+
+```
+10 10
+2
+0 0
+1 1
+```
+
+```
+    10    10 2
+0       0 1      1
+```
 
 #### Errors Related to Seed Files
 
