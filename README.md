@@ -602,16 +602,16 @@ next round happens.
 #### No Fog Command
 
 This command removes, for the next round only, what is often
-referred to as the, "fog of war." Squares containing mines, whether unrevealed,
+referred to as the, "fog of war." All squares containing mines, whether unrevealed,
 marked, or guessed, will be displayed with less-than and greater-than symbols on
 either side of the square's center (as opposed to white space). Using the
 `nofog` command **does** use up a round.
 In order to issue this command, the `nofog` command is used.
-The syntax format for this
-command is as follows: `-["nofog"]-`.
+The syntax format for this command is as follows: `-["nofog"]-`.
 
-Let's go back to our `10`-by-`10` example. Suppose that we secretly know that there is
-a mine in squares (1,1) and (1,3). If the player marked square (1,1) during the
+Let's go back to our `10`-by-`10` example. Suppose that in this example, there 
+are only two mines in the entire board which are located in squares (1,1) and (1,3). 
+If the player marked square (1,1) during the
 first round and then used the `nofog` command during the second
 round, then here is an example of what that scenario might look like:
 
