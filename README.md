@@ -64,7 +64,7 @@ If there has been an update and you have already cloned the project to Nike,
 then you can update your copy of the project using the `$ git pull`
 command while inside of your project directory. 
 
-* **2020-01-22:** (RE [Seed Files](#seed-files)) Clarified the term _white-space_.
+* **2020-01-22:** (RE: [Seed Files](#seed-files)) Clarified the term _white-space_.
 
 * **2020-01-20:** (RE: [Displaying Errors](#displaying-errors))
   If a command entered by the player is incorrect or not recognized, then
