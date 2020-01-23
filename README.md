@@ -811,7 +811,7 @@ minesweeper-alpha: meh
 
 Input Error: Command not recognized!"
 
- Rounds Completed: 1
+ Rounds Completed: 0
 
  0 |   |   |   |   |   |   |   |   |   |   |
  1 |   |   |   |   |   |   |   |   |   |   |
@@ -830,7 +830,7 @@ minesweeper-alpha:
 
 After the player entered the unknown command `meh`, the state of
 the game updates (e.g., number of rounds completed, the grid, etc.), the
-error message is displayed, and the next round happens.
+error message is displayed, and the round rusumes.
 
 ### Seed Files
 
