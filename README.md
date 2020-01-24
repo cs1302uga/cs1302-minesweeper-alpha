@@ -18,6 +18,7 @@ at the University of Georgia.
 ## Table of Contents
 
 * [Academic Honesty](#academic-honesty)
+* [Course-Specific Learning Outcomes](#course-specific-learning-outcomes)
 * [Updates](#updates)
 * [Project Description](#project-description)
   * [Note Concerning No Recursion](#note-concerning-no-recursion) 
