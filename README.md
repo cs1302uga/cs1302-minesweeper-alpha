@@ -1177,6 +1177,10 @@ point total. That is, they are all or nothing (no partial credit).
   your code, then the 100 point version of this penalty applies.
   Graders are instructed not to modify source code in an attempt to to make
   a submission compile.
+  
+  **Any additional classes that you create should be located in or under the `cs1302.game` package.**
+  If other `.java` files are present, then they will be compiled _individually_
+  by the graders and added to the class path, as needed, when compiling other files.
 
 * **(100 points) Development Environment:** This project must be implemented
   in Java 8, and it *must compile and run* correctly on Nike using the specific
