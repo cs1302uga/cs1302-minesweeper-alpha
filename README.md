@@ -1083,9 +1083,9 @@ The actual functionality is tested using test cases.
     For the purposes of this assignment, you may safely assume that
     valid input will be provided for the driver's command line
     arguments. For the purposes of this assignment, valid input
-    got the command line arguments includes using a path to a file
-    that does not exist or cannot be read due to permission, since
-    there is output that your program is expected to produce in those
+    for command line arguments includes no arguments, uninterpretable arguments,
+    and using a path to a file that does not exist or cannot be read due to permission, 
+    since there is output that your program is expected to produce in those
     scenarios.
 
     Additional code may be required if you are attempting one of the
