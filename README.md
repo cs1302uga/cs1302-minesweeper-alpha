@@ -986,8 +986,7 @@ The actual functionality is tested using test cases.
   this class represent a game of Minesweeper Alpha. You need to implement
   all of the methods listed below. Unless stated otherwise, each
   method is assumed to have public visibility. Instance variables
-  may be added, as needed, to keep track of a `MinesweeperGame` object's
-  state.
+  may be added, as needed, to keep track of object state.
 
   * **`MinesweeperGame(String seed)`**: In this constructor,
     you should read the contents of the file whose path is stored in `seed`
