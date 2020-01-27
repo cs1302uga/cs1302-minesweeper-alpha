@@ -181,6 +181,8 @@ square should be marked. The user would then have to reveal this square again la
 not be consistent with how you've played Minesweeper in the past but it will make it easier
 to code.
 
+<a id="win-conditions">
+
 The game is won when **all** of the following conditions are met:
 
 * All squares containing a mine are marked as _definitely_ containing a mine; and
@@ -774,8 +776,8 @@ Note that the first and last lines are blank and that the beginning of the
 other lines contain a single white space. You should replace the score in the
 output with the actual calculated score (mentioned above).
 
-To win the game, the user needs to have all mines marked and the number of marks
-needs to equal the number of mines.
+The conditions for winning are outlined earlier in this document, 
+[here](#win-conditions).
 
 #### Displaying Errors
 
