@@ -962,7 +962,7 @@ try {
   // System.err.println(e);
   // e.printStackTrace();
   // and don't forget to:
-  // print any error messages described earlier and exit with status 1
+  // print any error messages described earlier and exit appropriately
 } // try
 ```
 
