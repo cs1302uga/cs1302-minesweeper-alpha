@@ -958,9 +958,11 @@ try {
   // use scanner here as usual
 } catch (FileNotFoundException e) {
   // handle the exception here
-  // perhaps do this: System.err.println(e);
-  // and may this: e.printStackTrace();
-  // also print the error message described earlier and exit with status 1
+  // and perhaps do the following for testing/debugging only:
+  // System.err.println(e);
+  // e.printStackTrace();
+  // and don't forget to:
+  // print any error messages described earlier and exit with status 1
 } // try
 ```
 
