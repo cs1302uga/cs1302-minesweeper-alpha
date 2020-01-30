@@ -1094,9 +1094,9 @@ The actual functionality is tested using test cases.
 
     Additional code may be required if you are attempting one of the
     extra credit requirements listed later in this document.
-    <a id="test-cases"/>
+    
 
-* **(60 points) Test Cases**: The bulk of this project will be graded
+* **(60 points) Test Cases**: <a id="test-cases"/> The bulk of this project will be graded
   based on 30 test cases, each worth 2 points. A single test case can
   be described by three things: i) some starting configuration; ii) a
   sequence of user input; and iii) the program output given (i) and (ii).
