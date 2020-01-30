@@ -418,8 +418,8 @@ will not be covered in this course.** You are NOT meant to put this weird
 looking syntax into any code. It is purely meant to convey to you, the reader,
 what is and what is not valid input for a given command.
 
-In a syntax format string, one or more white space is represented as a
-`-`. Command tokens are enclosed in `[]` braces. If the
+In a syntax format string, one or more non-new-line white space is represented 
+as a `-`. Command tokens are enclosed in `[]` braces. If the
 contents of a token are surrounded by `""` marks, then that token can
 only take on that literal value. If more than one literal value is accepted for
 a token, then the quoted literals are separated by `/`. If the
