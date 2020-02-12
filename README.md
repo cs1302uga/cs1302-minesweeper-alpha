@@ -1217,8 +1217,13 @@ point total. That is, they are all or nothing (no partial credit).
   your code for compliance on Nike.
 
 * **In-line Documentation (10 points):** Code blocks should be adequately documented
-  using in-line comments. This is especially necessary when a block of code
-  is not immediately understood by a reader (e.g., yourself or the grader).
+  using in-line comments. With in-line comments, you should explain tricky, large, complicated,
+  or confusing blocks of code. This is especially necessary whenever a block of code
+  is not immediately understood by a reader (e.g., yourself or the grader). You might also
+  include information that someone reading your code would need to know but not someone using it
+  (that is more appropriate for a Javadoc comment). A good metric for this: if, after six months,
+  you cannot tell what the code is doing in under a few seconds, then you probably need to 
+  write some in-line comments.
 
 ### Extra Credit Requirements
 
