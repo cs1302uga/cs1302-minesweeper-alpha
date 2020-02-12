@@ -1221,9 +1221,9 @@ point total. That is, they are all or nothing (no partial credit).
   or confusing blocks of code. This is especially necessary whenever a block of code
   is not immediately understood by a reader (e.g., yourself or the grader). You might also
   include information that someone reading your code would need to know but not someone using it
-  (that is more appropriate for a Javadoc comment). A good metric for this: if, after six months,
-  you cannot tell what the code is doing in under a few seconds, then you probably need to 
-  write some in-line comments.
+  (that is more appropriate for a Javadoc comment). A good heuristic for this: if you can imagine that, 
+  after six months, you might not be able to tell in under a few seconds what a code block is doing,
+  then then you probably need to write some in-line comments.
 
 ### Extra Credit Requirements
 
