@@ -741,6 +741,8 @@ After the player correctly entered the command `h`, the state of
 the game updates (e.g., number of rounds completed, the grid, etc.), the
 help menu is displayed, and the next round happens.
 
+**Note:** the `help` command does use up a round.
+
 #### Quit Command
 
 In order to quit the game, the `quit` or `q` command
@@ -880,7 +882,7 @@ minesweeper-alpha:
 
 After the player entered the unknown command `meh`, the state of
 the game updates (e.g., number of rounds completed, the grid, etc.), the
-error message is displayed, and the round rusumes.
+error message is displayed, and the round resumes.
 
 ### Seed Files
 
@@ -972,7 +974,7 @@ $ java -cp bin cs1302.game.MinesweeperDriver --seed tests/seed1.txt
 **Note:** The command you use to run your file from your main project directory 
 (the directory containing `src` and `bin`) should **exactly match** the command above
 if you are passing in a seed file called `seed1.txt` containined in a `tests` directory 
-located directly within your main project directory.
+located directly within your main project directory. 
 
 To read the file, let us assume that we have the path to the file
 stored in a `String` object referred to with a variable called
@@ -981,15 +983,15 @@ stored in a `String` object referred to with a variable called
 * [`File`](https://docs.oracle.com/javase/8/docs/api/java/io/File.html)
 * [`Scanner`](https://docs.oracle.com/javase/8/docs/api/java/util/Scanner.html)
 
-Most of you have used the `Scanner` class to read from standard input.
-Here, we will use it to read from a text file. This is accomplished using
+Most of you have used the `Scanner` class to read keyboard input from standard 
+input. Here, we will use it to read from a text file. This is accomplished using
 something similar to the following code snippet:
 
 ```java
 try {
   File configFile = new File(seed);
   Scanner configScanner = new Scanner(seedFile);
-  // use scanner here as usual
+  // use Scanner here as usual
 } catch (FileNotFoundException e) {
   // handle the exception here
   // and perhaps do the following for testing/debugging only:
@@ -1001,7 +1003,7 @@ try {
 ```
 
 You may need to import
-[`FileNotFoundException`](https://docs.oracle.com/javase/8/docs/api/java/io/FileNotFoundException.html)
+[`FileNotFoundException`](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/FileNotFoundException.html)
 (or use its fully qualified name) if adapting the code snippet above.
 
 ## Project Requirements & Grading
@@ -1032,7 +1034,7 @@ The actual functionality is tested using test cases.
     to the seed file configuration specified by the file.
 
   * **`void printWelcome()`:** This method should print
-    the welcome banner to standard output, as described earler in
+    the welcome banner to standard output, as described earlier in
     this document.
 
   * **`void printMineField()`:** This method should print
@@ -1158,7 +1160,7 @@ The actual functionality is tested using test cases.
   ```
   $ java -cp bin cs1302.game.MinesweeperDriver --seed some/path/to/seed.txt < some/path/to/input.txt
   ```
-  
+
   ```
   $ cat some/path/to/input.txt | java -cp bin cs1302.game.MinesweeperDriver --seed some/path/to/seed.txt
   ```
@@ -1170,8 +1172,7 @@ The actual functionality is tested using test cases.
   the grader then compares that output to a file containing the expected
   output for that test case.
 
-  You can test your program manually or using a similar automating procedure
-  as described above.
+  If your code doesn't execute using the commands above, we will note be able to grade it.
   
   **NOTE:**
   Please take special care that your program works using the command-line
@@ -1180,6 +1181,9 @@ The actual functionality is tested using test cases.
   is mandatory. If your program does not  work with these command-line arguments, 
   then it will fail most of the test cases. **The graders will not adjust the commands
   when running your program to accomodate a different set of options.**
+
+  In other words, **This is exactly how we will run your code. 
+  So, this is how you should run it while testing.**
 
 ### Non-Functional Requirements
 
