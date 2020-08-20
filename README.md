@@ -5,10 +5,10 @@
 
 ![Unrelated image of mine."](mine.jpg)
 
-**DUE FRI 2020-01-31 (Jan 31) @ 11:55 PM.**
+**DUE FRI 2020-09-11 (Sep 11) @ 11:55 PM.**
 
 This repository contains the skeleton code for the Minesweeper Alpha project
-assigned to the students in the Spring 2020 CSCI 1302 classes
+assigned to the students in the Fall 2020 CSCI 1302 classes
 at the University of Georgia. 
 
 **Please read the entirety of this file before beginning your project.**
@@ -20,6 +20,7 @@ at the University of Georgia.
 * [Academic Honesty](#academic-honesty)
 * [Course-Specific Learning Outcomes](#course-specific-learning-outcomes)
 * [Updates](#updates)
+* [Suggested Checklist](#suggested-checklist)
 * [Project Description](#project-description)
   * [Note Concerning No Recursion](#note-concerning-no-recursion) 
   * [Minesweeper Overview](#minesweeper-overview)
@@ -78,11 +79,53 @@ If there has been an update and you have already cloned the project to Nike,
 then you can update your copy of the project using the `$ git pull`
 command while inside of your project directory. 
 
-* **2020-01-22:** (RE: [Seed Files](#seed-files)) Clarified the term _white-space_.
+## Suggested Checklist
 
-* **2020-01-20:** (RE: [Displaying Errors](#displaying-errors))
-  If a command entered by the player is incorrect or not recognized, then
-  a round should NOT be consumed.
+To help you with planning out this project, here are some suggested steps you can take that 
+your instructors believe will help you complete the project more easily. Some of the 
+items in this checklist may not make sense until you have read the entire project description,
+including the appendices. These steps are suggesions and, therefore, do not constitute an
+exhaustive list of steps that you may need to take to complete the project.
+
+**Preparation:**
+
+- [ ] Read through the entire project description, including the appendices,
+      **and write down questions as you go.**
+- [ ] Read it again! This time, you may be able to answer some of your own
+      questions.
+
+**Frontend:**
+
+- [ ] On paper, decompose the visual elements of your application to identify
+      some of the objects you may need.
+- [ ] On paper, draw the scene graph for your app.
+- [ ] Identify opportunities for the creation of custom components.
+- [ ] Write some of the code to make your app look like what it needs to look like.
+- [ ] Use Git to stage and commit your changes often; create and merge branches,
+      as needed.
+
+**Backend:**
+
+- [ ] Create any custom component classes.
+- [ ] On paper, hash out how you might store the list or lists of image URLs.
+- [ ] Write a method to retreive the JSON response string for a query to the iTunes 
+      Search API based on a query string.
+- [ ] Write a method that returns a list of URL strings based on a JSON response
+      string retrieved from the iTunes Search API.
+- [ ] Use Git to stage and commit your changes often; create and merge branches,
+      as needed.
+
+**Putting it all Together:**
+
+- [ ] Consider using a list or array to help you access the various `ImageView`
+      objects in your scene; making new `ImageView` objects all the time is 
+      _not_ reccommended.
+- [ ] Make the buttons work at a basic level (you can decide what basic is).
+- [ ] Make the progress bar work (requires careful consideration of the threading 
+      required by some of your app's event handlers).
+- [ ] Make the random-replacement work.
+- [ ] Use Git to stage and commit your changes often; create and merge branches,
+      as needed.
 
 ## Project Description
 
