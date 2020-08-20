@@ -56,7 +56,7 @@ In accordance with this notice, I must caution you **not** to
 fork this repository on GitHub if you have an account. Doing so will more than
 likely make your copy of the project publicly visible. Please follow the
 instructions contained in the [How to Download the Project](#how-to-download-the-project)
-section below in order to do your development on nike. Furthermore, you must adhere
+section below in order to do your development on Odin. Furthermore, you must adhere
 to the copyright notice and licensing information at the bottom of this document.
 
 ## Course-Specific Learning Outcomes
@@ -75,7 +75,7 @@ to the copyright notice and licensing information at the bottom of this document
 ## Updates
 
 Updates will be posted here.
-If there has been an update and you have already cloned the project to Nike,
+If there has been an update and you have already cloned the project to Odin,
 then you can update your copy of the project using the `$ git pull`
 command while inside of your project directory. 
 
@@ -94,7 +94,7 @@ exhaustive list of steps that you may need to take to complete the project.
 - [ ] Read it again! This time, you may be able to answer some of your own
       questions.
 
-**Frontend:**
+<!-- **Frontend:**
 
 - [ ] On paper, decompose the visual elements of your application to identify
       some of the objects you may need.
@@ -125,21 +125,22 @@ exhaustive list of steps that you may need to take to complete the project.
       required by some of your app's event handlers).
 - [ ] Make the random-replacement work.
 - [ ] Use Git to stage and commit your changes often; create and merge branches,
-      as needed.
+      as needed. -->
 
 ## Project Description
 
 This first project is meant to ensure that you are able to apply and extend
 your prerequisite knowledge as well as introduce you to developing and testing
-a Java application in a Linux environment (i.e., the Nike development
-server). Many aspects of this project may be new to you. You will be asked to do things
-that you have never been given explicit directions for before.
-This is just a part of software development. Sometimes you need to research
+a Java application in a Linux environment (i.e., the Odin development
+server). You should be familiar with the majority of aspects of this project through
+your introductory programming course and the class exercises from 1302. However, you 
+may also be asked to do things that you have never been given explicit directions for 
+before. This is just a part of software development. Sometimes you need to research
 how to solve a problem in order to implement a solution. That being said,
 the material included in this document should hopefully answer the majority
 of your questions.
 
-Your goal is to develop a non-recursive, non-GUI (GUI = Graphical User
+Your goal is to develop a **non-recursive**, **non-GUI** (GUI = Graphical User
 Interface) version of the game called **Minesweeper**. The code for this game will
 be organized in such a way that the recursive elements of Minesweeper can
 be added at a later point in time, if desired. It will also be organized so that
@@ -164,9 +165,9 @@ that does not contain a mine, **two** things happen:
    and "reveals" all of the (up to) eight adjacent squares.
 
 The second part mentioned above can cause one reveal made by the user
-to result in multiple reveals in the minefield. **This behavior is what
-the literature is referring to when it talks about recursion in Mineweeper.**
-Your game does not need to support this behavior. If the user reveals
+to result in multiple reveals in the minefield. This behavior is what
+the literature is referring to when it talks about recursion in Mineweeper.
+**Your game should not support this behavior**. If the user reveals
 one square, then, at most, one square is revealed in the minefield.
 
 ### Minesweeper Overview
@@ -187,7 +188,7 @@ of perfectly square.
 
 The game is played in rounds. During each round, the player is presented with
 the grid, the number of rounds completed so far, as well as a prompt. The player
-has the option to do 5 different things, each of which is briefly listed
+has the option to do 6 different things, each of which is briefly listed
 below and explained in great detail in later sections:
 
  1. Reveal a square on the grid.
@@ -216,13 +217,13 @@ When the player reveals a square of the grid, different things can happen:
   by the character `F`, is displayed in the square.
 
 To simplify the game mechanics, **the player may mark, guess, or reveal any square in the grid,
-even squares that have already been marked or revealed.** For example, the player may issue a 
+even squares that have already been marked or revealed.** In other words, the player may issue a 
 command to mark, guess, or reveal a square, regardless of its current state. The logic for 
 determining what happens to the square is always the same. For example, if a square has been 
 revealed and the user marks it as definitely containing a mine then a round is consumed and the
 square should be marked. The user would then have to reveal this square again later. This may
 not be consistent with how you've played Minesweeper in the past but it will make it easier
-to code.
+to code. We will leave it up to the user to be smart about how they play!
 
 <a id="win-conditions">
 
@@ -246,7 +247,8 @@ score = 100.0 * rows * cols / rounds;
 ```
 
 A score of `100` would denote a perfect game. In this version of Mineweeper, it should
-not be possible for the player to win the game in less than `(rows * cols)`-many rounds.
+not be possible for the player to win the game in less than `(rows * cols)`-many rounds 
+(take a second to convince yourself of this fact).
 Therefore, any game in which the player exceeds that many rounds would result in a score
 that is less than `100`. When displaying the score, the number should always be printed
 with two digits following the decimal point.
@@ -262,11 +264,11 @@ once and only once:
  /    \| | '_ \ / _ \/ __\ \ /\ / / _ \/ _ \ '_ \ / _ \ '__|
 / /\/\ \ | | | |  __/\__ \\ V  V /  __/  __/ |_) |  __/ |
 \/    \/_|_| |_|\___||___/ \_/\_/ \___|\___| .__/ \___|_|
-                 A L P H A   E D I T I O N |_| v2020.sp
+                 A L P H A   E D I T I O N |_| v2020.fa
 ```
 
-Take care when printing this message out to the screen. You will probably need
-to escape some of the characters in order for them to show up correctly.
+Take care when printing this message out to the screen. Depending on how you implement this
+part, you may need to escape some of the characters in order for them to show up correctly.
 
 In this Minesweeper game, **the size of the grid is restricted to at least `5`
 rows and `5` columns**, but may be greater. The number of rows and columns need not be the same.
@@ -451,8 +453,8 @@ As a reminder, trailing whitespace is ignored.
 
 #### Command Syntax Format
 
-In the sections below, each command will the syntax format that it must adhere
-to in order to be considered correct. Syntactically incorrect commands are
+In the sections below, we describe the syntax format that each command must 
+adhere to in order to be considered correct. Syntactically incorrect commands are
 considered an error. Information about displaying errors to the player is
 contained in a section below.
 
@@ -468,13 +470,6 @@ only take on that literal value. If more than one literal value is accepted for
 a token, then the quoted literals are separated by `/`. If the
 contents of a token are surrounded by `()` marks, then that token can
 only take on a value of the type expressed in parentheses.
-
-Syntax format strings are provided in this document in order to help you, the
-student, understand how syntactically correct commands could potentially be
-inputted by the player. These strings do not directly correspond to anything in
-the Java programming language. You should be able to use the information
-provided in these syntax format strings to parse commands entered by the
-user.
 
 #### Revealing a Square
 
@@ -543,16 +538,12 @@ should be displayed and the program should terminate gracefully:
 ```
 
 Yeah, that's old school ASCII art. Please note that the first and last lines are
-blank. Also note that the second line begins with a single white space. All other
-lines should be copied verbatim from this document (e.g., you can just copy and
-paste it using your plain text editor).
+blank. Also note that the second line (containing "oh no...") begins with a single 
+white space.
 
-The program should exit gracefully. This means that exit code should be zero.
-For example, the following snippet will accomplish this:
-
-```java
-System.exit(0);
-```
+The program should exit gracefully. This means that exit code passed to
+[`System.exit`](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/System.html#exit(int))
+should be zero. 
 
 If your program exits from a "game over" with any return codes other than zero 
 (e.g., if your game crashes), then some points will be deducted. After the program 
@@ -1230,7 +1221,7 @@ point total. That is, they are all or nothing (no partial credit).
   by the graders and added to the class path, as needed, when compiling other files.
 
 * **(100 points) Development Environment:** This project must be implemented
-  in Java 8, and it *must compile and run* correctly on Nike using the specific
+  in Java 8, and it *must compile and run* correctly on Odin using the specific
   version of Java 8 that is setup according to the instructions provided
   by your instructor. Graders are instructed not to modify source code in
   an attempt to to make a submission compile.
@@ -1257,7 +1248,7 @@ point total. That is, they are all or nothing (no partial credit).
 
   **NOTE:** The [CS1302 Code Style Guide](https://github.com/cs1302uga/cs1302-styleguide)
   includes instructions on how to use the `checkstyle` program to check
-  your code for compliance on Nike.
+  your code for compliance on Odin.
 
 * **In-line Documentation (10 points):** Code blocks should be adequately documented
   using in-line comments. With in-line comments, you should explain tricky, large, complicated,
@@ -1350,7 +1341,7 @@ characters for each square.
 
 ## How to Download the Project
 
-On Nike, execute the following terminal command in order to download the project
+On Odin, execute the following terminal command in order to download the project
 files into sub-directory within your present working directory:
 
 ```
@@ -1362,7 +1353,7 @@ your present working directory that contains the project files.
 
 If any updates to the project files are announced by your instructor, you can
 merge those changes into your copy by changing into your project's directory
-on Nike and issuing the following terminal command:
+on Odin and issuing the following terminal command:
 
 ```
 $ git pull
@@ -1373,8 +1364,8 @@ your instructor.
 
 ## Submission Instructions
 
-You will still be submitting your project via Nike. Make sure your project files
-are on `nike.cs.uga.edu`. Change into the parent directory of your
+You will still be submitting your project via Odin. Make sure your project files
+are on `odin.cs.uga.edu`. Change into the parent directory of your
 project directory and let `PROJ_DIR` represent the name of your
 project directory in the instructions provided below. If you've followed the
 instructions provided in this document, then the name of your project directory
@@ -1382,7 +1373,7 @@ is likely `cs1302-minesweeper-alpha`. While in your project parent
 directory, execute the following command:
 
 ```
-$ submit cs1302-minesweeper-alpha cs1302a
+$ submit cs1302-minesweeper-alpha csci-1302
 ```
 
 It is also a good idea to email a copy to yourself. To do this, simply execute
