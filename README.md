@@ -96,9 +96,9 @@ exhaustive list of steps that you may need to take to complete the project.
 
 **Planning:**
 
-- [ ] Plan how you will represent the Minesweeper board. Remember, the internal representation
+- [ ] Plan how you will represent the Minesweeper board. The internal representation
 most likely should not contain all of the characters that the user sees when the board is printed.
-You just need enough information that the print method can print the board properly.
+One idea of how to approach this is given under [suggestions](https://github.com/cs1302uga/cs1302-minesweeper-alpha#suggestions)
 - [ ] Write out test cases.
 
 **Implementing:**
