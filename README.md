@@ -94,38 +94,19 @@ exhaustive list of steps that you may need to take to complete the project.
 - [ ] Read it again! This time, you may be able to answer some of your own
       questions.
 
-<!-- **Frontend:**
+**Planning:**
 
-- [ ] On paper, decompose the visual elements of your application to identify
-      some of the objects you may need.
-- [ ] On paper, draw the scene graph for your app.
-- [ ] Identify opportunities for the creation of custom components.
-- [ ] Write some of the code to make your app look like what it needs to look like.
-- [ ] Use Git to stage and commit your changes often; create and merge branches,
-      as needed.
+- [ ] Plan how you will represent the Minesweeper board. Remember, the internal representation
+most likely should not contain all of the characters that the user sees when the board is printed.
+You just need enough information that the print method can print the board properly.
+- [ ] Write out test cases.
 
-**Backend:**
+**Implementing:**
 
-- [ ] Create any custom component classes.
-- [ ] On paper, hash out how you might store the list or lists of image URLs.
-- [ ] Write a method to retreive the JSON response string for a query to the iTunes 
-      Search API based on a query string.
-- [ ] Write a method that returns a list of URL strings based on a JSON response
-      string retrieved from the iTunes Search API.
-- [ ] Use Git to stage and commit your changes often; create and merge branches,
-      as needed.
-
-**Putting it all Together:**
-
-- [ ] Consider using a list or array to help you access the various `ImageView`
-      objects in your scene; making new `ImageView` objects all the time is 
-      _not_ reccommended.
-- [ ] Make the buttons work at a basic level (you can decide what basic is).
-- [ ] Make the progress bar work (requires careful consideration of the threading 
-      required by some of your app's event handlers).
-- [ ] Make the random-replacement work.
-- [ ] Use Git to stage and commit your changes often; create and merge branches,
-      as needed. -->
+- [ ] Type out the method signatures for each method listed in the 
+[functional requirements](https://github.com/cs1302uga/cs1302-minesweeper-alpha#functional-requirements)
+- [ ] Add proper Javadoc comments to all methods and both classes. Remember, if you
+can't describe, in detail, what each method does, you can't implement it.
 
 ## Project Description
 
