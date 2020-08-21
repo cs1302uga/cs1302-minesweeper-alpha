@@ -97,16 +97,25 @@ exhaustive list of steps that you may need to take to complete the project.
 **Planning:**
 
 - [ ] Plan how you will represent the Minesweeper board. The internal representation
-most likely should not contain all of the characters that the user sees when the board is printed.
-One idea of how to approach this is given under [suggestions](https://github.com/cs1302uga/cs1302-minesweeper-alpha#suggestions)
+      most likely should not contain all of the characters that the user sees when the board is printed.
+      One idea of how to approach this is given under [suggestions](https://github.com/cs1302uga/cs1302-minesweeper-alpha#suggestions)
 - [ ] Write out test cases.
+
+**Documenting:**
+
+- [ ] Type out the method signatures for each method listed in the 
+      [functional requirements](https://github.com/cs1302uga/cs1302-minesweeper-alpha#functional-requirements)
+- [ ] Add proper Javadoc comments to all methods and both classes. This will give you an opportunity to think
+      about each method a little bit more before you start writing the code. Also, these comments serve as
+      a convenient referencen while writing the code. Remember, if you
+      can't describe, in detail, what each method does, you can't implement it.
 
 **Implementing:**
 
-- [ ] Type out the method signatures for each method listed in the 
-[functional requirements](https://github.com/cs1302uga/cs1302-minesweeper-alpha#functional-requirements)
-- [ ] Add proper Javadoc comments to all methods and both classes. Remember, if you
-can't describe, in detail, what each method does, you can't implement it.
+- [ ] Start by declaring the instance variables of the `MinesweeperGame` class based on your chosen
+      board representation.
+- [ ] For testing and debugging purposes, it's a good idea to implement the `printMineField` method early
+      in the implementation phase.
 
 ## Project Description
 
