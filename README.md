@@ -980,7 +980,7 @@ something similar to the following code snippet:
 ```java
 try {
   File configFile = new File(seed);
-  Scanner configScanner = new Scanner(seedFile);
+  Scanner configScanner = new Scanner(configFile);
   // use Scanner here as usual
 } catch (FileNotFoundException e) {
   // handle the exception here
