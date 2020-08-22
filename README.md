@@ -927,7 +927,7 @@ status of `1` using the `echo $?` command.
    then use the following error message just before termination:
 
    ```
-   Seedfile Not Found Error: Cannot create game with FILENAME, because it cannot be be found
+   Seedfile Not Found Error: Cannot create game with FILENAME, because it cannot be found
                              or cannot be read due to permission.
 
    ```
@@ -970,8 +970,8 @@ To read the file, let us assume that we have the path to the file
 stored in a `String` object referred to with a variable called
 `seed` and use the following classes:
 
-* [`File`](https://docs.oracle.com/javase/8/docs/api/java/io/File.html)
-* [`Scanner`](https://docs.oracle.com/javase/8/docs/api/java/util/Scanner.html)
+* [`File`](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/File.html)
+* [`Scanner`](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Scanner.html)
 
 Most of you have used the `Scanner` class to read keyboard input from standard 
 input. Here, we will use it to read from a text file. This is accomplished using
