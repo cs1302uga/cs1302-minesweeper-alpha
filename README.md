@@ -119,6 +119,8 @@ exhaustive list of steps that you may need to take to complete the project.
 - [ ] Create seed files with various board dimensions. Test that your `printMineField` method works
       with each.
 - [ ] Implement `printWelcome`, `printWin`, `printLoss` using the banners given later in this document.
+- [ ] Implement the main game loop and the commands one at a time, testing each as you go.
+- [ ] Double check all output formatting and error conditions.
 
 ## Project Description
 
@@ -467,7 +469,8 @@ contents of a token are surrounded by `""` marks, then that token can
 only take on that literal value. If more than one literal value is accepted for
 a token, then the quoted literals are separated by `/`. If the
 contents of a token are surrounded by `()` marks, then that token can
-only take on a value of the type expressed in parentheses.
+only take on a value of the type expressed in parentheses. Note: the literal 
+values are case-sensitive. So, "ReVeal" is not the same as "reveal".
 
 #### Revealing a Square
 
