@@ -319,8 +319,9 @@ columns becomes multiple digits. In this case, padding should be added so that
 row numbers, column numbers, and mine field contents are padded with whitespace
 in a way that accomodates the multiple digit index values. Additionally, when
 padding is performed, **all affected index values and square contents are
-to be right aligned**. For example, let's assume we are playing a `12`-by-`5`
-game of Minesweeper. When the game starts, the interface should look like this:
+to be right aligned**. In other words, the padding is printed first. For example, 
+let's assume we are playing a `12`-by-`5` game of Minesweeper. When the game starts, 
+the interface should look like this:
 
 ```
 
@@ -391,7 +392,11 @@ minesweeper-alpha:
 ```
 
 In this example, padding was required for the row index values, column index
-values, and the square contents.
+values, and the square contents. Note: there are 4 total spaces allocated for each
+printed value (row index, column index, and cell contents). There are two spaces for 
+the value itself and a single space on each side of the contents. If this were a `10`-by-`10` 
+game, there would have been 3 spaces for each printed value. Take a few minutes to 
+understand why this is true.
 
 **Before you start writing the code to format your output,** please
 read the [Format Strings](#format-strings) and [Number of Digits](#number-of-digits)
@@ -1550,7 +1555,7 @@ n =  211; p = 3.0000
 n = 2111; p = 4.0000
 ```
 
-And there it is! We know have the number of digits for each number. This could
+And there it is! We now have the number of digits for each number. This could
 be useful for determining a desired _width_ for a format string variable (of course,
 you would need to make the number an `int` before it's usable there).
 
