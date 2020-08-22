@@ -116,6 +116,9 @@ exhaustive list of steps that you may need to take to complete the project.
       board representation.
 - [ ] For testing and debugging purposes, it's a good idea to implement the `printMineField` method early
       in the implementation phase.
+- [ ] Create seed files with various board dimensions. Test that your `printMineField` method works
+      with each.
+- [ ] Implement `printWelcome`, `printWin`, `printLoss` using the banners given later in this document.
 
 ## Project Description
 
