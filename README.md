@@ -121,6 +121,7 @@ exhaustive list of steps that you may need to take to complete the project.
 - [ ] Implement `printWelcome`, `printWin`, `printLoss` using the banners given later in this document.
 - [ ] Implement the main game loop and the commands one at a time, testing each as you go.
 - [ ] Double check all output formatting and error conditions.
+- [ ] Implement the `isWon` method with the proper win conditions.
 
 ## Project Description
 
