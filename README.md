@@ -87,21 +87,21 @@ items in this checklist may not make sense until you have read the entire projec
 including the appendices. These steps are suggesions and, therefore, do not constitute an
 exhaustive list of steps that you may need to take to complete the project.
 
-**Preparation:**
+**Preparation:** (Finish by Thursday, August 27th)
 
 - [ ] Read through the entire project description, including the appendices,
       **and write down questions as you go.**
 - [ ] Read it again! This time, you may be able to answer some of your own
       questions.
 
-**Planning:**
+**Planning:** (Finish by Friday, August 28th)
 
 - [ ] Plan how you will represent the Minesweeper board. The internal representation
       most likely should not contain all of the characters that the user sees when the board is printed.
       One idea of how to approach this is given under [suggestions](https://github.com/cs1302uga/cs1302-minesweeper-alpha#suggestions)
 - [ ] Write out test cases.
 
-**Documenting:**
+**Documenting:** (Finish by Sunday, August 30th)
 
 - [ ] Type out the method signatures for each method listed in the 
       [functional requirements](https://github.com/cs1302uga/cs1302-minesweeper-alpha#functional-requirements)
@@ -110,7 +110,7 @@ exhaustive list of steps that you may need to take to complete the project.
       a convenient referencen while writing the code. Remember, if you
       can't describe, in detail, what each method does, you can't implement it.
 
-**Implementing:**
+**Implementing:** (Finish by Monday, September 7th)
 
 - [ ] Start by declaring the instance variables of the `MinesweeperGame` class based on your chosen
       board representation.
@@ -122,6 +122,21 @@ exhaustive list of steps that you may need to take to complete the project.
 - [ ] Implement the main game loop and the commands one at a time, testing each as you go.
 - [ ] Double check all output formatting and error conditions.
 - [ ] Implement the `isWon` method with the proper win conditions.
+- [ ] Implement any remaining methods
+
+**Testing** (Finish by Thursday, September 10th)
+
+- [ ] Create seed files for testing. Be sure to vary the dimensions of the board, the number of mines and the
+      mine locations. Also be sure to include invalid configurations.
+- [ ] Create input and output files for each seed file. Run your code as described later in this document. In
+      the testing phase, try to avoid entering commands manually while playing the game. The commands should come
+      from the input files at this point.
+      
+**Review** (Finish by Friday, September 11th)
+
+- [ ] Do one final pass through the project document making sure you didn't miss anything.
+- [ ] Run your code through your test cases one last time.
+- [ ] Submit your code to Odin.
 
 ## Project Description
 
