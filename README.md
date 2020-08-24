@@ -917,7 +917,7 @@ format:
    indicating the location of each mine.
    
 **NOTE:** In Java, the term _white-space_ refers to one or more characters in a sequence that
-each satisfy the conditions outlined in [`Character.isWhitespace`](https://docs.oracle.com/javase/8/docs/api/java/lang/Character.html#isWhitespace-char-).
+each satisfy the conditions outlined in [`Character.isWhitespace`](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Character.html#isWhitespace(char)).
 You do not need to check these conditions specifically nor use this method
 if you use the built-in tokenizing provided by the `Scanner` class.
 
@@ -1311,7 +1311,7 @@ description of each extra credit that should be checked.
   and that the value of `MINES` will be strictly less than `m * n`.
 
   Use of the
-  [`PrintWriter`](https://docs.oracle.com/javase/8/docs/api/java/io/PrintWriter.html)
+  [`PrintWriter`](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/PrintWriter.html)
   class is reccommended. You are likely familiar with printing to standard
   output via `System.out`. The `PrintWriter` class allows you to create an
   object for arbitrary file output with the same interface that you are used
@@ -1532,7 +1532,7 @@ System.out.printf(format, 7);   // "!  7!"
 ```
 
 You can do a lot with format strings! The full Java specification for format strings
-can be found [here](https://docs.oracle.com/javase/8/docs/api/java/util/Formatter.html).
+can be found [here](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Formatter.html).
 
 ### Number of Digits
 
