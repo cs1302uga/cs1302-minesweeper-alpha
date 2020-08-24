@@ -1312,7 +1312,7 @@ description of each extra credit that should be checked.
 
   Use of the
   [`PrintWriter`](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/PrintWriter.html)
-  class is reccommended. You are likely familiar with printing to standard
+  class is recommended. You are likely familiar with printing to standard
   output via `System.out`. The `PrintWriter` class allows you to create an
   object for arbitrary file output with the same interface that you are used
   to (i.e., it provides methods like `print`, `println`, etc.).
