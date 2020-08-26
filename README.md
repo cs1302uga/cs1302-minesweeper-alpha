@@ -1061,13 +1061,11 @@ The actual functionality is tested using test cases.
   * **`void promptUser()`:** This method should print
     the game prompt to standard output and interpret user input
     from standard input, as described earlier in this document.
-    Instead of writing the code to check the mine field in this method,
-    you should call the `isWon` and `isLost` methods described in these
-    requirements instead.
+    Based on the command received, this method should delegate (i.e., call other
+    methods) to handle the work.
 
-  * **`boolean isWon()` and `boolean isLost()`:** These
-    methods should return `true` if, and only if, all the conditions
-    are met to win or lose the game, respectively, as defined earlier in
+  * **`boolean isWon()`:** This method should return `true` if, and only if, 
+    all the conditions are met to win the game as defined earlier in
     this document.
 
   * **`void printWin()` and ``void printLoss()``:** These 
