@@ -1023,6 +1023,27 @@ You may need to import
 [`FileNotFoundException`](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/FileNotFoundException.html)
 (or use its fully qualified name) if adapting the code snippet above.
 
+## Minesweeper Oracle
+
+If at any time while you are writing your Minesweeper program you find yourself wondering 
+"How should my program respond if \_\_\_\_\_ happens", you can consult the provided 
+Minesweeper oracle. The oracle is an executable-only (no code provided) version of the 
+instructors' solution to the Minesweeper project and is available on Odin. To run the oracle, you
+need to provide the same command-line arguments that you would to your version of Minesweeper.
+You only need to change the start of the command. Here is the exact syntax:
+
+```
+minesweeper-oracle cs1302.game.MinesweeperDriver --seed some/path/to/seed.txt < optional/path/to/input.txt
+```
+
+where `some/path/to/seed.txt` and `optional/path/to/input.txt` are replaced with paths to real seed
+and input files, respectively. The Minesweeper oracle also includes the `--gen` option to
+generate seed files. Feel free to use this to generate seed files for testing.
+
+If you find a bug in the oracle or believe there to be an inconsistency between what the oracle
+says and what this document says, please let your instructors know in a Piazza post. This is
+the first semester we have used the oracle so we may have to iron out a few kinks.
+
 ## Project Requirements & Grading
 
 This assignment is worth 100 points. The lowest possible grade is 0, and the
