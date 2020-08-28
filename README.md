@@ -1261,8 +1261,8 @@ point total. That is, they are all or nothing (no partial credit).
   by the graders and added to the class path, as needed, when compiling other files.
 
 * **(100 points) Development Environment:** This project must be implemented
-  in Java 8, and it *must compile and run* correctly on Odin using the specific
-  version of Java 8 that is setup according to the instructions provided
+  in Java 11, and it *must compile and run* correctly on Odin using the specific
+  version of Java 11 that is setup according to the instructions provided
   by your instructor. Graders are instructed not to modify source code in
   an attempt to to make a submission compile.
 
