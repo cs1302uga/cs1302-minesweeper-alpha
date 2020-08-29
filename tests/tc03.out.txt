@@ -1,3 +1,0 @@
-The following message should be printed to standard out:
-
-Seedfile Value Error: Cannot create a mine field with that many rows and/or columns!
