@@ -151,7 +151,8 @@ minesweeper-alpha:
  4 |   |   |   |   |   |
      0   1   2   3   4 
 
-minesweeper-alpha: 
+minesweeper-alpha: Input Error: Index out of bounds!
+
  Rounds Completed: 13
 
  0 | F | 2 | 1 | 0 | 0 |
@@ -161,7 +162,8 @@ minesweeper-alpha:
  4 |   |   |   |   |   |
      0   1   2   3   4 
 
-minesweeper-alpha: 
+minesweeper-alpha: Input Error: Index out of bounds!
+
  Rounds Completed: 13
 
  0 | F | 2 | 1 | 0 | 0 |
@@ -341,6 +343,26 @@ minesweeper-alpha:
  4 | 0 | 0 | 1 | 1 | F |
      0   1   2   3   4 
 
+minesweeper-alpha: 
+ Rounds Completed: 31
+
+ 0 | F | 2 | 1 | 0 | 0 |
+ 1 | 2 | F | 2 | 1 | 0 |
+ 2 | 1 | 2 | F | 2 | 1 |
+ 3 | 0 | 1 | 2 | F | 1 |
+ 4 | 0 | 0 | 1 | 1 | ? |
+     0   1   2   3   4 
+
+minesweeper-alpha: 
+ Rounds Completed: 32
+
+ 0 | F | 2 | 1 | 0 | 0 |
+ 1 | 2 | F | 2 | 1 | 0 |
+ 2 | 1 | 2 | F | 2 | 1 |
+ 3 | 0 | 1 | 2 | F | 1 |
+ 4 | 0 | 0 | 1 | 1 | 1 |
+     0   1   2   3   4 
+
  ░░░░░░░░░▄░░░░░░░░░░░░░░▄░░░░ "So Doge"
  ░░░░░░░░▌▒█░░░░░░░░░░░▄▀▒▌░░░
  ░░░░░░░░▌▒▒█░░░░░░░░▄▀▒▒▒▐░░░ "Such Score"
@@ -359,5 +381,5 @@ minesweeper-alpha:
  ░░▀▄▒▒▒▒▒▒▒▒▒▒▒░▒░▒░▒▄▒▒▒▒▌░░
  ░░░░▀▄▒▒▒▒▒▒▒▒▒▒▄▄▄▀▒▒▒▒▄▀░░░ CONGRATULATIONS!
  ░░░░░░▀▄▄▄▄▄▄▀▀▀▒▒▒▒▒▄▄▀░░░░░ YOU HAVE WON!
- ░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▀▀░░░░░░░░ SCORE: 83.33
+ ░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▀▀░░░░░░░░ SCORE: 78.13
 
