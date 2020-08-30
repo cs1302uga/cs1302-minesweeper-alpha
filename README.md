@@ -834,6 +834,9 @@ The conditions for winning are outlined earlier in this document,
 
 #### Displaying Errors
 
+Any errors related to seed files should be printed to standard error (`System.err`) and
+errors related to user commands should be printed to standard output (`System.out`).
+
 If the number of rows and columns specified in a seed file is not in proper bounds,
 then the following message should be displayed and the program should exit
 using `System.exit(3)` (after the program terminates, a user should be able to confirm the 
