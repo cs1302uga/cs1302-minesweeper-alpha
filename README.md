@@ -96,6 +96,8 @@ exhaustive list of steps that you may need to take to complete the project.
 
 **Planning:** (Finish by Friday, August 28th)
 
+- [ ] Play the Minesweeper game using the provided oracle. This will help you see how to run the program
+      and allow you to see expected input / output for a variety of scenarios.
 - [ ] Plan how you will represent the Minesweeper board. The internal representation
       most likely should not contain all of the characters that the user sees when the board is printed.
       One idea of how to approach this is given under [suggestions](https://github.com/cs1302uga/cs1302-minesweeper-alpha#suggestions)
