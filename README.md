@@ -5,7 +5,9 @@
 
 ![Unrelated image of mine."](mine.jpg)
 
-**DUE FRI 2020-09-11 (Sep 11) @ 11:55 PM.**
+~~**DUE FRI 2020-09-11 (Sep 11) @ 11:55 PM.**~~
+
+**DUE SUN 2020-09-13 (Sep 13) @ 11:55 PM.**
 
 This repository contains the skeleton code for the Minesweeper Alpha project
 assigned to the students in the Fall 2020 CSCI 1302 classes
