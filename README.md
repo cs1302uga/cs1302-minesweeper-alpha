@@ -1423,6 +1423,8 @@ directory, execute the following command:
 $ submit cs1302-minesweeper-alpha csci-1302
 ```
 
+<!--
+
 It is also a good idea to email a copy to yourself. To do this, simply execute
 the following command, replacing the email address with your email address:
 
@@ -1430,6 +1432,7 @@ the following command, replacing the email address with your email address:
 $ tar zcvf cs1302-minesweeper-alpha.tar.gz cs1302-minesweeper-alpha
 $ mutt -s "[cs1302] cs1302-minesweeper-alpha" -a cs1302-minesweeper-alpha.tar.gz -- your@email.com < /dev/null
 ```
+-->
 
 If you have any problems submitting your project then please email your
 instructor as soon as possible. However, emailing him about something like this
