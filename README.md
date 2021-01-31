@@ -1,5 +1,5 @@
 
-# CSCI 1302 - Minesweeper Alpha v2020.fa
+# CSCI 1302 - Minesweeper Alpha v2021.sp
 
 ![Approved for: Fall 2020](https://img.shields.io/badge/Approved%20for-Fall%202020-blueviolet)
 
@@ -10,7 +10,7 @@
 **DUE SUN 2020-09-13 (Sep 13) @ 11:55 PM.**
 
 This repository contains the skeleton code for the Minesweeper Alpha project
-assigned to the students in the Fall 2020 CSCI 1302 classes
+assigned to the students in the Spring 2021 CSCI 1302 classes
 at the University of Georgia. 
 
 **Please read the entirety of this file before beginning your project.**
@@ -63,23 +63,33 @@ to the copyright notice and licensing information at the bottom of this document
 
 ## Course-Specific Learning Outcomes
 
-* **LO1.a:** Navigate and modify files, directories, and permissions in a multi-user Unix-like environment.
-* **LO1.b:** (Partial) Execute, redirect, pipe, and manage programs/processes in a multi-user Unix-like environment.
-* **LO1.c:** Create and modify text files and source code using a powerful terminal-based text editor such as Emacs or Vi.
-* **LO1.d:** (Partial)	Use shell commands to compile new and existing software solutions that are organized into multi-level 
-  packages and have external dependencies.
-* **LO2.b:** (Partial) Define, throw, and propagate exceptions appropriately in a software solution.
-* **LO3.a:** Create and update source code that adheres to established style guidelines.
-* **LO3.b:** (Partial) Create class, interface, method, and inline documentation that satisfies a set of requirements.
-* **LO7.c:** (Partial) Use common abstract data types and structures, including lists, queues, arrays, and stacks in solving 
-  typical problems.
+* **LO1.a:** Navigate and modify files, directories, and permissions in a 
+  multi-user Unix-like environment.
+* **LO1.b:** (Partial) Execute, redirect, pipe, and manage programs/processes
+  in a multi-user Unix-like environment.
+* **LO1.c:** Create and modify text files and source code using a powerful 
+  terminal-based text editor such as Emacs or Vi.
+* **LO1.d:** (Partial)	Use shell commands to compile new and existing software 
+  solutions that are organized into multi-level packages and have external 
+  dependencies.
+* **LO2.b:** (Partial) Define, throw, and propagate exceptions appropriately in 
+  a software solution.
+* **LO3.a:** Create and update source code that adheres to established style 
+  guidelines.
+* **LO3.b:** (Partial) Create class, interface, method, and inline documentation 
+  that satisfies a set of requirements.
+* **LO7.c:** (Partial) Use common abstract data types and structures, including 
+  lists, queues, arrays, and stacks in solving typical problems.
   
 ## Updates
 
-Updates will be posted here.
-If there has been an update and you have already cloned the project to Odin,
+**Updates will be posted in this section.**
+If there is an update and you have already cloned the project to Odin,
 then you can update your copy of the project using the `$ git pull`
-command while inside of your project directory. 
+command while inside of your project directory. In many cases, this just
+updates your copy of the `README.md` file; however, it is possible for
+an update to affect other files as well. If other files are affected, then
+they will be mentioned in the update summary.
 
 ## Suggested Checklist
 
@@ -89,40 +99,46 @@ items in this checklist may not make sense until you have read the entire projec
 including the appendices. These steps are suggesions and, therefore, do not constitute an
 exhaustive list of steps that you may need to take to complete the project.
 
-**Preparation:** (Finish by Thursday, August 27th)
+**Preparation:** (Finish by TODO)
 
 - [ ] Read through the entire project description, including the appendices,
       **and write down questions as you go.**
 - [ ] Read it again! This time, you may be able to answer some of your own
       questions.
 
-**Planning:** (Finish by Friday, August 28th)
+**Planning:** (Finish by TODO)
 
-- [ ] Play the Minesweeper game using the provided oracle. This will help you see how to run the program
-      and allow you to see expected input / output for a variety of scenarios.
+- [ ] Play the Minesweeper game using the provided oracle. This will help you see 
+      how to run the program and allow you to see expected input / output for a 
+	  variety of scenarios.
 - [ ] Plan how you will represent the Minesweeper board. The internal representation
-      most likely should not contain all of the characters that the user sees when the board is printed.
-      One idea of how to approach this is given under [suggestions](https://github.com/cs1302uga/cs1302-minesweeper-alpha#suggestions)
+      most likely should not contain all of the characters that the user sees when
+	  the board is printed (e.g., you don't need to include vertical bars or index
+	  numbers in your array since they can be printed as you loop over your array).
+      One idea of how to approach this is given under 
+	  [suggestions](#suggestions).
 - [ ] Write out test cases.
 
 **Documenting:** (Finish by Sunday, August 30th)
 
 - [ ] Type out the method signatures for each method listed in the 
-      [functional requirements](https://github.com/cs1302uga/cs1302-minesweeper-alpha#functional-requirements)
-- [ ] Add proper Javadoc comments to all methods and both classes. This will give you an opportunity to think
-      about each method a little bit more before you start writing the code. Also, these comments serve as
+      [functional requirements](#functional-requirements)
+- [ ] Add proper Javadoc comments to all methods and both classes. 
+      This will give you an opportunity to think about each method a little bit 
+	  more before you start writing the code. Also, these comments serve as
       a convenient referencen while writing the code. Remember, if you
       can't describe, in detail, what each method does, you can't implement it.
 
 **Implementing:** (Finish by Monday, September 7th)
 
-- [ ] Start by declaring the instance variables of the `MinesweeperGame` class based on your chosen
-      board representation.
-- [ ] For testing and debugging purposes, it's a good idea to implement the `printMineField` method early
-      in the implementation phase.
-- [ ] Create seed files with various board dimensions. Test that your `printMineField` method works
-      with each.
-- [ ] Implement `printWelcome`, `printWin`, `printLoss` using the banners given later in this document.
+- [ ] Start by declaring the instance variables of the `MinesweeperGame` class based 
+      on your chosen board representation.
+- [ ] For testing and debugging purposes, it's a good idea to implement the 
+      `printMineField` method early in the implementation phase.
+- [ ] Create seed files with various board dimensions. Test that your 
+      `printMineField` method works with each.
+- [ ] Implement `printWelcome`, `printWin`, `printLoss` using the banners given
+      later in this document.
 - [ ] Implement the main game loop and the commands one at a time, testing each as you go.
 - [ ] Double check all output formatting and error conditions.
 - [ ] Implement the `isWon` method with the proper win conditions.
@@ -130,15 +146,18 @@ exhaustive list of steps that you may need to take to complete the project.
 
 **Testing** (Finish by Thursday, September 10th)
 
-- [ ] Create seed files for testing. Be sure to vary the dimensions of the board, the number of mines and the
-      mine locations. Also be sure to include invalid configurations.
-- [ ] Create input and output files for each seed file. Run your code as described later in this document. In
-      the testing phase, try to avoid entering commands manually while playing the game. The commands should come
+- [ ] Create seed files for testing. Be sure to vary the dimensions of the board, 
+      the number of mines and the mine locations. Also be sure to include invalid 
+	  configurations.
+- [ ] Create input and output files for each seed file. Run your code as described 
+      later in this document. In the testing phase, try to avoid entering commands 
+	  manually while playing the game. The commands should come
       from the input files at this point.
       
 **Review** (Finish by Friday, September 11th)
 
-- [ ] Do one final pass through the project document making sure you didn't miss anything.
+- [ ] Do one final pass through the project document making sure you didn't 
+      miss anything.
 - [ ] Run your code through your test cases one last time.
 - [ ] Submit your code to Odin.
 
@@ -242,15 +261,14 @@ to code. We will leave it up to the user to be smart about how they play!
 
 <a id="win-conditions">
 
-The game is won when **all** of the following conditions are met:
+The game is won when **both** of the following conditions are met:
 
 * All squares containing a mine are marked as _definitely_ containing a mine; and
-
 * All squares not containing a mine are revealed.
 
 At the end of the game, the player is presented with a score. Let `rows`, `cols`,
 and  `rounds` denote the number of rows in the grid, columns in the grid, and
-number of rounds completed, respectively. A round is defined as one successful
+number of rounds completed, respectively. A **round** is defined as one successful
 iteration of the main game loop. Therefore, only valid commands result in a round 
 being consumed. To be clear, _rounds_ is not quite the same as the number of commands 
 entered (some may be invalid); however, it should be less than or equal to that number.
