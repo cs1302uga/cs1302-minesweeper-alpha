@@ -511,7 +511,7 @@ should be displayed and the program should terminate gracefully:
 Yeah, that's old school ASCII art. Please note that the first and last lines are
 blank. Also note that the second line (containing "oh no...") begins with a single
 white space. A copy of this game over text, excluding the first and last blank
-linnes, is contained in [`resources/gameover.txt`](resources/gameover.txt).
+lines, is contained in [`resources/gameover.txt`](resources/gameover.txt).
 
 
 The program should exit gracefully. This means that exit code passed to
@@ -785,7 +785,9 @@ to the player and the game should exit gracefully:
 
 Note that the first and last lines are blank and that the beginning of the
 other lines contain a single white space. You should replace the score in the
-output with the actual calculated score (mentioned above).
+output with the actual calculated score (mentioned above). A copy of this game won
+text, excluding the first and last blank lines as well as the score value, is
+contained in [`resources/gamewon.txt`](resources/gamewon.txt).
 
 The conditions for winning are outlined earlier in this document,
 [here](#win-conditions).
