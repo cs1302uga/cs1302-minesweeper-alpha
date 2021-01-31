@@ -302,7 +302,7 @@ once and only once:
 
 Take care when printing this message out to the screen. Depending on how you implement this
 part, you may need to escape some of the characters in order for them to show up correctly.
-A copy of this logo is contained in this [`README.md`](README.md) file and in
+A copy of this welcome banner is contained in this [`README.md`](README.md) file and in
 [`resources/welcome.txt`](resources/welcome.txt).
 
 In this Minesweeper game, the initial game configuration is loaded from a
@@ -510,7 +510,9 @@ should be displayed and the program should terminate gracefully:
 
 Yeah, that's old school ASCII art. Please note that the first and last lines are
 blank. Also note that the second line (containing "oh no...") begins with a single
-white space.
+white space. A copy of this game over text, excluding the first and last blank
+linnes, is contained in [`resources/gameover.txt`](resources/gameover.txt).
+
 
 The program should exit gracefully. This means that exit code passed to
 [`System.exit`](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/System.html#exit(int))
