@@ -37,8 +37,8 @@ at the University of Georgia.
     * [Help Command](#help-command)
     * [Quit Command](#quit-command)
     * [Player Wins](#player-wins)
-    * [Displaying Errors](#displaying-errors)
   * [Seed Files](#seed-files)
+  * [Displaying Errors](#displaying-errors)
 * [Project Requirements & Grading](#project-requirements--grading)
   * [Functional Requirements](#functional-requirements)
   * [Non-Functional Requirements](#non-functional-requirements)
@@ -424,9 +424,10 @@ of the last sub-section with one set of code.
 #### Command Syntax Format
 
 In the sections below, we describe the syntax format that each command must
-adhere to in order to be considered correct. Syntactically incorrect commands are
-considered an error. Information about displaying errors to the player is
-contained in a section below.
+adhere to in order to be considered correct. Unknown commands and commands
+that are known but syntactically incorrect are considered invalid.
+Information about displaying errors related to invalid commands is
+contained in [a later section](#displaying-errors) in this document.
 
 **Please do not confuse this syntax with regular expressions, a topic that
 will not be covered in this course.** You are NOT meant to put this weird
@@ -495,7 +496,8 @@ lose the game. Also, since the total number of mines in the 8 cells directly
 adjacent to square (1,2) is 2, the number 2 is now placed in that cell.
 
 If the player reveals a square containing a mine, then the following message
-should be displayed and the program should terminate gracefully:
+should be displayed and the program should exit *gracefully* (as defined near
+the end of this section):
 
 ```
 
@@ -513,16 +515,25 @@ blank. Also note that the second line (containing "oh no...") begins with a sing
 white space. A copy of this game over text, excluding the first and last blank
 lines, is contained in [`resources/gameover.txt`](resources/gameover.txt).
 
+<a id="graceful-exit">
 
-The program should exit gracefully. This means that exit code passed to
+**Graceful Exit:** When we say that a program should exit *gracefully*, we mean that
+the *exit status* code used in the call to
 [`System.exit`](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/System.html#exit(int))
-should be `0` (i.e., zero).
+is `0` (i.e., zero).
 
-If your program exits from a "game over" with any return codes other than zero
-(e.g., if your game crashes), then some points will be deducted. After the program
-terminates, a user should be able to confirm the exit status of `0` using `echo $?`
-Note that using `echo $?` a second time would show the exit status of the first `echo`
-command; you need to rerun your program before checking the exit status again.
+* If a *graceful* exit is expected and your pour program exits for any reason
+  with an exit status other than `0` (e.g., if your game crashes), then some
+  points will be deducted from your grade.
+
+* Immediately after any program terminates and returns to the terminal shell,
+  a user can inspect what exit code was used by executing the following command:
+  ```
+  $ echo $?
+  ```
+  Note that using `echo $?` a second time would show the exit status of the
+  first `echo` command; you would need to rerun your program and cause it to
+  exit in order to check the exit status again.
 
 #### Mark Command
 
@@ -750,13 +761,14 @@ Bye!
 ```
 
 After the player correctly entered the command `q`, the game
-displayed the goodbye message and the program exited gracefully.
-
+displayed the goodbye message and the program exited *gracefully*
+(as defined elsewhere in this document).
 
 #### Player Wins
 
 When the player wins the game, the following message should be displayed
-to the player and the game should exit gracefully:
+to the player and the game should exit *gracefully* (as defined
+elsewhere in this document):
 
 ```
 
@@ -792,77 +804,6 @@ contained in [`resources/gamewon.txt`](resources/gamewon.txt).
 The conditions for winning are outlined earlier in this document,
 [here](#win-conditions).
 
-#### Displaying Errors
-
-Any errors related to seed files should be printed to standard error (`System.err`) and
-errors related to user commands should be printed to standard output (`System.out`).
-
-If the number of rows and columns specified in a seed file is not in proper bounds,
-then the following message should be displayed and the program should exit
-using `System.exit(3)` (after the program terminates, a user should be able to confirm the
-exit status of `3` using `echo $?`.):
-
-```
-
-Seedfile Value Error: Cannot create a mine field with that many rows and/or columns!
-```
-
-Note that the first line is blank.
-
-If a command entered by the player is incorrect or not recognized, then the following
-message should be displayed to the player **and a round should NOT be consumed**:
-
-```
-
-Input Error: Command not recognized!
-```
-
-Note that the first line is blank.
-
-Let's go back to our `10`-by-`10` example. Suppose that the player either leaves the
-prompt blank or enters in some command that is not recognized.
-Here is an example of what that might look like.
-
-```
-
- Rounds Completed: 0
-
- 0 |   |   |   |   |   |   |   |   |   |   |
- 1 |   |   |   |   |   |   |   |   |   |   |
- 2 |   |   |   |   |   |   |   |   |   |   |
- 3 |   |   |   |   |   |   |   |   |   |   |
- 4 |   |   |   |   |   |   |   |   |   |   |
- 5 |   |   |   |   |   |   |   |   |   |   |
- 6 |   |   |   |   |   |   |   |   |   |   |
- 7 |   |   |   |   |   |   |   |   |   |   |
- 8 |   |   |   |   |   |   |   |   |   |   |
- 9 |   |   |   |   |   |   |   |   |   |   |
-     0   1   2   3   4   5   6   7   8   9
-
-minesweeper-alpha: meh
-
-Input Error: Command not recognized!"
-
- Rounds Completed: 0
-
- 0 |   |   |   |   |   |   |   |   |   |   |
- 1 |   |   |   |   |   |   |   |   |   |   |
- 2 |   |   |   |   |   |   |   |   |   |   |
- 3 |   |   |   |   |   |   |   |   |   |   |
- 4 |   |   |   |   |   |   |   |   |   |   |
- 5 |   |   |   |   |   |   |   |   |   |   |
- 6 |   |   |   |   |   |   |   |   |   |   |
- 7 |   |   |   |   |   |   |   |   |   |   |
- 8 |   |   |   |   |   |   |   |   |   |   |
- 9 |   |   |   |   |   |   |   |   |   |   |
-     0   1   2   3   4   5   6   7   8   9
-
-minesweeper-alpha:
-```
-
-After the player entered the unknown command `meh`, the state of
-the game updates (e.g., number of rounds completed, the grid, etc.), the
-error message is displayed, and the round resumes.
 
 ### Seed Files
 
@@ -904,44 +845,6 @@ The following seed files are valid and contain the same information:
     10    10 2
 0       0 1      1
 ```
-
-#### Errors Related to Seed Files
-
-There are some errors that can occur with seed files. For the errors listed
-below, the program should exit with exit `System.exit(1)` and the associated
-error message should be displayed to standard error (i.e., using `System.err` instead
-of `System.out`). After the program terminates, a user should be able to confirm the exit
-status of `1` using the `echo $?` command.
-
-* **If a seed file cannot be read because it cannot be found or cannot be read due to permission,**
-   then use the following error message just before termination:
-
-   ```
-   Seedfile Not Found Error: Cannot create game with FILENAME, because it cannot be found
-                             or cannot be read due to permission.
-
-   ```
-
-   Note that there are three lines and the third line is empty. Also, be sure to replace `FILENAME` with
-   the actual name of the file.
-
- * **If a seed file is not formatted correctly,** then use the following
-   error message just before termination:
-
-   ```
-   Seedfile Format Error: Cannot create game with FILENAME, because it is not formatted correctly.
-
-   ```
-
-   Note that the second line is empty. Also, be sure to replace `FILENAME` with
-   the actual name of the file.
-
-   A seed file is also considered to be malformed
-   if the number of mines exceeds the number of squares in
-   the grid, and if a mine location is specified as being outside of the grid.
-   If the grid size is not an acceptable grid size, then use the error and
-   exit status specified in the [Displaying Errors](#displaying-errors)
-   section instead of the message and exit status above.
 
 An example seed file is present in the project materials. In order to run
 your program with the seed file, you should be able to use the following
@@ -985,6 +888,60 @@ try {
 You may need to import
 [`FileNotFoundException`](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/FileNotFoundException.html)
 (or use its fully qualified name) if adapting the code snippet above.
+
+### Displaying Errors
+
+All error messages should be printed to standard error (`System.err`)
+with one blank line preceeding the line with the error message.
+In some cases, an error message should cause the program
+to terminate. In such cases, an integer will be specificied that
+you are required to use the specific exit status number in your call to
+[`System.exit`](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/System.html#exit(int)).
+If you let `errorMessage` denote an error message and `exitStatus` denote
+an exit status, then here is some code that exactly illustrates what needs
+to happen for error messages that exit the program:
+
+```java
+System.err.println();
+System.err.println(errorMessage);
+System.exit(exitStatus);
+```
+
+If an error does exit the program, then the last line in the code above
+should be omitted.
+
+Here is a list of the different errors that can occur in the program:
+
+* **Invalid Usage Error:** If your program detects encounters invalid command-line
+  arguments or no command-line arguments, then the error message and exit status
+  in the table near the end of this section should be used.
+
+* **Seed File Not Found Error:** If your program is not able to read the seed
+  file that is specified by the user via a command-line argument due to a
+  `FileNotFoundException`, then the error message and exit status
+  in the table near the end of this section should be used. Note that `<message>`
+  (including the angle brackets) in the error message text should be
+  replaced with the `String` returned by the exception object's `getMessage()`
+  method.
+
+* **Seed File Malformed Error:** If a
+
+* **Invalid Command Error:** While the game is running, if a command entered by
+  the player is invalid or not recognized, then the error message in the table
+  near the end of this section should be used. For this kind of error, the
+  program **should NOT exit**, and **a round should NOT be consumed** (i.e.,
+  your counter for the number of rounds should not increase). After the error
+  message is displayed, the round is essentially restarted and the number of rounds,
+  the grid, and the prompt should be displayed again.
+
+Here is the table that summarizes the different error messages and exit status codes:
+
+| Error                         | Error Message                          | Exit Status |
+|-------------------------------|----------------------------------------|-------------|
+| **Invalid Usage Error**       | `Seed File Not Found Error: <message>` | `1`         |
+| **Seed File Not Found Error** | `Seed File Not Found Error: <message>` | `2`         |
+| **Seed File Malformed Error** | `Seed File Malformed Error: <message>` | `3`         |
+| **Invalid Command Error:**    | `Invalid Command Error!`               | NA          |
 
 ## Minesweeper Oracle
 
