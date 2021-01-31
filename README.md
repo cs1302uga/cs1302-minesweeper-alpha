@@ -302,6 +302,8 @@ once and only once:
 
 Take care when printing this message out to the screen. Depending on how you implement this
 part, you may need to escape some of the characters in order for them to show up correctly.
+A copy of this logo is contained in this [`README.md`](README.md) file and in
+[`resources/welcome.txt`](resources/welcome.txt).
 
 In this Minesweeper game, the initial game configuration is loaded from a
 [seed file](#seed-files); the player provides the path to a *seed file* when as
