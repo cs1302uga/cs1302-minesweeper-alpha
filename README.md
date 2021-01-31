@@ -11,7 +11,7 @@
 
 This repository contains the skeleton code for the Minesweeper Alpha project
 assigned to the students in the Spring 2021 CSCI 1302 classes
-at the University of Georgia. 
+at the University of Georgia.
 
 **Please read the entirety of this file before beginning your project.**
 
@@ -24,7 +24,7 @@ at the University of Georgia.
 * [Updates](#updates)
 * [Suggested Checklist](#suggested-checklist)
 * [Project Description](#project-description)
-  * [Note Concerning No Recursion](#note-concerning-no-recursion) 
+  * [Note Concerning No Recursion](#note-concerning-no-recursion)
   * [Minesweeper Overview](#minesweeper-overview)
   * [The Grid and Interface](#the-grid-and-interface)
     * [The Grid](#the-grid)
@@ -63,24 +63,24 @@ to the copyright notice and licensing information at the bottom of this document
 
 ## Course-Specific Learning Outcomes
 
-* **LO1.a:** Navigate and modify files, directories, and permissions in a 
+* **LO1.a:** Navigate and modify files, directories, and permissions in a
   multi-user Unix-like environment.
 * **LO1.b:** (Partial) Execute, redirect, pipe, and manage programs/processes
   in a multi-user Unix-like environment.
-* **LO1.c:** Create and modify text files and source code using a powerful 
+* **LO1.c:** Create and modify text files and source code using a powerful
   terminal-based text editor such as Emacs or Vi.
-* **LO1.d:** (Partial)	Use shell commands to compile new and existing software 
-  solutions that are organized into multi-level packages and have external 
+* **LO1.d:** (Partial)	Use shell commands to compile new and existing software
+  solutions that are organized into multi-level packages and have external
   dependencies.
-* **LO2.b:** (Partial) Define, throw, and propagate exceptions appropriately in 
+* **LO2.b:** (Partial) Define, throw, and propagate exceptions appropriately in
   a software solution.
-* **LO3.a:** Create and update source code that adheres to established style 
+* **LO3.a:** Create and update source code that adheres to established style
   guidelines.
-* **LO3.b:** (Partial) Create class, interface, method, and inline documentation 
+* **LO3.b:** (Partial) Create class, interface, method, and inline documentation
   that satisfies a set of requirements.
-* **LO7.c:** (Partial) Use common abstract data types and structures, including 
+* **LO7.c:** (Partial) Use common abstract data types and structures, including
   lists, queues, arrays, and stacks in solving typical problems.
-  
+
 ## Updates
 
 **Updates will be posted in this section.**
@@ -93,12 +93,12 @@ they will be mentioned in the update summary.
 
 ## Suggested Checklist
 
-To help you with planning out this project, here are some suggested steps you can take that 
-your instructors believe will help you complete the project more easily. Some of the 
+To help you with planning out this project, here are some suggested steps you can take that
+your instructors believe will help you complete the project more easily. Some of the
 items in this checklist may not make sense until you have read the entire project description,
 including the appendices. These steps are suggesions and, therefore, do not constitute an
 exhaustive list of steps that you may need to take to complete the project.
-
+n
 **Preparation:** (Finish by TODO)
 
 - [ ] Read through the entire project description, including the appendices,
@@ -108,34 +108,34 @@ exhaustive list of steps that you may need to take to complete the project.
 
 **Planning:** (Finish by TODO)
 
-- [ ] Play the Minesweeper game using the provided oracle. This will help you see 
-      how to run the program and allow you to see expected input / output for a 
+- [ ] Play the Minesweeper game using the provided oracle. This will help you see
+      how to run the program and allow you to see expected input / output for a
 	  variety of scenarios.
 - [ ] Plan how you will represent the Minesweeper board. The internal representation
       most likely should not contain all of the characters that the user sees when
 	  the board is printed (e.g., you don't need to include vertical bars or index
 	  numbers in your array since they can be printed as you loop over your array).
-      One idea of how to approach this is given under 
+      One idea of how to approach this is given under
 	  [suggestions](#suggestions).
 - [ ] Write out test cases.
 
 **Documenting:** (Finish by Sunday, August 30th)
 
-- [ ] Type out the method signatures for each method listed in the 
+- [ ] Type out the method signatures for each method listed in the
       [functional requirements](#functional-requirements)
-- [ ] Add proper Javadoc comments to all methods and both classes. 
-      This will give you an opportunity to think about each method a little bit 
+- [ ] Add proper Javadoc comments to all methods and both classes.
+      This will give you an opportunity to think about each method a little bit
 	  more before you start writing the code. Also, these comments serve as
       a convenient referencen while writing the code. Remember, if you
       can't describe, in detail, what each method does, you can't implement it.
 
 **Implementing:** (Finish by Monday, September 7th)
 
-- [ ] Start by declaring the instance variables of the `MinesweeperGame` class based 
+- [ ] Start by declaring the instance variables of the `MinesweeperGame` class based
       on your chosen board representation.
-- [ ] For testing and debugging purposes, it's a good idea to implement the 
+- [ ] For testing and debugging purposes, it's a good idea to implement the
       `printMineField` method early in the implementation phase.
-- [ ] Create seed files with various board dimensions. Test that your 
+- [ ] Create seed files with various board dimensions. Test that your
       `printMineField` method works with each.
 - [ ] Implement `printWelcome`, `printWin`, `printLoss` using the banners given
       later in this document.
@@ -146,17 +146,17 @@ exhaustive list of steps that you may need to take to complete the project.
 
 **Testing** (Finish by Thursday, September 10th)
 
-- [ ] Create seed files for testing. Be sure to vary the dimensions of the board, 
-      the number of mines and the mine locations. Also be sure to include invalid 
+- [ ] Create seed files for testing. Be sure to vary the dimensions of the board,
+      the number of mines and the mine locations. Also be sure to include invalid
 	  configurations.
-- [ ] Create input and output files for each seed file. Run your code as described 
-      later in this document. In the testing phase, try to avoid entering commands 
+- [ ] Create input and output files for each seed file. Run your code as described
+      later in this document. In the testing phase, try to avoid entering commands
 	  manually while playing the game. The commands should come
       from the input files at this point.
-      
+
 **Review** (Finish by Friday, September 11th)
 
-- [ ] Do one final pass through the project document making sure you didn't 
+- [ ] Do one final pass through the project document making sure you didn't
       miss anything.
 - [ ] Run your code through your test cases one last time.
 - [ ] Submit your code to Odin.
@@ -167,8 +167,8 @@ This first project is meant to ensure that you are able to apply and extend
 your prerequisite knowledge as well as introduce you to developing and testing
 a Java application in a Linux environment (i.e., the Odin development
 server). You should be familiar with the majority of aspects of this project through
-your introductory programming course and the class exercises from 1302. However, you 
-may also be asked to do things that you have never been given explicit directions for 
+your introductory programming course and the class exercises from 1302. However, you
+may also be asked to do things that you have never been given explicit directions for
 before. This is just a part of software development. Sometimes you need to research
 how to solve a problem in order to implement a solution. That being said,
 the material included in this document should hopefully answer the majority
@@ -251,9 +251,9 @@ When the player reveals a square of the grid, different things can happen:
   by the character `F`, is displayed in the square.
 
 To simplify the game mechanics, **the player may mark, guess, or reveal any square in the grid,
-even squares that have already been marked or revealed.** In other words, the player may issue a 
-command to mark, guess, or reveal a square, regardless of its current state. The logic for 
-determining what happens to the square is always the same. For example, if a square has been 
+even squares that have already been marked or revealed.** In other words, the player may issue a
+command to mark, guess, or reveal a square, regardless of its current state. The logic for
+determining what happens to the square is always the same. For example, if a square has been
 revealed and the user marks it as definitely containing a mine then a round is consumed and the
 square should be marked. The user would then have to reveal this square again later. This may
 not be consistent with how you've played Minesweeper in the past but it will make it easier
@@ -269,8 +269,8 @@ The game is won when **both** of the following conditions are met:
 At the end of the game, the player is presented with a score. Let `rows`, `cols`,
 and  `rounds` denote the number of rows in the grid, columns in the grid, and
 number of rounds completed, respectively. A **round** is defined as one successful
-iteration of the main game loop. Therefore, only valid commands result in a round 
-being consumed. To be clear, _rounds_ is not quite the same as the number of commands 
+iteration of the main game loop. Therefore, only valid commands result in a round
+being consumed. To be clear, _rounds_ is not quite the same as the number of commands
 entered (some may be invalid); however, it should be less than or equal to that number.
 
 The player's score is calculated as follows:
@@ -280,7 +280,7 @@ score = 100.0 * rows * cols / rounds;
 ```
 
 A score of `100` would denote a perfect game. In this version of Mineweeper, it should
-not be possible for the player to win the game in less than `(rows * cols)`-many rounds 
+not be possible for the player to win the game in less than `(rows * cols)`-many rounds
 (take a second to convince yourself of this fact).
 Therefore, any game in which the player exceeds that many rounds would result in a score
 that is less than `100`. When displaying the score, the number should always be printed
@@ -297,16 +297,23 @@ once and only once:
  /    \| | '_ \ / _ \/ __\ \ /\ / / _ \/ _ \ '_ \ / _ \ '__|
 / /\/\ \ | | | |  __/\__ \\ V  V /  __/  __/ |_) |  __/ |
 \/    \/_|_| |_|\___||___/ \_/\_/ \___|\___| .__/ \___|_|
-                 A L P H A   E D I T I O N |_| v2020.fa
+                             ALPHA EDITION |_| v2021.sp
 ```
 
 Take care when printing this message out to the screen. Depending on how you implement this
 part, you may need to escape some of the characters in order for them to show up correctly.
 
-In this Minesweeper game, **the size of the grid is restricted to at least `5`
-rows and `5` columns**, but may be greater. The number of rows and columns need not be the same.
-Rows and columns are indexed starting at `0`. Therefore, in a `10`-by-`10` (rows-by-columns),
+In this Minesweeper game, the initial game configuration is loaded from a
+[seed file](#seed-files); the player provides the path to a *seed file* when as
+a command-line argument to the program. Two pieces of of information that are read
+from the seed file are the number of rows and the number of columns which together
+specify the grid size (i.e., the size of the minefield).
+
+The number of rows and the number of columns need not be the same. Rows and columns
+are indexed starting at `0`. Therefore, in a `10`-by-`10` (rows-by-columns),
 the first row is indexed as `0` and the last row is indexed as `9` (similarly for columns).
+In a `5`-by-`8` game, the row indices are from `0` to `4`, while the column indices
+are from `0` to `7`, respectively.
 
 #### The Grid
 
@@ -349,102 +356,13 @@ starts, the interface should look like this:
 minesweeper-alpha:
 ```
 
-Please note that the in either example, the first, third, and second-to-last lines are blank 
+Please note that the in either example, the first, third, and second-to-last lines are blank
 (the lines before and after "Rounds Completed" and the line before the prompt).
 All other lines, except the last line containing the prompt, start with one blank space.
 The line containing the prompt contains an extra space after the `:`
 so that **when the user types in a command, the text does not touch the
 `:`.** Multiple output examples are provided in the [Appendix](#minefield-output-examples)
 of this project description for your convenience.
-
-The output is a little tricky when either the number of rows or the number of
-columns becomes multiple digits. In this case, padding should be added so that
-row numbers, column numbers, and mine field contents are padded with whitespace
-in a way that accomodates the multiple digit index values. Additionally, when
-padding is performed, **all affected index values and square contents are
-to be right aligned**. In other words, the padding is printed first. For example, 
-let's assume we are playing a `12`-by-`5` game of Minesweeper. When the game starts, 
-the interface should look like this:
-
-```
-
- Rounds Completed: 0
-
-  0 |   |   |   |   |   |
-  1 |   |   |   |   |   |
-  2 |   |   |   |   |   |
-  3 |   |   |   |   |   |
-  4 |   |   |   |   |   |
-  5 |   |   |   |   |   |
-  6 |   |   |   |   |   |
-  7 |   |   |   |   |   |
-  8 |   |   |   |   |   |
-  9 |   |   |   |   |   |
- 10 |   |   |   |   |   |
- 11 |   |   |   |   |   |
-      0   1   2   3   4
-
-minesweeper-alpha:
-```
-
-In this example, the row numbers needed to be padded to accomodate the `10` and `11` index
-values, however, the column numbers and square contents did not require any padding.
-
-Now let's assume we are playing a `5`-by-`12` game of Minesweeper. When the game starts,
-the interface should look like this:
-
-```
-
- Rounds Completed: 0
-
- 0 |    |    |    |    |    |    |    |    |    |    |    |    |
- 1 |    |    |    |    |    |    |    |    |    |    |    |    |
- 2 |    |    |    |    |    |    |    |    |    |    |    |    |
- 3 |    |    |    |    |    |    |    |    |    |    |    |    |
- 4 |    |    |    |    |    |    |    |    |    |    |    |    |
-      0    1    2    3    4    5    6    7    8    9   10   11
-
-minesweeper-alpha:
-```
-
-In this example, the column numbers and square contents needed to be padded
-due to column index values `10` and `11`, however, the row index values did
-not require any padding.
-
-Finally, let's assume we are playing a `11`-by-`11` game of Minesweeper. When the
-game starts, the interface should look like this:
-
-```
-
- Rounds Completed: 0
-
-  0 |    |    |    |    |    |    |    |    |    |    |    |
-  1 |    |    |    |    |    |    |    |    |    |    |    |
-  2 |    |    |    |    |    |    |    |    |    |    |    |
-  3 |    |    |    |    |    |    |    |    |    |    |    |
-  4 |    |    |    |    |    |    |    |    |    |    |    |
-  5 |    |    |    |    |    |    |    |    |    |    |    |
-  6 |    |    |    |    |    |    |    |    |    |    |    |
-  7 |    |    |    |    |    |    |    |    |    |    |    |
-  8 |    |    |    |    |    |    |    |    |    |    |    |
-  9 |    |    |    |    |    |    |    |    |    |    |    |
- 10 |    |    |    |    |    |    |    |    |    |    |    |
-       0    1    2    3    4    5    6    7    8    9   10
-
-minesweeper-alpha:
-```
-
-In this example, padding was required for the row index values, column index
-values, and the square contents. Note: there are 4 total spaces allocated for each
-printed value (row index, column index, and cell contents). There are two spaces for 
-the value itself and a single space on each side of the contents. If this were a `10`-by-`10` 
-game, there would have been 3 spaces for each printed value. Take a few minutes to 
-understand why this is true.
-
-**Before you start writing the code to format your output,** please
-read the [Format Strings](#format-strings) and [Number of Digits](#number-of-digits)
-sections in the Appendix. They provide some code examples that should be
-helpful.
 
 #### The User Interface
 
@@ -489,9 +407,21 @@ minesweeper-alpha:   mark     0  0
 
 As a reminder, trailing whitespace is ignored.
 
+#### Advice of Reading Commands
+
+All valid game commands are entered on a single line. Implementers should always
+use the `nextLine()` method of their one and only *standard input* `Scanner`
+object to retrieve an entire line of input for a command as a `String`. Once
+an entire line is retrieved, it can be parsed using various methods; however,
+implementers may find it useful to construct a new `Scanner` object using
+the line as its source so that they can scan over the individual tokens.
+To put this into perspective, taking the "make a `Scanner` from the line"
+approach would make it so you can handle all four examples at the end
+of the last sub-section with one set of code.
+
 #### Command Syntax Format
 
-In the sections below, we describe the syntax format that each command must 
+In the sections below, we describe the syntax format that each command must
 adhere to in order to be considered correct. Syntactically incorrect commands are
 considered an error. Information about displaying errors to the player is
 contained in a section below.
@@ -501,13 +431,13 @@ will not be covered in this course.** You are NOT meant to put this weird
 looking syntax into any code. It is purely meant to convey to you, the reader,
 what is and what is not valid input for a given command.
 
-In a syntax format string, one or more non-new-line white space is represented 
+In a syntax format string, one or more non-new-line white space is represented
 as a `-`. Command tokens are enclosed in `[]` braces. If the
 contents of a token are surrounded by `""` marks, then that token can
 only take on that literal value. If more than one literal value is accepted for
 a token, then the quoted literals are separated by `/`. If the
 contents of a token are surrounded by `()` marks, then that token can
-only take on a value of the type expressed in parentheses. Note: the literal 
+only take on a value of the type expressed in parentheses. Note: the literal
 values are case-sensitive. So, "ReVeal" is not the same as "reveal".
 
 #### Revealing a Square
@@ -559,7 +489,7 @@ minesweeper-alpha:
 After the player correctly entered the command `r 1 2`, the state of
 the game updates (e.g., number of rounds completed, the grid, etc.), and the
 next round happens. Since there was no mine in square (1,2), the player does not
-lose the game. Also, since the total number of mines in the 8 cells directly 
+lose the game. Also, since the total number of mines in the 8 cells directly
 adjacent to square (1,2) is 2, the number 2 is now placed in that cell.
 
 If the player reveals a square containing a mine, then the following message
@@ -577,16 +507,18 @@ should be displayed and the program should terminate gracefully:
 ```
 
 Yeah, that's old school ASCII art. Please note that the first and last lines are
-blank. Also note that the second line (containing "oh no...") begins with a single 
+blank. Also note that the second line (containing "oh no...") begins with a single
 white space.
 
 The program should exit gracefully. This means that exit code passed to
 [`System.exit`](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/System.html#exit(int))
-should be zero. 
+should be `0` (i.e., zero).
 
-If your program exits from a "game over" with any return codes other than zero 
-(e.g., if your game crashes), then some points will be deducted. After the program 
-terminates, a user should be able to confirm the exit status of `0` using `echo $?`.
+If your program exits from a "game over" with any return codes other than zero
+(e.g., if your game crashes), then some points will be deducted. After the program
+terminates, a user should be able to confirm the exit status of `0` using `echo $?`
+Note that using `echo $?` a second time would show the exit status of the first `echo`
+command; you need to rerun your program before checking the exit status again.
 
 #### Mark Command
 
@@ -698,8 +630,8 @@ either side of the square's center (as opposed to white space). Using the
 In order to issue this command, the `nofog` command is used.
 The syntax format for this command is as follows: `-["nofog"]-`.
 
-Let's go back to our `10`-by-`10` example. Suppose that in this example, there 
-are only two mines in the entire board which are located in squares (1,1) and (1,3). 
+Let's go back to our `10`-by-`10` example. Suppose that in this example, there
+are only two mines in the entire board which are located in squares (1,1) and (1,3).
 If the player marked square (1,1) during the
 first round and then used the `nofog` command during the second
 round, then here is an example of what that scenario might look like:
@@ -851,7 +783,7 @@ Note that the first and last lines are blank and that the beginning of the
 other lines contain a single white space. You should replace the score in the
 output with the actual calculated score (mentioned above).
 
-The conditions for winning are outlined earlier in this document, 
+The conditions for winning are outlined earlier in this document,
 [here](#win-conditions).
 
 #### Displaying Errors
@@ -861,7 +793,7 @@ errors related to user commands should be printed to standard output (`System.ou
 
 If the number of rows and columns specified in a seed file is not in proper bounds,
 then the following message should be displayed and the program should exit
-using `System.exit(3)` (after the program terminates, a user should be able to confirm the 
+using `System.exit(3)` (after the program terminates, a user should be able to confirm the
 exit status of `3` using `echo $?`.):
 
 ```
@@ -940,13 +872,13 @@ format:
 
  * Subsequent pairs of tokens are integers (separated by white space)
    indicating the location of each mine.
-   
+
 **NOTE:** In Java, the term _white-space_ refers to one or more characters in a sequence that
 each satisfy the conditions outlined in [`Character.isWhitespace`](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Character.html#isWhitespace(char)).
 You do not need to check these conditions specifically nor use this method
 if you use the built-in tokenizing provided by the `Scanner` class.
 
-**NOTE:** It is acceptable for white-space to occur both at the beginning and 
+**NOTE:** It is acceptable for white-space to occur both at the beginning and
 end of a seed file.
 
 The following seed files are valid and contain the same information:
@@ -970,12 +902,12 @@ The following seed files are valid and contain the same information:
 #### Errors Related to Seed Files
 
 There are some errors that can occur with seed files. For the errors listed
-below, the program should exit with exit `System.exit(1)` and the associated 
+below, the program should exit with exit `System.exit(1)` and the associated
 error message should be displayed to standard error (i.e., using `System.err` instead
 of `System.out`). After the program terminates, a user should be able to confirm the exit
 status of `1` using the `echo $?` command.
-   
-* **If a seed file cannot be read because it cannot be found or cannot be read due to permission,** 
+
+* **If a seed file cannot be read because it cannot be found or cannot be read due to permission,**
    then use the following error message just before termination:
 
    ```
@@ -998,7 +930,7 @@ status of `1` using the `echo $?` command.
    Note that the second line is empty. Also, be sure to replace `FILENAME` with
    the actual name of the file.
 
-   A seed file is also considered to be malformed 
+   A seed file is also considered to be malformed
    if the number of mines exceeds the number of squares in
    the grid, and if a mine location is specified as being outside of the grid.
    If the grid size is not an acceptable grid size, then use the error and
@@ -1013,10 +945,10 @@ command (actual seed filename may differ):
 $ java -cp bin cs1302.game.MinesweeperDriver --seed tests/seed1.txt
 ```
 
-**Note:** The command you use to run your file from your main project directory 
+**Note:** The command you use to run your file from your main project directory
 (the directory containing `src` and `bin`) should **exactly match** the command above
-if you are passing in a seed file called `seed1.txt` containined in a `tests` directory 
-located directly within your main project directory. 
+if you are passing in a seed file called `seed1.txt` containined in a `tests` directory
+located directly within your main project directory.
 
 To read the file, let us assume that we have the path to the file
 stored in a `String` object referred to with a variable called
@@ -1025,7 +957,7 @@ stored in a `String` object referred to with a variable called
 * [`File`](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/File.html)
 * [`Scanner`](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Scanner.html)
 
-Most of you have used the `Scanner` class to read keyboard input from standard 
+Most of you have used the `Scanner` class to read keyboard input from standard
 input. Here, we will use it to read from a text file. This is accomplished using
 something similar to the following code snippet:
 
@@ -1050,9 +982,9 @@ You may need to import
 
 ## Minesweeper Oracle
 
-If at any time while you are writing your Minesweeper program you find yourself wondering 
-"How should my program respond if \_\_\_\_\_ happens", you can consult the provided 
-Minesweeper oracle. The oracle is an executable-only (no code provided) version of the 
+If at any time while you are writing your Minesweeper program you find yourself wondering
+"How should my program respond if \_\_\_\_\_ happens", you can consult the provided
+Minesweeper oracle. The oracle is an executable-only (no code provided) version of the
 instructors' solution to the Minesweeper project and is available on Odin. To run the oracle, you
 need to provide the same command-line arguments that you would to your version of Minesweeper.
 You only need to change the start of the command. Here is the exact syntax:
@@ -1110,12 +1042,12 @@ The actual functionality is tested using test cases.
     Based on the command received, this method should delegate (i.e., call other
     methods) to handle the work.
 
-  * **`boolean isWon()`:** This method should return `true` if, and only if, 
+  * **`boolean isWon()`:** This method should return `true` if, and only if,
     all the conditions are met to win the game as defined earlier in
     this document.
 
-  * **`void printWin()` and ``void printLoss()``:** These 
-    methods should print the win and game over emssages to standard 
+  * **`void printWin()` and ``void printLoss()``:** These
+    methods should print the win and game over emssages to standard
     output, respectively, as described earler in this document.
 
   * **`void play()`:** This method should provide the
@@ -1125,7 +1057,7 @@ The actual functionality is tested using test cases.
   document before writing the code to implement these methods.
 
   **NOTE:** You are not only free but encouraged to implement other methods,
-  as needed, to help with readability, code reuse, etc. In some cases, you may 
+  as needed, to help with readability, code reuse, etc. In some cases, you may
   need to add other methods to meet the style requirement for method length.
 
 * **`cs1302.game.MinesweeperDriver` Class**: This class
@@ -1138,7 +1070,7 @@ The actual functionality is tested using test cases.
        of command-line arguments that are allowed for this program:
 
        1. `--seed PATH_TO_SEEDFILE`
-       
+
           In this scenario, there are exactly two command-line arguments
           supplied. The second command-line argument should be interpreted
           as a `String` referred to by `seed` and supplied to
@@ -1147,7 +1079,7 @@ The actual functionality is tested using test cases.
           the object's `play` method.
 
        1. `--gen PATH_TO_SEEDFILE ROWS COLS MINES`
-       
+
           Please see the extra credit for information on how to parse these
           command-line arguments. If you choose to not do the extra
           credit, then your program should print the following
@@ -1157,7 +1089,7 @@ The actual functionality is tested using test cases.
           ```
           Seedfile generation not supported.
           ```
-          
+
           After the program terminates, a user should be able to confirm the exit
           status of `2` using `echo $?`.
 
@@ -1170,14 +1102,14 @@ The actual functionality is tested using test cases.
           ```
           Unable to interpret supplied command-line arguments.
           ```
-          
+
           After the program terminates, a user should be able to confirm the exist
           status of `1` using `echo $?`.
-          
+
           NOTE: If `--gen` is not supported, then you are not required to check the
           validity of any arguments that follow.
-          
-       You may find it useful to consult the 
+
+       You may find it useful to consult the
        [Command-Line Arguments Tutorial](https://github.com/cs1302uga/cs1302-tutorials/blob/master/cla/cla.md)
        from the required reading.
 
@@ -1185,13 +1117,13 @@ The actual functionality is tested using test cases.
     valid input will be provided for the driver's command line
     arguments. For the purposes of this assignment, valid input
     for command line arguments includes no arguments, uninterpretable arguments,
-    and using a path to a file that does not exist or cannot be read due to permission, 
+    and using a path to a file that does not exist or cannot be read due to permission,
     since there is output that your program is expected to produce in those
     scenarios.
 
     Additional code may be required if you are attempting one of the
     extra credit requirements listed later in this document.
-    
+
 
 * **(60 points) Test Cases**: <a id="test-cases"/> The bulk of this project will be graded
   based on 30 test cases, each worth 2 points. A single test case can
@@ -1201,11 +1133,11 @@ The actual functionality is tested using test cases.
 
   When a regular user plays the game, they specify a file with the
   starting configuration, e.g.,
-  
+
   ```
   $ java -cp bin cs1302.game.MinesweeperDriver --seed some/path/to/seed.txt
   ```
-  
+
   In this scenario, the user enters their commands into standard input
   and the game prints its output to standard output.
 
@@ -1217,7 +1149,7 @@ The actual functionality is tested using test cases.
   instead of keyboard input. This is accomplished using the shell
   input redirection operator `<` or pipe `|`. For example, the grader
   might type either of the following to accomplish the same thing:
-  
+
   ```
   $ java -cp bin cs1302.game.MinesweeperDriver --seed some/path/to/seed.txt < some/path/to/input.txt
   ```
@@ -1225,7 +1157,7 @@ The actual functionality is tested using test cases.
   ```
   $ cat some/path/to/input.txt | java -cp bin cs1302.game.MinesweeperDriver --seed some/path/to/seed.txt
   ```
-  
+
   In this example, the shell forces the program to interpret standard input
   as the file `input.txt`. Instead of halting for user input, any method
   calls to your program's `Scanner` object for `System.in` return immediately
@@ -1234,16 +1166,16 @@ The actual functionality is tested using test cases.
   output for that test case.
 
   If your code doesn't execute using the commands above, we will note be able to grade it.
-  
+
   **NOTE:**
   Please take special care that your program works using the command-line
-  arguments described in [this section](#test-cases). Including the `--seed` 
+  arguments described in [this section](#test-cases). Including the `--seed`
   and `--gen` command-line options as described in this project description
-  is mandatory. If your program does not  work with these command-line arguments, 
+  is mandatory. If your program does not  work with these command-line arguments,
   then it will fail most of the test cases. **The graders will not adjust the commands
   when running your program to accomodate a different set of options.**
 
-  In other words, **This is exactly how we will run your code. 
+  In other words, **This is exactly how we will run your code.
   So, this is how you should run it while testing.**
 
 ### Non-Functional Requirements
@@ -1263,24 +1195,24 @@ point total. That is, they are all or nothing (no partial credit).
   If you follow this structure, then you would type the following to compile
   your code, assuming you are in the top-level project
   directory `cs1302-minesweeper-alpha`:
-  
+
   ```
   $ javac -cp bin -d bin src/cs1302/game/MinesweeperGame.java
   $ javac -cp bin -d bin src/cs1302/game/MinesweeperDriver.java
   ```
-  
+
   The class path may be omitted in the first command if there are
-  no other dependencies. Remember, when you compile `.java` files individually, 
-  there might be dependencies between the files. In such cases, the order in which 
+  no other dependencies. Remember, when you compile `.java` files individually,
+  there might be dependencies between the files. In such cases, the order in which
   you compile the code and whether or not you specify the class path matters.
- 
+
   **NOTE:** If your grader needs to modify your directory structure or
   any of your filenames to compile your code, then the 10 point version
   of this penalty will apply. If, however, your grader is unable to compile
   your code, then the 100 point version of this penalty applies.
   Graders are instructed not to modify source code in an attempt to to make
   a submission compile.
-  
+
   **Any additional classes that you create should be located in or under the `cs1302.game` package.**
   If other `.java` files are present, then they will be compiled _individually_
   by the graders and added to the class path, as needed, when compiling other files.
@@ -1293,7 +1225,7 @@ point total. That is, they are all or nothing (no partial credit).
 
 * **(100 points) One Scanner for Standard Input:** Only one `Scanner`
   object for `System.in` (i.e., for standard input) should be created.
-  **You are free to make `Scanner` objects for other input sources as needed.** 
+  **You are free to make `Scanner` objects for other input sources as needed.**
   Please note that if you create a new  `Scanner` object at
   the beginning of a method or loop, then more than one object will
   be created if the method is called more than once or if the loop
@@ -1320,7 +1252,7 @@ point total. That is, they are all or nothing (no partial credit).
   or confusing blocks of code. This is especially necessary whenever a block of code
   is not immediately understood by a reader (e.g., yourself or the grader). You might also
   include information that someone reading your code would need to know but not someone using it
-  (that is more appropriate for a Javadoc comment). A good heuristic for this: if you can imagine that, 
+  (that is more appropriate for a Javadoc comment). A good heuristic for this: if you can imagine that,
   after six months, you might not be able to tell in under a few seconds what a code block is doing,
   then then you probably need to write some in-line comments.
 
@@ -1462,9 +1394,9 @@ the day or night the project is due is probably not the best idea.
 
 All of the examples provided in this appendix are also test cases. Their associated
 test case files are located in the `tests` directory provided with this project.
-Please read the [Functional Requirements](#functional-requirements) and 
+Please read the [Functional Requirements](#functional-requirements) and
 [Test Cases](#test-cases) sections for information on how to automate the running
-of test cases. 
+of test cases.
 
 #### 5-by-5 Example
 
