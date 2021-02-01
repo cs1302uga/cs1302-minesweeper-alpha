@@ -806,7 +806,6 @@ contained in [`resources/gamewon.txt`](resources/gamewon.txt).
 The conditions for winning are outlined earlier in this document,
 [here](#win-conditions).
 
-
 ### Seed Files
 
 Each game is setup using seed files. Seed files have the following
@@ -1016,10 +1015,16 @@ The actual functionality is tested using test cases.
   method is assumed to have public visibility. Instance variables
   may be added, as needed, to keep track of object state.
 
-  * **`MinesweeperGame(String seed)`**: In this constructor,
-    you should read the contents of the file whose path is stored in `seed`
-    and initialize variables, as needed, to setup the game according
-    to the seed file configuration specified by the file.
+  * **`MinesweeperGame(Scanner stdIn, String seedPath)`**: In this constructor,
+    you should intialize some of your instance variables and setup the game
+    using the information in the seed file referred to by `seedPath`.
+
+    * You will probably want to create a separate method for reading the seed file.
+    * Take care that you assign `stdIn` to an instance variable and that
+      you use that instance variable whenever you need to read from standard input.
+      Other than the initial assignment to that variable, you should not
+      reassign it elsewhere in your code or you risk getting a zero on your
+      project.
 
   * **`void printWelcome()`:** This method should print
     the welcome banner to standard output, as described earlier in
@@ -1032,7 +1037,7 @@ The actual functionality is tested using test cases.
   * **`void promptUser()`:** This method should print
     the game prompt to standard output and interpret user input
     from standard input, as described earlier in this document.
-p    Based on the command received, this method should delegate (i.e., call other
+    Based on the command received, this method should delegate (i.e., call other
     methods) to handle the work.
 
   * **`boolean isWon()`:** This method should return `true` if, and only if,
