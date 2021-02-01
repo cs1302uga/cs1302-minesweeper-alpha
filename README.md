@@ -860,9 +860,8 @@ $ java -cp bin cs1302.game.MinesweeperDriver tests/seed1.txt
 if you are passing in a seed file called `seed1.txt` containined in a `tests` directory
 located directly within your main project directory.
 
-To read the file, let us assume that we have the path to the file
-stored in a `String` object referred to with a variable called
-`seed` and use the following classes:
+To read the file, let us assume that we have access to the seed file's path
+via a `String` variable called `seedPath` and that we will use the following classes:
 
 * [`File`](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/File.html)
 * [`Scanner`](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Scanner.html)
@@ -873,7 +872,7 @@ something similar to the following code snippet:
 
 ```java
 try {
-  File configFile = new File(seed);
+  File configFile = new File(seedPath);
   Scanner configScanner = new Scanner(configFile);
   // use Scanner here as usual
 } catch (FileNotFoundException e) {
