@@ -261,7 +261,7 @@ to code. We will leave it up to the user to be smart about how they play!
 
 <a id="win-conditions">
 
-The game is won when **both** of the following conditions are met:
+The game is won only when **both** of the following conditions are met:
 
 * All squares containing a mine are marked as _definitely_ containing a mine; and
 * All squares not containing a mine are revealed.
