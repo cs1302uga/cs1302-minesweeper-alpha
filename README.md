@@ -100,19 +100,19 @@ your instructors believe will help you complete the project more easily. Some of
 items in this checklist may not make sense until you have read the entire project description,
 including the appendices. These steps are suggesions and, therefore, do not constitute an
 exhaustive list of steps that you may need to take to complete the project.
-n
-**Preparation:** (Finish by TODO)
+
+**Preparation:** (Finish by Wednesday, Feb. 3rd)
 
 - [ ] Read through the entire project description, including the appendices,
       **and write down questions as you go.**
 - [ ] Read it again! This time, you may be able to answer some of your own
       questions.
 
-**Planning:** (Finish by TODO)
+**Planning:** (Finish by Thursday, Feb. 4th)
 
-- [ ] Play the Minesweeper game using the provided oracle. This will help you see
+<!-- - [ ] Play the Minesweeper game using the provided oracle. This will help you see
       how to run the program and allow you to see expected input / output for a
-	  variety of scenarios.
+	  variety of scenarios.-->
 - [ ] Plan how you will represent the Minesweeper board. The internal representation
       most likely should not contain all of the characters that the user sees when
 	  the board is printed (e.g., you don't need to include vertical bars or index
@@ -121,7 +121,7 @@ n
 	  [suggestions](#suggestions).
 - [ ] Write out test cases.
 
-**Documenting:** (Finish by Sunday, August 30th)
+**Documenting:** (Finish by Sunday, Feb. 7th)
 
 - [ ] Type out the method signatures for each method listed in the
       [functional requirements](#functional-requirements)
@@ -131,7 +131,7 @@ n
       a convenient referencen while writing the code. Remember, if you
       can't describe, in detail, what each method does, you can't implement it.
 
-**Implementing:** (Finish by Monday, September 7th)
+**Implementing:** (Finish by Wednesday, Feb. 10th)
 
 - [ ] Start by declaring the instance variables of the `MinesweeperGame` class based
       on your chosen board representation.
@@ -146,7 +146,7 @@ n
 - [ ] Implement the `isWon` method with the proper win conditions.
 - [ ] Implement any remaining methods
 
-**Testing** (Finish by Thursday, September 10th)
+**Testing** (Finish by Thursday, February 11th)
 
 - [ ] Create seed files for testing. Be sure to vary the dimensions of the board,
       the number of mines and the mine locations. Also be sure to include invalid
@@ -156,7 +156,7 @@ n
 	  manually while playing the game. The commands should come
       from the input files at this point.
 
-**Review** (Finish by Friday, September 11th)
+**Review** (Finish by Friday, February 12th)
 
 - [ ] Do one final pass through the project document making sure you didn't
       miss anything.
