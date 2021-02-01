@@ -814,8 +814,8 @@ format:
    number of `rows` and `cols`, respectively, for the size
    of the mine board.
 
- * The third token is an integer indicating the number of mines to be
-   placed on the mine board.
+ * The third token is an integer indicating `numMines`, i.e., the number of
+   mines to be placed on the mine board.
 
  * Subsequent pairs of tokens are integers (separated by white space)
    indicating the location of each mine.
@@ -912,19 +912,38 @@ should be omitted.
 
 Here is a list of the different errors that can occur in the program:
 
-* **Invalid Usage Error:** If your program detects encounters invalid command-line
-  arguments or no command-line arguments, then the error message and exit status
-  in the table near the end of this section should be used.
+* **Invalid Usage Error:** If your program detects encounters any number of
+  command-line arguments other than one (i.e., if `args.length != 1`),
+  then the error message and exit status in the table near the end of
+  this section should be used.
 
 * **Seed File Not Found Error:** If your program is not able to read the seed
   file that is specified by the user via a command-line argument due to a
   `FileNotFoundException`, then the error message and exit status
-  in the table near the end of this section should be used. Note that `<message>`
-  (including the angle brackets) in the error message text should be
-  replaced with the `String` returned by the exception object's `getMessage()`
-  method.
+  in the table near the end of this section should be used.
 
-* **Seed File Malformed Error:** If a
+  Note that `<message>` (including the angle brackets) in the error message
+  text should be replaced with the `String` returned by the exception
+  object's `getMessage()` method.
+
+* **Seed File Malformed Error:** If your program encounters a problem in the
+  format of a seed file, then the error message and exit status in the table
+  near the end of this section should be used. Note that a seed file is
+  considered *malformed* or not formatted correctly if any of the following
+  conditions are met:
+
+  * a token is epected but is not found;
+  * a token is not of the expected type (e.g., it's expected to be an `int` but it's not);
+  * the token for `rows` is less than `5` or greater than `10`;
+  * the token for `cols` is less than `5` or greater than `10`;
+  * the token for `numMines` is less than `1` or greater than `(rows * cols) - 1`; or
+  * the position of a mine is not in bounds.
+
+  Note that `<message>` (including the angle brackets) in the error message text
+  should be replaced with some descriptive `String`. If the error arrises due
+  to some exception, then you may use the `String` returned by the exception
+  object's `getMessage()` method; otherwise, you may use some short, single line
+  `String` of your choosing that describes the problem.
 
 * **Invalid Command Error:** While the game is running, if a command entered by
   the player is invalid or not recognized, then the error message in the table
@@ -934,14 +953,20 @@ Here is a list of the different errors that can occur in the program:
   message is displayed, the round is essentially restarted and the number of rounds,
   the grid, and the prompt should be displayed again.
 
+  Note that `<message>` (including the angle brackets) in the error message text
+  should be replaced with some descriptive `String`. If the error arrises due
+  to some exception, then you may use the `String` returned by the exception
+  object's `getMessage()` method; otherwise, you may use some short, single line
+  `String` of your choosing that describes the problem.
+
 Here is the table that summarizes the different error messages and exit status codes:
 
-| Error                         | Error Message                          | Exit Status |
-|-------------------------------|----------------------------------------|-------------|
-| **Invalid Usage Error**       | `Seed File Not Found Error: <message>` | `1`         |
-| **Seed File Not Found Error** | `Seed File Not Found Error: <message>` | `2`         |
-| **Seed File Malformed Error** | `Seed File Malformed Error: <message>` | `3`         |
-| **Invalid Command Error:**    | `Invalid Command Error!`               | NA          |
+| Error                         | Error Message                             | Exit Status |
+|-------------------------------|-------------------------------------------|-------------|
+| **Invalid Usage Error**       | `Usage: MinesweeperDriver SEED_FILE_PATH` | `1`         |
+| **Seed File Not Found Error** | `Seed File Not Found Error: <message>`    | `2`         |
+| **Seed File Malformed Error** | `Seed File Malformed Error: <message>`    | `3`         |
+| **Invalid Command Error:**    | `Invalid Command: <message>`              | NA          |
 
 ## Minesweeper Oracle
 
