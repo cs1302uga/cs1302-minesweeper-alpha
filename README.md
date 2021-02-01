@@ -5,15 +5,20 @@
 
 ![Unrelated image of mine."](mine.jpg)
 
-~~**DUE FRI 2020-09-11 (Sep 11) @ 11:55 PM.**~~
-
-**DUE SUN 2020-09-13 (Sep 13) @ 11:55 PM.**
-
 This repository contains the skeleton code for the Minesweeper Alpha project
 assigned to the students in the Spring 2021 CSCI 1302 classes
 at the University of Georgia.
 
 **Please read the entirety of this file before beginning your project.**
+
+There are different deadline options for this project. Students who
+perform their final submission via the `submit` command before the date/times listed
+below automatically receive the associated **Submission-Based (SB) extra credit**.
+The late penalty does not start applying until after the final date listed.
+
+* **FRI 2020-10-02 (Oct 2) @ 11:55 PM EST (`+10` SB Extra Credit)**
+* **SAT 2020-10-03 (Oct 3) @ 11:55 PM EST (`+5` SB Extra Credit)**
+* **SUN 2020-10-04 (Oct 4) @ 11:55 PM EST (`+0` SB Extra Credit)**
 
 **Seriously. Read this entire file *before* starting.**
 
@@ -42,14 +47,11 @@ at the University of Georgia.
 * [Project Requirements & Grading](#project-requirements--grading)
   * [Functional Requirements](#functional-requirements)
   * [Non-Functional Requirements](#non-functional-requirements)
-  * [Extra Credit Requirements](#extra-credit-requirements)
 * [Suggestions](#suggestions)
 * [How to Download the Project](#how-to-download-the-project)
 * [Submission Instructions](#submission-instructions)
 * [Appendix](#appendix)
   * [Minefield Output Examples](#minefield-output-examples)
-  * [Format Strings](#format-strings)
-  * [Number of Digits](#number-of-digits)
 
 ## Academic Honesty
 
@@ -851,7 +853,7 @@ your program with the seed file, you should be able to use the following
 command (actual seed filename may differ):
 
 ```
-$ java -cp bin cs1302.game.MinesweeperDriver --seed tests/seed1.txt
+$ java -cp bin cs1302.game.MinesweeperDriver tests/seed1.txt
 ```
 
 **Note:** The command you use to run your file from your main project directory
@@ -936,8 +938,9 @@ Here is a list of the different errors that can occur in the program:
   * a token is not of the expected type (e.g., it's expected to be an `int` but it's not);
   * the token for `rows` is less than `5` or greater than `10`;
   * the token for `cols` is less than `5` or greater than `10`;
-  * the token for `numMines` is less than `1` or greater than `(rows * cols) - 1`; or
-  * the position of a mine is not in bounds.
+  * the token for `numMines` is less than `1` or greater than `(rows * cols) - 1`;
+  * the location of a mine is not in bounds; or
+  * the file contains extra tokens after the expected number of mine locations.
 
   Note that `<message>` (including the angle brackets) in the error message text
   should be replaced with some descriptive `String`. If the error arrises due
@@ -968,6 +971,7 @@ Here is the table that summarizes the different error messages and exit status c
 | **Seed File Malformed Error** | `Seed File Malformed Error: <message>`    | `3`         |
 | **Invalid Command Error:**    | `Invalid Command: <message>`              | NA          |
 
+<!--
 ## Minesweeper Oracle
 
 If at any time while you are writing your Minesweeper program you find yourself wondering
@@ -978,7 +982,7 @@ need to provide the same command-line arguments that you would to your version o
 You only need to change the start of the command. Here is the exact syntax:
 
 ```
-minesweeper-oracle cs1302.game.MinesweeperDriver --seed some/path/to/seed.txt < optional/path/to/input.txt
+minesweeper-oracle cs1302.game.MinesweeperDriver some/path/to/seed.txt < optional/path/to/input.txt
 ```
 
 where `some/path/to/seed.txt` and `optional/path/to/input.txt` are replaced with paths to real seed
@@ -988,11 +992,12 @@ generate seed files. Feel free to use this to generate seed files for testing.
 If you find a bug in the oracle or believe there to be an inconsistency between what the oracle
 says and what this document says, please let your instructors know in a Piazza post. This is
 the first semester we have used the oracle so we may have to iron out a few kinks.
+//-->
 
 ## Project Requirements & Grading
 
 This assignment is worth 100 points. The lowest possible grade is 0, and the
-highest possible grade is 105 (due to extra credit).
+highest possible grade without extra credit is 100.
 
 ### Functional Requirements
 
@@ -1027,7 +1032,7 @@ The actual functionality is tested using test cases.
   * **`void promptUser()`:** This method should print
     the game prompt to standard output and interpret user input
     from standard input, as described earlier in this document.
-    Based on the command received, this method should delegate (i.e., call other
+p    Based on the command received, this method should delegate (i.e., call other
     methods) to handle the work.
 
   * **`boolean isWon()`:** This method should return `true` if, and only if,
@@ -1044,8 +1049,8 @@ The actual functionality is tested using test cases.
   **NOTE:** Please see the [Suggestions](#suggestions) section of this
   document before writing the code to implement these methods.
 
-  **NOTE:** You are not only free but encouraged to implement other methods,
-  as needed, to help with readability, code reuse, etc. In some cases, you may
+  **NOTE:** You are encouraged to implement other methods, as needed,
+  to help with readability, code reuse, etc. In some cases, you may
   need to add other methods to meet the style requirement for method length.
 
 * **`cs1302.game.MinesweeperDriver` Class**: This class
@@ -1054,76 +1059,36 @@ The actual functionality is tested using test cases.
   * `void main(String[] args)`: This public, static method should
     do the following :
 
-    1. Handle command-line arguments. There are only two variations
-       of command-line arguments that are allowed for this program:
+    1. **Create your one and only standard input `Scanner` object.** While your
+       program may have as many `Scanner` objects as is needed, it may only have
+       exactly one `Scanner` object for standard input per program execution.
+       Your `main` method should include the following code:
+       ```java
+       Scanner stdIn = new Scanner(System.in);
+       ```
+       You must not include `new Scanner(System.in)` anywhere else in your project
+       or you risk getting a grade of zero for the project.
 
-       1. `--seed PATH_TO_SEEDFILE`
+    1. **Handle command-line arguments.** Exactly one command-line argument is
+       expected, and it represents the path to a seed file. You should assign
+       that argument to a local `String` variable called `seedPath` so that it
+       can be used in the call to your `MinesweeperGame` constructor in step 3.
 
-          In this scenario, there are exactly two command-line arguments
-          supplied. The second command-line argument should be interpreted
-          as a `String` referred to by `seed` and supplied to
-          a `MinesweeperGame` object by passing `seed` into the constructor.
-          After constructing the `MinesweeperGame` object, you should invoke
-          the object's `play` method.
-
-       1. `--gen PATH_TO_SEEDFILE ROWS COLS MINES`
-
-          Please see the extra credit for information on how to parse these
-          command-line arguments. If you choose to not do the extra
-          credit, then your program should print the following
-          message to _standard error_ when `--gen` is supplied as the first argument,
-          then exit with `System.exit(2)`:
-
-          ```
-          Seedfile generation not supported.
-          ```
-
-          After the program terminates, a user should be able to confirm the exit
-          status of `2` using `echo $?`.
-
-       1. Only the command-line options and their associated argumented just mentioned are supported.
-          If your program cannot interpret or should not interpret the
-          supplied command-line arguments (except in the case of not
-          supporting the `--gen` option; see note below), then your program should print
-          the following to _standard error_, then exit with `System.exit(1)`:
-
-          ```
-          Unable to interpret supplied command-line arguments.
-          ```
-
-          After the program terminates, a user should be able to confirm the exist
-          status of `1` using `echo $?`.
-
-          NOTE: If `--gen` is not supported, then you are not required to check the
-          validity of any arguments that follow.
-
-       You may find it useful to consult the
-       [Command-Line Arguments Tutorial](https://github.com/cs1302uga/cs1302-tutorials/blob/master/cla/cla.md)
-       from the required reading.
-
-    For the purposes of this assignment, you may safely assume that
-    valid input will be provided for the driver's command line
-    arguments. For the purposes of this assignment, valid input
-    for command line arguments includes no arguments, uninterpretable arguments,
-    and using a path to a file that does not exist or cannot be read due to permission,
-    since there is output that your program is expected to produce in those
-    scenarios.
-
-    Additional code may be required if you are attempting one of the
-    extra credit requirements listed later in this document.
-
+    1. **Instatiate the `MinesweeperGame` object call its `play()` method.**
+       Use the `stdIn` and `seedPath` variables from the first two steps when
+       you create the object. Once the object is created, call its `play()`
+       method.
 
 * **(60 points) Test Cases**: <a id="test-cases"/> The bulk of this project will be graded
-  based on 30 test cases, each worth 2 points. A single test case can
-  be described by three things: i) some starting configuration; ii) a
-  sequence of user input; and iii) the program output given (i) and (ii).
+  based on multiple test cases. A single test case can be described by three things:
+  i) a seed file path; ii) some user input; and iii) the program output given (i) and (ii).
   A few of these test cases are provided with the project.
 
-  When a regular user plays the game, they specify a file with the
-  starting configuration, e.g.,
+  When a regular user plays the game, they specify the seed file as a command-line
+  argument, e.g.,
 
   ```
-  $ java -cp bin cs1302.game.MinesweeperDriver --seed some/path/to/seed.txt
+  $ java -cp bin cs1302.game.MinesweeperDriver some/path/to/seed.txt
   ```
 
   In this scenario, the user enters their commands into standard input
@@ -1139,11 +1104,11 @@ The actual functionality is tested using test cases.
   might type either of the following to accomplish the same thing:
 
   ```
-  $ java -cp bin cs1302.game.MinesweeperDriver --seed some/path/to/seed.txt < some/path/to/input.txt
+  $ java -cp bin cs1302.game.MinesweeperDriver some/path/to/seed.txt < some/path/to/input.txt
   ```
 
   ```
-  $ cat some/path/to/input.txt | java -cp bin cs1302.game.MinesweeperDriver --seed some/path/to/seed.txt
+  $ cat some/path/to/input.txt | java -cp bin cs1302.game.MinesweeperDriver some/path/to/seed.txt
   ```
 
   In this example, the shell forces the program to interpret standard input
@@ -1153,18 +1118,16 @@ The actual functionality is tested using test cases.
   the grader then compares that output to a file containing the expected
   output for that test case.
 
-  If your code doesn't execute using the commands above, we will note be able to grade it.
+  If your code does not execute with a command-line argument as described above,
+  then it will automatically be assigned a grade of zero, regardless of any code
+  contained in the submission. No exceptions will be made for this. That is,
+  **the graders will not adjust the commands when running your program to accomodate
+  a different set of command-line arguments.** If there is a package-related issue,
+  however, then the graders may make some minor adjustments for a relatively small
+  grade penalty.
 
-  **NOTE:**
-  Please take special care that your program works using the command-line
-  arguments described in [this section](#test-cases). Including the `--seed`
-  and `--gen` command-line options as described in this project description
-  is mandatory. If your program does not  work with these command-line arguments,
-  then it will fail most of the test cases. **The graders will not adjust the commands
-  when running your program to accomodate a different set of options.**
-
-  In other words, **This is exactly how we will run your code.
-  So, this is how you should run it while testing.**
+  In other words, what is presented above **is exactly how we will run your program.
+  Therefore, it is how you should run it while developing and testing your program.**
 
 ### Non-Functional Requirements
 
@@ -1213,7 +1176,7 @@ point total. That is, they are all or nothing (no partial credit).
 
 * **(100 points) One Scanner for Standard Input:** Only one `Scanner`
   object for `System.in` (i.e., for standard input) should be created.
-  **You are free to make `Scanner` objects for other input sources as needed.**
+  **You may create `Scanner` objects for other input sources as needed.**
   Please note that if you create a new  `Scanner` object at
   the beginning of a method or loop, then more than one object will
   be created if the method is called more than once or if the loop
@@ -1229,10 +1192,10 @@ point total. That is, they are all or nothing (no partial credit).
   as defined in the [CS1302 Code Style Guide](https://github.com/cs1302uga/cs1302-styleguide).
   All of the individual code style guidelines listed in that document are part
   of this single non-functional requirement. Like the other non-functional
-  requirements, this requirement is all or nothing.
+  requirements, **this requirement is all or nothing**.
 
   **NOTE:** The [CS1302 Code Style Guide](https://github.com/cs1302uga/cs1302-styleguide)
-  includes instructions on how to use the `checkstyle` program to check
+  includes instructions on how to use the `check1302` program to check
   your code for compliance on Odin.
 
 * **In-line Documentation (10 points):** Code blocks should be adequately documented
@@ -1243,46 +1206,6 @@ point total. That is, they are all or nothing (no partial credit).
   (that is more appropriate for a Javadoc comment). A good heuristic for this: if you can imagine that,
   after six months, you might not be able to tell in under a few seconds what a code block is doing,
   then then you probably need to write some in-line comments.
-
-### Extra Credit Requirements
-
-An extra credit requirement is an extra functional requirement that is *added*
-to your point total if satisfied. If you want the graders to check for any
-extra credit requirements, then you must include an extra text file with your
-submission called `EXTRA.md`. In that file, you need to provide a brief
-description of each extra credit that should be checked.
-
-* **Seed File Generator (5 points):** Allow users to generate seed files that
-  specifiy random, valid seed file configurations by specifying a `--gen`
-  option to the driver class. Here is a synopsis that should be followed:
-  ```
-  $ java -cp bin cs1302.game.MinesweeperDriver --gen PATH_TO_SEEDFILE ROWS COLS MINES
-  ```
-  where
-
-  * `-cp bin` denotes that the class path to the compiled version
-    of the game's default package is `bin`,
-  * `cs1302.game.MinesweeperDriver` denotes the fully qualified name of
-    the game's driver class,
-  * `PATH_TO_SEEDFILE` is the path to a text file to which the starting configuration
-    will be written,
-  * `ROWS` denotes the number of rows in the mine field,
-  * `COLS` denotes the number of columns in the mine field,
-  * `MINES` denotes the number of pre-determined mine locations to generate.
-
-  You may assume the order of the command-line arguments as presented
-  above. Additionally, you may assume valid input of command-line arguments
-  and that the value of `MINES` will be strictly less than `m * n`.
-
-  Use of the
-  [`PrintWriter`](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/PrintWriter.html)
-  class is recommended. You are likely familiar with printing to standard
-  output via `System.out`. The `PrintWriter` class allows you to create an
-  object for arbitrary file output with the same interface that you are used
-  to (i.e., it provides methods like `print`, `println`, etc.).
-
-  If this extra credit is mentioned in `EXTRA.md`, then it will be tested
-  using five simple test cases.
 
 ## Suggestions
 
@@ -1399,157 +1322,9 @@ of test cases.
 
 See also: [`examples/5-by-5.txt`](examples/5-by-5.txt)
 
-#### 5-by-11 Example
+#### TODO
 
-```
- 0 |  ? |    |    |    |    |    |    |    |    |    |    |
- 1 |    |    |    |    |    |    |    |    |    |    |    |
- 2 |    |    |  F |< F>|    |    |    |    |    |    |    |
- 3 |    |    |<  >|  2 |    |    |    |    |    |    |    |
- 4 |    |    |    |    |    |    |    |    |    |    |    |
-      0    1    2    3    4    5    6    7    8    9   10
-```
-
-See also: [`examples/5-by-11.txt`](examples/5-by-11.txt)
-
-#### 11-by-5 Example
-
-```
-  0 | ? |   |   |   |   |
-  1 |   |   |   |   |   |
-  2 |   |   | F |<F>|   |
-  3 |   |   |< >| 2 |   |
-  4 |   |   |   |   |   |
-  5 |   |   |   |   |   |
-  6 |   |   |   |   |   |
-  7 |   |   |   |   |   |
-  8 |   |   |   |   |   |
-  9 |   |   |   |   |   |
- 10 |   |   |   |   |   |
-      0   1   2   3   4
-```
-
-See also: [`examples/11-by-5.txt`](examples/11-by-5.txt)
-
-#### 11-by-11 Example
-
-```
-  0 |  ? |    |    |    |    |    |    |    |    |    |    |
-  1 |    |    |    |    |    |    |    |    |    |    |    |
-  2 |    |    |  F |< F>|    |    |    |    |    |    |    |
-  3 |    |    |<  >|  2 |    |    |    |    |    |    |    |
-  4 |    |    |    |    |    |    |    |    |    |    |    |
-  5 |    |    |    |    |    |    |    |    |    |    |    |
-  6 |    |    |    |    |    |    |    |    |    |    |    |
-  7 |    |    |    |    |    |    |    |    |    |    |    |
-  8 |    |    |    |    |    |    |    |    |    |    |    |
-  9 |    |    |    |    |    |    |    |    |    |    |    |
- 10 |    |    |    |    |    |    |    |    |    |    |    |
-       0    1    2    3    4    5    6    7    8    9   10
-```
-
-See also: [`examples/11-by-11.txt`](examples/11-by-11.txt)
-
-### Format Strings
-
-The `System.out.printf` and `String.format` methods are really powerful tools when it comes to
-formatting output and strings. You may be familar with the variable resplacement capabilities
-that they both provide. Each `%` variable in the supplied format string is replaced by
-a parameter supplied to the method. Here are two examples.
-
-```java
-String name = "Bill";
-int age = 22;
-String format = "Person names %s is %d years old.";
-String str = String.format(format, name, age);
-System.out.println(str);
-```
-
-```java
-String name = "Bill";
-int age = 22;
-System.out.printf("Person names %s is %d years old.\n", name, age);
-```
-
-The output to either example is:
-
-```
-Person named Bill is 22 years old.
-```
-
-Each `%` variable is followed by a _conversion character_ indicating how the variable should be formatted.
-Here are some common conversion characters:
-
-| Conversion | Description |
-|------------|-------------|
-| `s`        | If the argument arg is `null`, then the result is "null". Otherwise, the result is obtained by calling `toString()`. |
-| `d`        | The result is formatted as a decimal integer. |
-| `f`        | The result is formatted as a floating point number.  |
-| `%`        | The result is a literal `%`. |
-
-You can also include a _width_, a positive decimal integer indicating the minimum number of
-characters to be written to the output, between the `%` and the conversion character.
-Here are some examples that use `%3d` (width is `3` and conversion is `d`):
-
-```java
-String format = "!%3d!\n";
-System.out.printf(format, 42);  // "! 42!" (but without the quotes)
-System.out.printf(format, 312); // "!312!"
-System.out.printf(format, 7);   // "!  7!"
-```
-
-You can do a lot with format strings! The full Java specification for format strings
-can be found [here](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Formatter.html).
-
-### Number of Digits
-
-We can use mathematics to help us find the number of digits in a base 10 (decimal)
-number. Given an `int` value `n`, we know that <code>n &lt; 10<sup>p</sup></code> for certain
-values of `p`. To find the smallest such `p`, we can take the logarithm of both sides:
-<code>p &gt; Math.log10(n)</code>. Let's take a look at the values we get for different
-values of `n`:
-
-```java
-for (int n = 2; n < 10000; n = n * 10 + 1) {
-    double p = Math.log10(n);
-    System.out.printf("%.4f\n", p);
-} // for
-```
-
-Here is the output:
-
-```
-n =    2; p = 0.3010
-n =   21; p = 1.3222
-n =  211; p = 2.3243
-n = 2111; p = 3.3245
-```
-
-As you can see, the values for `p` almost tell us the number of digits. Using `Math.ceil`,
-you can find the _smallest_ integers that are `>=` each number:
-
-```java
-for (int n = 2; n < 10000; n = n * 10 + 1) {
-    double p = Math.ceil(Math.log10(n));
-    System.out.printf("%.4f\n", p);
-} // for
-```
-
-Here is the output:
-
-```
-n =    2; p = 1.0000
-n =   21; p = 2.0000
-n =  211; p = 3.0000
-n = 2111; p = 4.0000
-```
-
-And there it is! We now have the number of digits for each number. This could
-be useful for determining a desired _width_ for a format string variable (of course,
-you would need to make the number an `int` before it's usable there).
-
-**There is one value that breaks this formula: `n = 1`.** Check out it and see
-if you can figure out how to deal with that edge case, if needed.
+TODO include some non-square examples
 
 <hr/>
 
