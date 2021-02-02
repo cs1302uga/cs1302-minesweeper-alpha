@@ -119,16 +119,17 @@ exhaustive list of steps that you may need to take to complete the project.
 	  numbers in your array since they can be printed as you loop over your array).
       One idea of how to approach this is given under
 	  [suggestions](#suggestions).
+- [ ] Unsure of your chosen board representation? Feel free to come by office hours to discuss!
 - [ ] Write out test cases.
 
 **Documenting:** (Finish by Sunday, Feb. 7th)
 
 - [ ] Type out the method signatures for each method listed in the
       [functional requirements](#functional-requirements)
-- [ ] Add proper Javadoc comments to all methods and both classes.
+- [ ] Add proper Javadoc comments to all methods and both classes. Don't implement the methods yet. 
       This will give you an opportunity to think about each method a little bit
 	  more before you start writing the code. Also, these comments serve as
-      a convenient referencen while writing the code. Remember, if you
+      a convenient reference while writing the code. Remember, if you
       can't describe, in detail, what each method does, you can't implement it.
 
 **Implementing:** (Finish by Wednesday, Feb. 10th)
@@ -524,7 +525,7 @@ the *exit status* code used in the call to
 [`System.exit`](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/System.html#exit(int))
 is `0` (i.e., zero).
 
-* If a *graceful* exit is expected and your pour program exits for any reason
+* If a *graceful* exit is expected and your program exits for any reason
   with an exit status other than `0` (e.g., if your game crashes), then some
   points will be deducted from your grade.
 
@@ -907,12 +908,12 @@ System.err.println(errorMessage);
 System.exit(exitStatus);
 ```
 
-If an error does exit the program, then the last line in the code above
+If an error does not exit the program, then the last line in the code above
 should be omitted.
 
 Here is a list of the different errors that can occur in the program:
 
-* **Invalid Usage Error:** If your program detects encounters any number of
+* **Invalid Usage Error:** If your program encounters any number of
   command-line arguments other than one (i.e., if `args.length != 1`),
   then the error message and exit status in the table near the end of
   this section should be used.
@@ -932,16 +933,15 @@ Here is a list of the different errors that can occur in the program:
   considered *malformed* or not formatted correctly if any of the following
   conditions are met:
 
-  * a token is epected but is not found;
+  * a token is expected but is not found;
   * a token is not of the expected type (e.g., it's expected to be an `int` but it's not);
   * the token for `rows` is less than `5` or greater than `10`;
   * the token for `cols` is less than `5` or greater than `10`;
-  * the token for `numMines` is less than `1` or greater than `(rows * cols) - 1`;
-  * the location of a mine is not in bounds; or
-  * the file contains extra tokens after the expected number of mine locations.
+  * the token for `numMines` is less than `1` or greater than `(rows * cols) - 1`; or
+  * the location of a mine is not in bounds.
 
   Note that `<message>` (including the angle brackets) in the error message text
-  should be replaced with some descriptive `String`. If the error arrises due
+  should be replaced with some descriptive `String`. If the error arises due
   to some exception, then you may use the `String` returned by the exception
   object's `getMessage()` method; otherwise, you may use some short, single line
   `String` of your choosing that describes the problem.
