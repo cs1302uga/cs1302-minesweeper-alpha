@@ -1307,28 +1307,9 @@ the day or night the project is due is probably not the best idea.
 
 ### Minefield Output Examples
 
-All of the examples provided in this appendix are also test cases. Their associated
-test case files are located in the `tests` directory provided with this project.
-Please read the [Functional Requirements](#functional-requirements) and
-[Test Cases](#test-cases) sections for information on how to automate the running
-of test cases.
-
-#### 5-by-5 Example
-
-```
- 0 | ? |   |   |   |   |
- 1 |   |   |   |   |   |
- 2 |   |   | F |<F>|   |
- 3 |   |   |< >| 2 |   |
- 4 |   |   |   |   |   |
-     0   1   2   3   4
-```
-
-See also: [`examples/5-by-5.txt`](examples/5-by-5.txt)
-
-#### TODO
-
-TODO include some non-square examples
+The [`examples`](examples/) directory contains an example of
+blank grid for every possible combination `rows` and `cols`
+supported by this game.
 
 <hr/>
 
