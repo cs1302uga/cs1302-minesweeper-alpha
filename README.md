@@ -1297,6 +1297,12 @@ Each test case has a number (e.g., `01`) and can be described by five things:
 | # | Seed File | StdIn | StdOut | StdErr | Combined |
 |---|-----------|-------|--------|--------|----------|
 | `tc01` | [`.seed.txt`](tests/tc01.seed.txt) | [`.in.txt`](tests/tc01.in.txt) | [`.out.txt`](tests/tc01.out.txt) | [`.err.txt`](tests/tc01.err.txt) | [`.combined.txt`](tests/tc01.combined.txt) |
+| `tc02` | [`.seed.txt`](tests/tc02.seed.txt) | [`.in.txt`](tests/tc02.in.txt) | [`.out.txt`](tests/tc02.out.txt) | [`.err.txt`](tests/tc02.err.txt) | [`.combined.txt`](tests/tc02.combined.txt) |
+| `tc03` | [`.seed.txt`](tests/tc03.seed.txt) | [`.in.txt`](tests/tc03.in.txt) | [`.out.txt`](tests/tc03.out.txt) | [`.err.txt`](tests/tc03.err.txt) | [`.combined.txt`](tests/tc03.combined.txt) |
+| `tc04` | [`.seed.txt`](tests/tc04.seed.txt) | [`.in.txt`](tests/tc04.in.txt) | [`.out.txt`](tests/tc04.out.txt) | [`.err.txt`](tests/tc04.err.txt) | [`.combined.txt`](tests/tc04.combined.txt) |
+| `tc05` | [`.seed.txt`](tests/tc05.seed.txt) | [`.in.txt`](tests/tc05.in.txt) | [`.out.txt`](tests/tc05.out.txt) | [`.err.txt`](tests/tc05.err.txt) | [`.combined.txt`](tests/tc05.combined.txt) |
+| `tc06` | [`.seed.txt`](tests/tc06.seed.txt) | [`.in.txt`](tests/tc06.in.txt) | [`.out.txt`](tests/tc06.out.txt) | [`.err.txt`](tests/tc06.err.txt) | [`.combined.txt`](tests/tc06.combined.txt) |
+| `tc07` | [`.seed.txt`](tests/tc07.seed.txt) | [`.in.txt`](tests/tc07.in.txt) | [`.out.txt`](tests/tc07.out.txt) | [`.err.txt`](tests/tc07.err.txt) | [`.combined.txt`](tests/tc07.combined.txt) |
 
 When a regular user plays the game, they specify the seed file as a command-line
 argument, e.g.,
