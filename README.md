@@ -1331,15 +1331,17 @@ program's perspective, it stil thinks it's reading from standard input.
 It's just that standard input now refers to an actual file on disk
 instead of keyboard input. This is accomplished using the shell
 input redirection operator `<` or pipe `|`. For example, the grader
-might type either of the following to run the first test case provided
+might type the following to run the first test case provided
 in the [`tests`](tests/):
 
 ```
+  run with test/tc01.seed.txt
+  +------------------------------------------------------------+
+  |                                                            |
 $ java -cp bin cs1302.game.MinesweeperDriver tests/tc01.seed.txt < tests/tc01.in.txt
-```
-
-```
-$ cat tests/tc01.in.txt | java -cp bin cs1302.game.MinesweeperDriver tests/tc01.seed.txt
+                                                                 |                 |
+                                                                 +-----------------+
+                                        redirect standard input to tests/tc01.in.txt
 ```
 
 In this example, the shell forces the program to interpret standard input
