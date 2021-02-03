@@ -44,6 +44,7 @@ The late penalty does not start applying until after the final date listed.
     * [Player Wins](#player-wins)
   * [Seed Files](#seed-files)
   * [Displaying Errors](#displaying-errors)
+* [Minesweeper Oracle](#minesweeper-oracle)
 * [Project Requirements & Grading](#project-requirements--grading)
   * [Functional Requirements](#functional-requirements)
   * [Non-Functional Requirements](#non-functional-requirements)
@@ -111,9 +112,9 @@ exhaustive list of steps that you may need to take to complete the project.
 
 **Planning:** (Finish by Thursday, Feb. 4th)
 
-<!-- - [ ] Play the Minesweeper game using the provided oracle. This will help you see
+- [ ] Play the Minesweeper game using the provided oracle. This will help you see
       how to run the program and allow you to see expected input / output for a
-	  variety of scenarios.-->
+	  variety of scenarios.
 - [ ] Plan how you will represent the Minesweeper board. The internal representation
       most likely should not contain all of the characters that the user sees when
 	  the board is printed (e.g., you don't need to include vertical bars or index
@@ -970,7 +971,6 @@ Here is the table that summarizes the different error messages and exit status c
 | **Seed File Malformed Error** | `Seed File Malformed Error: <message>`    | `3`         |
 | **Invalid Command Error:**    | `Invalid Command: <message>`              | NA          |
 
-<!--
 ## Minesweeper Oracle
 
 If at any time while you are writing your Minesweeper program you find yourself wondering
@@ -991,7 +991,6 @@ generate seed files. Feel free to use this to generate seed files for testing.
 If you find a bug in the oracle or believe there to be an inconsistency between what the oracle
 says and what this document says, please let your instructors know in a Piazza post. This is
 the first semester we have used the oracle so we may have to iron out a few kinks.
-//-->
 
 ## Project Requirements & Grading
 
