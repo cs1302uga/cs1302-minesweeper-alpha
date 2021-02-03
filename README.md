@@ -127,7 +127,7 @@ exhaustive list of steps that you may need to take to complete the project.
 
 - [ ] Type out the method signatures for each method listed in the
       [functional requirements](#functional-requirements)
-- [ ] Add proper Javadoc comments to all methods and both classes. Don't implement the methods yet. 
+- [ ] Add proper Javadoc comments to all methods and both classes. Don't implement the methods yet.
       This will give you an opportunity to think about each method a little bit
 	  more before you start writing the code. Also, these comments serve as
       a convenient reference while writing the code. Remember, if you
@@ -1086,53 +1086,23 @@ The actual functionality is tested using test cases.
 
 * **(60 points) Test Cases**: <a id="test-cases"/> The bulk of this project will be graded
   based on multiple test cases. A single test case can be described by three things:
-  i) a seed file path; ii) some user input; and iii) the program output given (i) and (ii).
-  A few of these test cases are provided with the project.
 
-  When a regular user plays the game, they specify the seed file as a command-line
-  argument, e.g.,
+  Some example test cases are provided with the project description; they
+  are described in the [Test Case Examples](#test-case-examples) section of the
+  Appendix. Since the actual test cases that will be used to grade your project
+  may be a superset of the ones provided, you should take care to read and
+  understand how to test your program using the example test cases. If your
+  program does not execute with a command-line argument and input/output
+  redirection as described in the appendix (and perhaps elsewhere), then it will
+  automatically be assigned a grade of zero, regardless of any code
+  contained in the submission. No exceptions will be made for this.
 
-  ```
-  $ java -cp bin cs1302.game.MinesweeperDriver some/path/to/seed.txt
-  ```
-
-  In this scenario, the user enters their commands into standard input
-  and the game prints its output to standard output.
-
-  When the grader wants to check your game, they will not manually
-  type in commands into standard input. Instead, they will use the shell
-  to redirect standard input to a file that contains user input. From the
-  program's perspective, it stil thinks it's reading from standard input.
-  It's just that standard input now refers to an actual file on disk
-  instead of keyboard input. This is accomplished using the shell
-  input redirection operator `<` or pipe `|`. For example, the grader
-  might type either of the following to accomplish the same thing:
-
-  ```
-  $ java -cp bin cs1302.game.MinesweeperDriver some/path/to/seed.txt < some/path/to/input.txt
-  ```
-
-  ```
-  $ cat some/path/to/input.txt | java -cp bin cs1302.game.MinesweeperDriver some/path/to/seed.txt
-  ```
-
-  In this example, the shell forces the program to interpret standard input
-  as the file `input.txt`. Instead of halting for user input, any method
-  calls to your program's `Scanner` object for `System.in` return immediately
-  with a token from the file. Once the program has stopped producing output,
-  the grader then compares that output to a file containing the expected
-  output for that test case.
-
-  If your code does not execute with a command-line argument as described above,
-  then it will automatically be assigned a grade of zero, regardless of any code
-  contained in the submission. No exceptions will be made for this. That is,
+  To be absolutely clear, you must make sure your program runs as described
+  in the [Test Case Examples](#test-case-examples) section of the Appendix;
   **the graders will not adjust the commands when running your program to accomodate
   a different set of command-line arguments.** If there is a package-related issue,
   however, then the graders may make some minor adjustments for a relatively small
   grade penalty.
-
-  In other words, what is presented above **is exactly how we will run your program.
-  Therefore, it is how you should run it while developing and testing your program.**
 
 ### Non-Functional Requirements
 
@@ -1315,6 +1285,49 @@ supported by this game.
 ### Test Case Examples
 
 The [`tests`](tests/) directory contains some example test cases.
+A single test case can be described by five things:
+
+  1. a path to a **seed file**;
+  2. a path to a file with **user input**;
+  3. a path to a file with expected **standard output** given 1 and 2;
+  4. a path to a file with expected **standard error** given 1 and 2; and
+  5. a path to a file with expected **combined output** (i.e., standard output
+     and standard error) given 1 and 2.
+
+When a regular user plays the game, they specify the seed file as a command-line
+argument, e.g.,
+
+```
+$ java -cp bin cs1302.game.MinesweeperDriver some/path/to/seed.txt
+```
+
+In this scenario, the user enters their commands into standard input
+and the game prints its output to standard output.
+
+When the grader wants to check your game, they will not manually
+type in commands into standard input. Instead, they will use the shell
+to redirect standard input to a file that contains user input. From the
+program's perspective, it stil thinks it's reading from standard input.
+It's just that standard input now refers to an actual file on disk
+instead of keyboard input. This is accomplished using the shell
+input redirection operator `<` or pipe `|`. For example, the grader
+might type either of the following to accomplish the same thing:
+
+```
+$ java -cp bin cs1302.game.MinesweeperDriver some/path/to/seed.txt < some/path/to/input.txt
+```
+
+```
+$ cat some/path/to/input.txt | java -cp bin cs1302.game.MinesweeperDriver some/path/to/seed.txt
+```
+
+In this example, the shell forces the program to interpret standard input
+as the file `input.txt`. Instead of halting for user input, any method
+calls to your program's `Scanner` object for `System.in` return immediately
+with a token from the file. Once the program has stopped producing output,
+the grader then compares that output to a file containing the expected
+output for that test case.
+
 
 <hr/>
 
