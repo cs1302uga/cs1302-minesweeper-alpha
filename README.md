@@ -52,6 +52,7 @@ The late penalty does not start applying until after the final date listed.
 * [Submission Instructions](#submission-instructions)
 * [Appendix](#appendix)
   * [Minefield Output Examples](#minefield-output-examples)
+  * [Test Case Examples](#test-case-examples)
 
 ## Academic Honesty
 
@@ -1310,6 +1311,10 @@ the day or night the project is due is probably not the best idea.
 The [`examples`](examples/) directory contains an example of
 a blank grid for every possible combination `rows` and `cols`
 supported by this game.
+
+### Test Case Examples
+
+The [`tests`](tests/) directory contains some example test cases.
 
 <hr/>
 
