@@ -1279,7 +1279,7 @@ the day or night the project is due is probably not the best idea.
 ### Minefield Output Examples
 
 The [`examples`](examples/) directory contains an example of
-a blank grid for every possible combination `rows` and `cols`
+a blank grid for every possible combination of `rows` and `cols`
 supported by this game.
 
 ### Test Case Examples
