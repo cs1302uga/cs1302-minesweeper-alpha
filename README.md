@@ -1340,13 +1340,11 @@ $ java -cp bin cs1302.game.MinesweeperDriver tests/tc01.seed.txt < tests/tc01.in
 Here is what each part of that command means:
 
 ```
-   run with test/tc01.seed.txt
-  +------------------------------------------------------------+
-  |                                                            |
+  run with test/tc01.seed.txt
+ +--------------------------------------------------------------+
 $ java -cp bin cs1302.game.MinesweeperDriver tests/tc01.seed.txt < tests/tc01.in.txt
-                                                                 |                 |
-                                                                 +-----------------+
-                                       redirect standard input to tests/tc01.in.txt
+                                                                +-------------------+
+                                        redirect standard input to tests/tc01.in.txt
 ```
 
 In this example, the shell forces the program to interpret standard input
