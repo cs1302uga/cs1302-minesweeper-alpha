@@ -1285,14 +1285,16 @@ supported by this game.
 ### Test Case Examples
 
 The [`tests`](tests/) directory contains some example test cases.
-A single test case can be described by five things:
+Each test case has a number (e.g., `01`) and can be described by five things:
 
   1. a path to a **seed file**;
-  2. a path to a file with **user input**;
-  3. a path to a file with expected **standard output** given 1 and 2;
-  4. a path to a file with expected **standard error** given 1 and 2; and
-  5. a path to a file with expected **combined output** (i.e., standard output
-     and standard error) given 1 and 2.
+  2. a path to a file with **user input** (StdIn);
+  3. a path to a file with expected **standard output** (StdOut) given 1 and 2;
+  4. a path to a file with expected **standard error** (StdErr) given 1 and 2; and
+  5. a path to a file with expected **combined output** (Combined, i.e., standard
+     output and standard error) given 1 and 2.
+
+| # | Seed File | StdIn |
 
 When a regular user plays the game, they specify the seed file as a command-line
 argument, e.g.,
