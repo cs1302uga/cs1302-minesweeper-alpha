@@ -1284,6 +1284,11 @@ supported by this game.
 
 ### Test Case Examples
 
+**What is described in this section is exactly the method that the graders
+will use to test your program**, with the exception that the graders have
+access to more test cases. Therefore, **you should make every effor to test
+your program following these instruction.**
+
 The [`tests`](tests/) directory contains some example test cases.
 Each test case has a number (e.g., `01`) and can be described by five things:
 
@@ -1304,6 +1309,11 @@ Each test case has a number (e.g., `01`) and can be described by five things:
 | `tc06` | [`.seed.txt`](tests/tc06.seed.txt) | [`.in.txt`](tests/tc06.in.txt) | [`.out.txt`](tests/tc06.out.txt) | [`.err.txt`](tests/tc06.err.txt) | [`.combined.txt`](tests/tc06.combined.txt) |
 | `tc07` | [`.seed.txt`](tests/tc07.seed.txt) | [`.in.txt`](tests/tc07.in.txt) | [`.out.txt`](tests/tc07.out.txt) | [`.err.txt`](tests/tc07.err.txt) | [`.combined.txt`](tests/tc07.combined.txt) |
 
+**You are encouraged to add your own test cases;** however, we will not use
+your test cases when grading your project.
+
+#### Running the Test Cases
+
 When a regular user plays the game, they specify the seed file as a command-line
 argument, e.g.,
 
@@ -1314,30 +1324,43 @@ $ java -cp bin cs1302.game.MinesweeperDriver some/path/to/seed.txt
 In this scenario, the user enters their commands into standard input
 and the game prints its output to standard output.
 
-When the grader wants to check your game, they will not manually
-type in commands into standard input. Instead, they will use the shell
+When the grader wants to check your game, **they will not manually
+type in commands into standard input.** Instead, they will use the shell
 to redirect standard input to a file that contains user input. From the
 program's perspective, it stil thinks it's reading from standard input.
 It's just that standard input now refers to an actual file on disk
 instead of keyboard input. This is accomplished using the shell
 input redirection operator `<` or pipe `|`. For example, the grader
-might type either of the following to accomplish the same thing:
+might type either of the following to run the first test case provided
+in the [`tests`](tests/):
 
 ```
-$ java -cp bin cs1302.game.MinesweeperDriver some/path/to/seed.txt < some/path/to/input.txt
+$ java -cp bin cs1302.game.MinesweeperDriver tests/tc01.seed.txt < tests/tc01.in.txt
 ```
 
 ```
-$ cat some/path/to/input.txt | java -cp bin cs1302.game.MinesweeperDriver some/path/to/seed.txt
+$ cat tests/tc01.in.txt | java -cp bin cs1302.game.MinesweeperDriver tests/tc01.seed.txt
 ```
 
 In this example, the shell forces the program to interpret standard input
-as the file `input.txt`. Instead of halting for user input, any method
+as the file `tests/tc01.in.txt`. Instead of halting for user input, any method
 calls to your program's `Scanner` object for `System.in` return immediately
 with a token from the file. Once the program has stopped producing output,
-the grader then compares that output to a file containing the expected
-output for that test case.
+the grader then compares that output to `tests/tc01.out.txt`, `tests/tc01.err.txt`, and
+`tests/tc01.combined.txt` to see ensure that everything appears as it should for
+that test case.
 
+#### Saving Output
+
+If you want to save the standard output, standard error, and combined output of your
+program, then you can utilize output redirection as follows (replace `filename` with
+some appropriate name, as needed):
+
+| Type            | Example                    |
+|-----------------|----------------------------|
+| Standard Output | `> filename.out.txt`       |
+| Standard Error  | `2> filename.err.txt`      |
+| Combined Output | `&> filename.combined.txt` |
 
 <hr/>
 
