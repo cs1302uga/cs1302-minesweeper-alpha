@@ -1337,6 +1337,8 @@ in the [`tests`](tests/):
 $ java -cp bin cs1302.game.MinesweeperDriver tests/tc01.seed.txt < tests/tc01.in.txt
 ```
 
+Here is what each part of that command means:
+
 ```
    run with test/tc01.seed.txt
   +------------------------------------------------------------+
@@ -1373,6 +1375,9 @@ some appropriate name, as needed):
 | Standard Output | `> filename.out.txt`       |
 | Standard Error  | `2> filename.err.txt`      |
 | Combined Output | `&> filename.combined.txt` |
+
+You can combine input and output redirection, but **take care not to overwrite the
+output files in the `test` directory.**
 
 <hr/>
 
