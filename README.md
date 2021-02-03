@@ -981,7 +981,7 @@ need to provide the same command-line arguments that you would to your version o
 You only need to change the start of the command. Here is the exact syntax:
 
 ```
-minesweeper-oracle cs1302.game.MinesweeperDriver some/path/to/seed.txt < optional/path/to/input.txt
+$ minesweeper-oracle cs1302.game.MinesweeperDriver some/path/to/seed.txt < optional/path/to/input.txt
 ```
 
 where `some/path/to/seed.txt` and `optional/path/to/input.txt` are replaced with paths to real seed
@@ -1354,6 +1354,13 @@ with a token from the file. Once the program has stopped producing output,
 the grader then compares that output to `tests/tc01.out.txt`, `tests/tc01.err.txt`, and
 `tests/tc01.combined.txt` to see ensure that everything appears as it should for
 that test case.
+
+You can run the same tests against [the oracle implementation](#minesweeper-oracle).
+Here is an example:
+
+```
+$ minesweeper-oracle cs1302.game.MinesweeperDriver tests/tc01.seed.txt < tests/tc01.in.txt
+```
 
 #### Saving Output
 
