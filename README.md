@@ -1294,7 +1294,9 @@ Each test case has a number (e.g., `01`) and can be described by five things:
   5. a path to a file with expected **combined output** (Combined, i.e., standard
      output and standard error) given 1 and 2.
 
-| # | Seed File | StdIn |
+| # | Seed File | StdIn | StdOut | StdErr | Combined |
+|---|-----------|-------|--------|--------|----------|
+| `01` | [`tests/tc01.seed.txt`](tests/tc01.seed.txt) | [`tests/tc01.in.txt`](tests/tc01.in.txt) | [`tests/tc01.out.txt`](tests/tc01.out.txt) | [`tests/tc01.err.txt`](tests/tc01.err.txt) | [`tests/tc01.combined.txt`](tests/tc01.combined.txt) |
 
 When a regular user plays the game, they specify the seed file as a command-line
 argument, e.g.,
