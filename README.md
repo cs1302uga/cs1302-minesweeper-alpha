@@ -1016,14 +1016,37 @@ The actual functionality is tested using test cases.
 
   * **`MinesweeperGame(Scanner stdIn, String seedPath)`**: In this constructor,
     you should intialize some of your instance variables and setup the game
-    using the information in the seed file referred to by `seedPath`.
-
+    using the information in the seed file referred to by `seedPath`. 
+    
+    * Keep in mind that this constructor will be called from your `Driver`
+      class, so that's where the iniitial values of `stdIn` and `seedPath`
+      come from. You should refer to the instructions for `Driver` for 
+      more information before you make any assumptions.
     * You will probably want to create a separate method for reading the seed file.
-    * Take care that you assign `stdIn` to an instance variable and that
+    * Take care that you **assign `stdIn` to an instance variable** and that
       you use that instance variable whenever you need to read from standard input.
-      Other than the initial assignment to that variable, you should not
-      reassign it elsewhere in your code or you risk getting a zero on your
-      project.
+      
+      **WARNING:** Other than the initial assignment to your `stdIn`-related
+      instance variable in the constructor, you should not reassign that instance
+      variable elsewhere in your `MinesweeperGame` class; if you do, then you risk 
+      getting a zero on your project per [one of the requirements](#stdin).  
+      
+      **SUGGESTION:** We said that you should assign `stdIn` to an instance 
+      variable, but **it's also perfectly okay for you to assign it to an instance
+      constant**. This will prevent you from reassigning it on accident. In Jave, 
+      you can leave an instance constant uninitialized on the line where it's 
+      declared so long as you initialize exactly once inside your constructor. 
+      Here is the declaration (notice we didn't initialize it here):
+    
+      ```java
+      private final Scanner STDIN; // declare instance constant
+      ```
+      
+      Here is what a line in the constructor might look like:
+      
+      ```java
+      this.STDIN = stdin; // initialize instance constant
+      ```
 
   * **`void printWelcome()`:** This method should print
     the welcome banner to standard output, as described earlier in
@@ -1148,7 +1171,7 @@ point total. That is, they are all or nothing (no partial credit).
   by your instructor. Graders are instructed not to modify source code in
   an attempt to to make a submission compile.
 
-* **(100 points) One Scanner for Standard Input:** Only one `Scanner`
+* **(100 points) One Scanner for Standard Input:** <a id="stdin"/>Only one `Scanner`
   object for `System.in` (i.e., for standard input) should be created.
   **You may create `Scanner` objects for other input sources as needed.**
   Please note that if you create a new  `Scanner` object at
