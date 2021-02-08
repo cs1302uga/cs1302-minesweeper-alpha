@@ -95,6 +95,11 @@ updates your copy of the `README.md` file; however, it is possible for
 an update to affect other files as well. If other files are affected, then
 they will be mentioned in the update summary.
 
+* **2021-02-08:** (no `git pull` required) The section describing the
+  `MinesweeperGame` constructor has been updated to provide more insight
+  into to the `stdIn` parameter and what to do with it. You can see the 
+  updated version [here](#constructor).
+
 ## Suggested Checklist
 
 To help you with planning out this project, here are some suggested steps you can take that
@@ -1008,7 +1013,7 @@ The actual functionality is tested using test cases.
 
 <!-- ![UML Class Diagram](uml_diagram.png) //-->
 
-* **`cs1302.game.MinesweeperGame` Class**: Instances of
+* **`cs1302.game.MinesweeperGame` Class**: <a id="constructor"/> Instances of
   this class represent a game of Minesweeper Alpha. You need to implement
   all of the methods listed below. Unless stated otherwise, each
   method is assumed to have public visibility. Instance variables
