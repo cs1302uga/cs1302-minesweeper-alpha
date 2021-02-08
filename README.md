@@ -1052,6 +1052,10 @@ The actual functionality is tested using test cases.
       ```java
       this.STDIN = stdin; // initialize instance constant
       ```
+      
+      If you follow this suggestion, then you can call `STDIN.nextLine()` or
+      `this.STDIN.nextLine()` in your class's instance methods whenever
+      you want to get a line of user input (e.g., for a command). 
 
   * **`void printWelcome()`:** This method should print
     the welcome banner to standard output, as described earlier in
