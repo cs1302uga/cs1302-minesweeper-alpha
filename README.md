@@ -1040,7 +1040,7 @@ The actual functionality is tested using test cases.
       variable, but **it's also perfectly okay for you to assign it to an instance
       constant**. This will prevent you from reassigning it on accident. In Java, 
       you can leave an instance constant uninitialized on the line where it's 
-      declared so long as you initialize exactly once inside your constructor. 
+      declared so long as you initialize it exactly once inside your constructor. 
       Here is the declaration (notice we didn't initialize it here):
     
       ```java
