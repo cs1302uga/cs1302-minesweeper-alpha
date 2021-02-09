@@ -934,7 +934,7 @@ Here is a list of the different errors that can occur in the program:
   text should be replaced with the `String` returned by the exception
   object's `getMessage()` method.
 
-* **Seed File Malformed Error:** If your program encounters a problem in the
+* **Seed File Malformed Error:** <a id="badseed"/> If your program encounters a problem in the
   format of a seed file, then the error message and exit status in the table
   near the end of this section should be used. Note that a seed file is
   considered *malformed* or not formatted correctly if any of the following
