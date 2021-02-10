@@ -99,6 +99,11 @@ they will be mentioned in the update summary.
   `MinesweeperGame` constructor has been updated to provide more insight
   into to the `stdIn` parameter and what to do with it. You can see the 
   updated version [here](#constructor).
+  
+* **2021-02-10:** (no `git pull` required) Updated the suggested name of 
+  the instance constant for the standard input `Scanner` in `MinesweeperGame`
+  from `STDIN` to `stdIn` since `final` instance variables are not technically
+  considered constants by the Style Guide.
 
 ## Suggested Checklist
 
@@ -1044,17 +1049,17 @@ The actual functionality is tested using test cases.
       Here is the declaration (notice we didn't initialize it here):
     
       ```java
-      private final Scanner STDIN; // declare instance constant
+      private final Scanner stdIn; // declare instance constant
       ```
       
       Here is what a line in the constructor might look like:
       
       ```java
-      this.STDIN = stdin; // initialize instance constant
+      this.stdIn = stdIn; // initialize instance constant
       ```
       
-      If you follow this suggestion, then you can call `STDIN.nextLine()` or
-      `this.STDIN.nextLine()` in your class's instance methods whenever
+      If you follow this suggestion, then you can call `stdIn.nextLine()` or
+      `this.stdIn.nextLine()` in your class's instance methods whenever
       you want to get a line of user input (e.g., for a command). 
 
   * **`void printWelcome()`:** This method should print
