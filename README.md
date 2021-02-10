@@ -424,7 +424,7 @@ minesweeper-alpha:   mark     0  0
 
 As a reminder, trailing whitespace is ignored.
 
-#### Advice of Reading Commands
+#### Advice on Reading Commands
 
 All valid game commands are entered on a single line. Implementers should always
 use the `nextLine()` method of their one and only *standard input* `Scanner`
