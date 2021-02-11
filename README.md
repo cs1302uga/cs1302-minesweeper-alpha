@@ -436,6 +436,21 @@ To put this into perspective, taking the "make a `Scanner` from the line"
 approach would make it so you can handle all four examples at the end
 of the last sub-section with one set of code.
 
+Here's some example code:
+
+```java
+// Assume you have have a Scanner object that reads from System.in called stdIn
+String fullCommand = stdIn.nextLine();  // reads the full command from the user (Ex: command may contain "reveal 1 3")
+
+// Create a new Scanner to parse the tokens from the given command
+Scanner commandScan = new Scanner(fullCommand); // Neat! A new use of Scanner. :)
+
+// Now, we can call our regular Scanner methods to get each part of the assigned command
+String command = commandScan.next(); // command would contain "reveal" from if given the command above.
+
+// Continue to call additional Scanner methods (nextInt(), etc.) to parse out the other tokens from the full command.
+```
+
 #### Command Syntax Format
 
 In the sections below, we describe the syntax format that each command must
