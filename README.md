@@ -1010,8 +1010,10 @@ $ minesweeper-oracle cs1302.game.MinesweeperDriver some/path/to/seed.txt < optio
 ```
 
 where `some/path/to/seed.txt` and `optional/path/to/input.txt` are replaced with paths to real seed
-and input files, respectively. The Minesweeper oracle also includes the `--gen` option to
-generate seed files. Feel free to use this to generate seed files for testing.
+and input files, respectively. 
+
+<!--The Minesweeper oracle also includes the `--gen` option to
+generate seed files. Feel free to use this to generate seed files for testing.-->
 
 If you find a bug in the oracle or believe there to be an inconsistency between what the oracle
 says and what this document says, please let your instructors know in a Piazza post. This is
