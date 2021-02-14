@@ -94,7 +94,8 @@ minesweeper-alpha:
  4 |   |   |   |   |   |
      0   1   2   3   4 
 
-minesweeper-alpha: Invalid Command: Index 5 out of bounds for length 5
+minesweeper-alpha: 
+Invalid Command: Index 5 out of bounds for length 5
 
  Rounds Completed: 8
 
@@ -105,7 +106,8 @@ minesweeper-alpha: Invalid Command: Index 5 out of bounds for length 5
  4 |   |   |   |   |   |
      0   1   2   3   4 
 
-minesweeper-alpha: Invalid Command: Index -1 out of bounds for length 5
+minesweeper-alpha: 
+Invalid Command: Index -1 out of bounds for length 5
 
  Rounds Completed: 8
 
