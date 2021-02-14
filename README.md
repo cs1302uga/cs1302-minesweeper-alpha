@@ -967,6 +967,7 @@ Here is a list of the different errors that can occur in the program:
   * the token for `numMines` is less than `1` or greater than `(rows * cols) - 1`; or
   * the location of a mine is not in bounds.
 
+
   Note that `<message>` (including the angle brackets) in the error message text
   should be replaced with some descriptive `String`. If the error arises due
   to some exception, then you may use the `String` returned by the exception
