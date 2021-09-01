@@ -1,12 +1,12 @@
 
-# CSCI 1302 - Minesweeper Alpha v2021.sp
+# CSCI 1302 - Minesweeper Alpha v2021.fa
 
-![Approved for: Spring 2021](https://img.shields.io/badge/Approved%20for-Spring%202021-success)
+![Approved for: Fall 2021](https://img.shields.io/badge/Approved%20for-Fall%202021-blue)
 
 ![Unrelated image of mine."](mine.jpg)
 
 This repository contains the skeleton code for the Minesweeper Alpha project
-assigned to the students in the Spring 2021 CSCI 1302 classes
+assigned to the students in the Fall 2021 CSCI 1302 classes
 at the University of Georgia.
 
 **Please read the entirety of this file before beginning your project.**
@@ -16,9 +16,9 @@ perform their final submission via the `submit` command before the date/times li
 below automatically receive the associated **Submission-Based (SB) extra credit**.
 The late penalty does not start applying until after the final date listed.
 
-* **SUN 2021-02-14 (Feb 14) @ 11:55 PM EST (`+10` SB Extra Credit)**
-* **MON 2021-02-15 (Feb 15) @ 11:55 PM EST (`+5` SB Extra Credit)**
-* **TUE 2021-02-16 (Feb 16) @ 11:55 PM EST (`+0` SB Extra Credit)**
+* **WED 2021-09-15 (Sep 15) @ 11:55 PM EST (`+20` SB Extra Credit)**
+* **FRI 2021-09-17 (Feb 17) @ 11:55 PM EST (`+10` SB Extra Credit)**
+* **SUN 2021-09-19 (Sep 19) @ 11:55 PM EST (`+0` SB Extra Credit)**
 
 **Seriously. Read this entire file *before* starting.**
 
@@ -95,16 +95,6 @@ updates your copy of the `README.md` file; however, it is possible for
 an update to affect other files as well. If other files are affected, then
 they will be mentioned in the update summary.
 
-* **2021-02-08:** (no `git pull` required) The section describing the
-  `MinesweeperGame` constructor has been updated to provide more insight
-  into to the `stdIn` parameter and what to do with it. You can see the 
-  updated version [here](#constructor).
-  
-* **2021-02-10:** (no `git pull` required) Updated the suggested name of 
-  the instance constant for the standard input `Scanner` in `MinesweeperGame`
-  from `STDIN` to `stdIn` since `final` instance variables are not technically
-  considered constants by the Style Guide.
-
 ## Suggested Checklist
 
 To help you with planning out this project, here are some suggested steps you can take that
@@ -113,30 +103,30 @@ items in this checklist may not make sense until you have read the entire projec
 including the appendices. These steps are suggesions and, therefore, do not constitute an
 exhaustive list of steps that you may need to take to complete the project.
 
-**Preparation:** (Finish by Wednesday, Feb. 3rd)
+**Preparation:** (Finish before Monday, Sep. 6th)
 
 - [ ] Read through the entire project description, including the appendices,
       **and write down questions as you go.**
 - [ ] Read it again! This time, you may be able to answer some of your own
       questions.
 
-**Planning:** (Finish by Thursday, Feb. 4th)
+**Planning:** (Finish before Tuesday, Sep 7th)
 
 - [ ] Play the Minesweeper game using the provided oracle. This will help you see
       how to run the program and allow you to see expected input / output for a
 	  variety of scenarios.
 - [ ] Plan how you will represent the Minesweeper board. The internal representation
-      most likely should not contain all of the characters that the user sees when
+      should not contain all of the characters that the user sees when
 	  the board is printed (e.g., you don't need to include vertical bars or index
 	  numbers in your array since they can be printed as you loop over your array).
       One idea of how to approach this is given under
 	  [suggestions](#suggestions).
 - [ ] Unsure of your chosen board representation? Feel free to come by office hours to discuss!
-- [ ] Write out test cases.
+- [ ] Write out test cases. Make sure to consider edge cases.
 
-**Documenting:** (Finish by Sunday, Feb. 7th)
+**Documenting:** (Finish before Friday, Sep 10th)
 
-- [ ] Type out the method signatures for each method listed in the
+- [ ] Type out the method signatures (not the full methods - just the signatures) for each method listed in the
       [functional requirements](#functional-requirements)
 - [ ] Add proper Javadoc comments to all methods and both classes. Don't implement the methods yet.
       This will give you an opportunity to think about each method a little bit
@@ -144,7 +134,7 @@ exhaustive list of steps that you may need to take to complete the project.
       a convenient reference while writing the code. Remember, if you
       can't describe, in detail, what each method does, you can't implement it.
 
-**Implementing:** (Finish by Wednesday, Feb. 10th)
+**Implementing:** (Finish before Monday, Sep 13th)
 
 - [ ] Start by declaring the instance variables of the `MinesweeperGame` class based
       on your chosen board representation.
@@ -159,7 +149,7 @@ exhaustive list of steps that you may need to take to complete the project.
 - [ ] Implement the `isWon` method with the proper win conditions.
 - [ ] Implement any remaining methods
 
-**Testing** (Finish by Thursday, February 11th)
+**Testing** (Finish before Tuesday, Sep 14th)
 
 - [ ] Create seed files for testing. Be sure to vary the dimensions of the board,
       the number of mines and the mine locations. Also be sure to include invalid
@@ -169,7 +159,7 @@ exhaustive list of steps that you may need to take to complete the project.
 	  manually while playing the game. The commands should come
       from the input files at this point.
 
-**Review** (Finish by Friday, February 12th)
+**Review** (Finish before Wednesday, Sep 15th)
 
 - [ ] Do one final pass through the project document making sure you didn't
       miss anything.
@@ -182,7 +172,7 @@ This first project is meant to ensure that you are able to apply and extend
 your prerequisite knowledge as well as introduce you to developing and testing
 a Java application in a Linux environment (i.e., the Odin development
 server). You should be familiar with the majority of aspects of this project through
-your introductory programming course and the class exercises from 1302. However, you
+your introductory programming course and the work so far from 1302. However, you
 may also be asked to do things that you have never been given explicit directions for
 before. This is just a part of software development. Sometimes you need to research
 how to solve a problem in order to implement a solution. That being said,
@@ -197,7 +187,11 @@ you can add a GUI to it later as well. Interestingly, the organization of some o
 classes in this project will also introduce you to some elementary aspects of
 game programming.
 
-If you are not familiar with Minesweeper as a game, then please consult the
+If you are not familiar with Minesweeper as a game, we recommend playing a free, online
+version of the game. Just make sure to ignore the recursive elements of the game that uncovers
+more than one cell in a single click (more below). Our version will only do one cell at a time. After
+you've familiarized yourself with the game, play the oracle a few times to see the expected 
+1302 implementation. You should also consult the
 [Wikipedia entry](https://en.wikipedia.org/wiki/Minesweeper_(video_game))
 for the game, ignoring any mentions of recursion. Once you're familiar
 with the basic gameplay, then continue reading this project description.
@@ -312,7 +306,7 @@ once and only once:
  /    \| | '_ \ / _ \/ __\ \ /\ / / _ \/ _ \ '_ \ / _ \ '__|
 / /\/\ \ | | | |  __/\__ \\ V  V /  __/  __/ |_) |  __/ |
 \/    \/_|_| |_|\___||___/ \_/\_/ \___|\___| .__/ \___|_|
-                             ALPHA EDITION |_| v2021.sp
+                             ALPHA EDITION |_| v2021.fa
 ```
 
 Take care when printing this message out to the screen. Depending on how you implement this
@@ -391,7 +385,7 @@ same:
 
 ```
 minesweeper-alpha: help
-minesweeper-alpha:         help
+minesweeper-alpha:         help         
 ```
 
 Although it's hard to see in the example above, trailing whitespace should
@@ -1017,8 +1011,8 @@ and input files, respectively.
 generate seed files. Feel free to use this to generate seed files for testing.-->
 
 If you find a bug in the oracle or believe there to be an inconsistency between what the oracle
-says and what this document says, please let your instructors know in a Piazza post. This is
-the first semester we have used the oracle so we may have to iron out a few kinks.
+says and what this document says, please let your instructors know in a Piazza post. We have only
+given students access to the oracle once before so we may still have to iron out a few kinks.
 
 ## Project Requirements & Grading
 
