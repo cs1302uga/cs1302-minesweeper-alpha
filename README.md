@@ -17,7 +17,7 @@ below automatically receive the associated **Submission-Based (SB) extra credit*
 The late penalty does not start applying until after the final date listed.
 
 * **WED 2021-09-15 (Sep 15) @ 11:55 PM EST (`+20` SB Extra Credit)**
-* **FRI 2021-09-17 (Feb 17) @ 11:55 PM EST (`+10` SB Extra Credit)**
+* **FRI 2021-09-17 (Sep 17) @ 11:55 PM EST (`+10` SB Extra Credit)**
 * **SUN 2021-09-19 (Sep 19) @ 11:55 PM EST (`+0` SB Extra Credit)**
 
 **Seriously. Read this entire file *before* starting.**
