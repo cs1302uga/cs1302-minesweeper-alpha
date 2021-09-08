@@ -842,6 +842,10 @@ format:
 
  * Subsequent pairs of tokens are integers (separated by white space)
    indicating the location of each mine.
+	
+**NOTE:** Please refer to the "**Seed File Malformed Error**" description in the 
+["Displaying Errors" section](#displaying-errors) later in this document
+for constraints related to the tokens in a seed file.
 
 **NOTE:** In Java, the term _white-space_ refers to one or more characters in a sequence that
 each satisfy the conditions outlined in [`Character.isWhitespace`](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Character.html#isWhitespace(char)).
