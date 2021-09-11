@@ -216,11 +216,11 @@ one square, then, at most, one square is revealed in the minefield.
 ### Minesweeper Overview
 
 In your Minesweeper, the player is initially presented with a grid of
-undifferentiated squares. Either some randomly-selected squares or seed-selected
-squares (more on seeds later) are designated to contain mines. The
-size of the grid and the number of mines are set in advance by a
-seed file that the user specifies as a command-line argument to your
-program. The ratio of the number of mines to the grid size is often used as a
+undifferentiated squares. Some of those squares contain hidden mines. The
+size of the grid, the number of mines, and the individual mine locations
+are set in advance by a seed file (more on that later) that the user 
+specifies as a command-line argument to your program. The ratio of the 
+number of mines to the grid size is often used as a
 measure of an individual game's difficulty. The grid size can also be
 represented in terms of the number of rows and columns in the grid.
 In this project description, we may refer to the _grid_ or to the
