@@ -15,7 +15,7 @@
      0   1   2   3   4 
 
 minesweeper-alpha: 
-Input Error: Command not recognized!
+Invalid Command: Command not recognized!
 
  Rounds Completed: 0
 
