@@ -95,6 +95,10 @@ updates your copy of the `README.md` file; however, it is possible for
 an update to affect other files as well. If other files are affected, then
 they will be mentioned in the update summary.
 
+* **2021-09-15 WED:** Some test cases in the `tests` directory have
+  been updated to reflect the output produced by the most recent
+  version of the oracle implementation.
+
 ## Suggested Checklist
 
 To help you with planning out this project, here are some suggested steps you can take that
@@ -190,7 +194,7 @@ game programming.
 If you are not familiar with Minesweeper as a game, we recommend playing a free, online
 version of the game. Just make sure to ignore the recursive elements of the game that uncovers
 more than one cell in a single click (more below). Our version will only do one cell at a time. After
-you've familiarized yourself with the game, play the oracle a few times to see the expected 
+you've familiarized yourself with the game, play the oracle a few times to see the expected
 1302 implementation. You should also consult the
 [Wikipedia entry](https://en.wikipedia.org/wiki/Minesweeper_(video_game))
 for the game, ignoring any mentions of recursion. Once you're familiar
@@ -218,8 +222,8 @@ one square, then, at most, one square is revealed in the minefield.
 In your Minesweeper, the player is initially presented with a grid of
 undifferentiated squares. Some of those squares contain hidden mines. The
 size of the grid, the number of mines, and the individual mine locations
-are set in advance by a seed file (more on that later) that the user 
-specifies as a command-line argument to your program. The ratio of the 
+are set in advance by a seed file (more on that later) that the user
+specifies as a command-line argument to your program. The ratio of the
 number of mines to the grid size is often used as a
 measure of an individual game's difficulty. The grid size can also be
 represented in terms of the number of rows and columns in the grid.
@@ -385,7 +389,7 @@ same:
 
 ```
 minesweeper-alpha: help
-minesweeper-alpha:         help         
+minesweeper-alpha:         help
 ```
 
 Although it's hard to see in the example above, trailing whitespace should
@@ -842,8 +846,8 @@ format:
 
  * Subsequent pairs of tokens are integers (separated by white space)
    indicating the location of each mine.
-	
-**NOTE:** Please refer to the "**Seed File Malformed Error**" description in the 
+
+**NOTE:** Please refer to the "**Seed File Malformed Error**" description in the
 ["Displaying Errors" section](#displaying-errors) later in this document
 for constraints related to the tokens in a seed file.
 
@@ -1009,7 +1013,7 @@ $ minesweeper-oracle cs1302.game.MinesweeperDriver some/path/to/seed.txt < optio
 ```
 
 where `some/path/to/seed.txt` and `optional/path/to/input.txt` are replaced with paths to real seed
-and input files, respectively. 
+and input files, respectively.
 
 <!--The Minesweeper oracle also includes the `--gen` option to
 generate seed files. Feel free to use this to generate seed files for testing.-->
@@ -1042,41 +1046,41 @@ The actual functionality is tested using test cases.
 
   * **`MinesweeperGame(Scanner stdIn, String seedPath)`**: In this constructor,
     you should intialize some of your instance variables and setup the game
-    using the information in the seed file referred to by `seedPath`. 
-    
+    using the information in the seed file referred to by `seedPath`.
+
     * Keep in mind that this constructor will be called from your `Driver`
       class, so that's where the iniitial values of `stdIn` and `seedPath`
-      come from. You should refer to the instructions for `Driver` for 
+      come from. You should refer to the instructions for `Driver` for
       more information before you make any assumptions.
     * You will probably want to create a separate method for reading the seed file.
     * Take care that you **assign `stdIn` to an instance variable** and that
       you use that instance variable whenever you need to read from standard input.
-      
+
       **WARNING:** Other than the initial assignment to your `stdIn`-related
       instance variable in the constructor, you should not reassign that instance
-      variable elsewhere in your `MinesweeperGame` class; if you do, then you risk 
-      getting a zero on your project per [one of the requirements](#stdin).  
-      
-      **SUGGESTION:** We said that you should assign `stdIn` to an instance 
+      variable elsewhere in your `MinesweeperGame` class; if you do, then you risk
+      getting a zero on your project per [one of the requirements](#stdin).
+
+      **SUGGESTION:** We said that you should assign `stdIn` to an instance
       variable, but **it's also perfectly okay for you to assign it to an instance
-      constant**. This will prevent you from reassigning it on accident. In Java, 
-      you can leave an instance constant uninitialized on the line where it's 
-      declared so long as you initialize it exactly once inside your constructor. 
+      constant**. This will prevent you from reassigning it on accident. In Java,
+      you can leave an instance constant uninitialized on the line where it's
+      declared so long as you initialize it exactly once inside your constructor.
       Here is the declaration (notice we didn't initialize it here):
-    
+
       ```java
       private final Scanner stdIn; // declare instance constant
       ```
-      
+
       Here is what a line in the constructor might look like:
-      
+
       ```java
       this.stdIn = stdIn; // initialize instance constant
       ```
-      
+
       If you follow this suggestion, then you can call `stdIn.nextLine()` or
       `this.stdIn.nextLine()` in your class's instance methods whenever
-      you want to get a line of user input (e.g., for a command). 
+      you want to get a line of user input (e.g., for a command).
 
   * **`void printWelcome()`:** This method should print
     the welcome banner to standard output, as described earlier in
