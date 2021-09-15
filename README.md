@@ -1303,14 +1303,12 @@ your instructor.
 
 ## Submission Instructions
 
-You will still be submitting your project via Odin. Make sure your project files
-are on `odin.cs.uga.edu`. Change into the parent directory of your
-project directory and let `PROJ_DIR` represent the name of your
-project directory in the instructions provided below. If you've followed the
-instructions provided in this document, then the name of your project directory
-is likely `cs1302-minesweeper-alpha`. While in your project parent
-directory, execute the following command:
-
+You will submit your project via Odin. Before you submit, make sure that your
+project files are located in a directory called `cs1302-minesweeper-alpha` -- if 
+you followed the instructions provided earlier in this document to download
+the project, then your directory name should good. To submit, change into the 
+parent of your project directory and execute the following command:
+	
 ```
 $ check1302 cs1302-minesweeper-alpha
 ```
