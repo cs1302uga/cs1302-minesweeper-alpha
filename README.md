@@ -8,7 +8,7 @@
 ![Unrelated image of mine."](mine.jpg)
 
 This repository contains the skeleton code for the Minesweeper Alpha project
-assigned to the students in the Fall 2021 CSCI 1302 classes
+assigned to the students in the Spring 2022 CSCI 1302 classes
 at the University of Georgia.
 
 **Please read the entirety of this file before beginning your project.**
