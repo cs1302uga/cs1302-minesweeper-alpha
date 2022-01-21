@@ -1,6 +1,9 @@
 
 # CSCI 1302 - Minesweeper Alpha v2022.sp
 
+
+![Approved for: Spring 2022](https://img.shields.io/badge/Approved%20PENDING-red) 
+
 <!-- 
 ![Approved for: Spring 2022](https://img.shields.io/badge/Approved%20for-Spring%202022-purple) 
 //-->
