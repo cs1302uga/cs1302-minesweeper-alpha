@@ -1,12 +1,7 @@
 
 # CSCI 1302 - Minesweeper Alpha v2022.sp
 
-
-![Approved for: Spring 2022](https://img.shields.io/badge/Approved%20for-PENDING-red) 
-
-<!-- 
 ![Approved for: Spring 2022](https://img.shields.io/badge/Approved%20for-Spring%202022-purple) 
-//-->
 
 ![Unrelated image of mine."](mine.jpg)
 
@@ -21,9 +16,9 @@ perform their final submission via the `submit` command before the date/times li
 below automatically receive the associated **Submission-Based (SB) extra credit**.
 The late penalty does not start applying until after the final date listed.
 
-* **WED 2022-02-TBA (Feb TBA) @ 11:55 PM EST (`+20` SB Extra Credit)**
-* **FRI 2022-02-TBA (Feb TBA) @ 11:55 PM EST (`+10` SB Extra Credit)**
-* **SUN 2022-02-TBA (Feb TBA) @ 11:55 PM EST (`+0` SB Extra Credit)**
+* **WED 2022-02-09 (Feb 9th) @ 11:55 PM EST (`+20` SB Extra Credit)**
+* **FRI 2022-02-11 (Feb 11th) @ 11:55 PM EST (`+10` SB Extra Credit)**
+* **SUN 2022-02-13 (Feb 13th) @ 11:55 PM EST (`+0` SB Extra Credit)**
 
 **Seriously. Read this entire file *before* starting.**
 
