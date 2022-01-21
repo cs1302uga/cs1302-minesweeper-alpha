@@ -1,7 +1,7 @@
 
-# CSCI 1302 - Minesweeper Alpha v2021.fa
+# CSCI 1302 - Minesweeper Alpha v2022.sp
 
-![Approved for: Fall 2021](https://img.shields.io/badge/Approved%20for-Fall%202021-blue)
+![Approved for: Spring 2022](https://img.shields.io/badge/Approved%20for-Spring%202022-purple)
 
 ![Unrelated image of mine."](mine.jpg)
 
@@ -310,7 +310,7 @@ once and only once:
  /    \| | '_ \ / _ \/ __\ \ /\ / / _ \/ _ \ '_ \ / _ \ '__|
 / /\/\ \ | | | |  __/\__ \\ V  V /  __/  __/ |_) |  __/ |
 \/    \/_|_| |_|\___||___/ \_/\_/ \___|\___| .__/ \___|_|
-                             ALPHA EDITION |_| v2021.fa
+                             ALPHA EDITION |_| v2022.sp
 ```
 
 Take care when printing this message out to the screen. Depending on how you implement this
@@ -1304,17 +1304,17 @@ your instructor.
 ## Submission Instructions
 
 You will submit your project via Odin. Before you submit, make sure that your
-project files are located in a directory called `cs1302-minesweeper-alpha` -- if 
+project files are located in a directory called `cs1302-minesweeper-alpha` -- if
 you followed the instructions provided earlier in this document to download
-the project, then your directory name should good. To submit, change into the 
+the project, then your directory name should good. To submit, change into the
 parent of your project directory and execute the following command:
-	
+
 ```
 $ check1302 cs1302-minesweeper-alpha
 ```
 
 If there are style guide violations, then fix them and retest your code! Once
-you have no style guide violations and your code compiles, you can submit 
+you have no style guide violations and your code compiles, you can submit
 using the following command:
 
 ```
