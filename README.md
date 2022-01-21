@@ -95,10 +95,6 @@ updates your copy of the `README.md` file; however, it is possible for
 an update to affect other files as well. If other files are affected, then
 they will be mentioned in the update summary.
 
-* **2021-09-15 WED:** Some test cases in the `tests` directory have
-  been updated to reflect the output produced by the most recent
-  version of the oracle implementation.
-
 ## Suggested Checklist
 
 To help you with planning out this project, here are some suggested steps you can take that
