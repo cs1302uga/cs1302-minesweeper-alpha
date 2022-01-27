@@ -543,7 +543,7 @@ lines, is contained in [`resources/gameover.txt`](resources/gameover.txt).
 
 **Graceful Exit:** When we say that a program should exit *gracefully*, we mean that
 the *exit status* code used in the call to
-[`System.exit`](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/System.html#exit(int))
+[`System.exit`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/System.html#exit(int))
 is `0` (i.e., zero).
 
 * If a *graceful* exit is expected and your program exits for any reason
@@ -848,7 +848,7 @@ format:
 for constraints related to the tokens in a seed file.
 
 **NOTE:** In Java, the term _white-space_ refers to one or more characters in a sequence that
-each satisfy the conditions outlined in [`Character.isWhitespace`](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Character.html#isWhitespace(char)).
+each satisfy the conditions outlined in [`Character.isWhitespace`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Character.html#isWhitespace(char)).
 You do not need to check these conditions specifically nor use this method
 if you use the built-in tokenizing provided by the `Scanner` class.
 
@@ -889,8 +889,8 @@ located directly within your main project directory.
 To read the file, let us assume that we have access to the seed file's path
 via a `String` variable called `seedPath` and that we will use the following classes:
 
-* [`File`](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/File.html)
-* [`Scanner`](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Scanner.html)
+* [`File`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/File.html)
+* [`Scanner`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Scanner.html)
 
 Most of you have used the `Scanner` class to read keyboard input from standard
 input. Here, we will use it to read from a text file. This is accomplished using
@@ -912,7 +912,7 @@ try {
 ```
 
 You may need to import
-[`FileNotFoundException`](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/FileNotFoundException.html)
+[`FileNotFoundException`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/FileNotFoundException.html)
 (or use its fully qualified name) if adapting the code snippet above.
 
 ### Displaying Errors
@@ -922,7 +922,7 @@ with one blank line preceeding the line with the error message.
 In some cases, an error message should cause the program
 to terminate. In such cases, an integer will be specificied that
 you are required to use the specific exit status number in your call to
-[`System.exit`](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/System.html#exit(int)).
+[`System.exit`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/System.html#exit(int)).
 If you let `errorMessage` denote an error message and `exitStatus` denote
 an exit status, then here is some code that exactly illustrates what needs
 to happen for error messages that exit the program:
@@ -1196,8 +1196,8 @@ point total. That is, they are all or nothing (no partial credit).
   by the graders and added to the class path, as needed, when compiling other files.
 
 * **(100 points) Development Environment:** This project must be implemented
-  in Java 11, and it *must compile and run* correctly on Odin using the specific
-  version of Java 11 that is setup according to the instructions provided
+  in Java 17, and it *must compile and run* correctly on Odin using the specific
+  version of Java 17 that is setup according to the instructions provided
   by your instructor. Graders are instructed not to modify source code in
   an attempt to to make a submission compile.
 
