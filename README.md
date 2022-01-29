@@ -105,6 +105,7 @@ exhaustive list of steps that you may need to take to complete the project.
 
 **Preparation:** (Finish before Monday, Jan. 31st)
 
+- [x] Start reading the project description.
 - [ ] Read through the entire project description, including the appendices,
       **and write down questions as you go.**
 - [ ] Read it again! This time, you may be able to answer some of your own
