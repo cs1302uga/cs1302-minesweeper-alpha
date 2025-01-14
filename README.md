@@ -97,24 +97,24 @@ they will be mentioned in the update summary.
 
 ## Suggested Checklist
 
-To help you with planning out this project, here are some suggested steps you can take that
-your instructors believe will help you complete the project more easily. Some of the
+To help you plan this project, here are some suggested steps you can take that
+your instructors believe will help you complete the project more easily. Some 
 items in this checklist may not make sense until you have read the entire project description,
-including the appendices. These steps are suggesions and, therefore, do not constitute an
-exhaustive list of steps that you may need to take to complete the project.
+including the appendices. These steps are suggestions and, therefore, do not constitute an
+exhaustive list of steps you need to take to complete the project.
 
-**Preparation:** (Finish before Monday, Jan. 31st)
+**Preparation:** (Finish before Monday, Jan. 27th)
 
 - [x] Start reading the project description.
 - [ ] Read through the entire project description, including the appendices,
       **and write down questions as you go.**
-- [ ] Read it again! This time, you may be able to answer some of your own
+- [ ] Read it again! This time, you may be able to answer some of your 
       questions.
 
-**Planning:** (Finish before Tuesday, Feb. 1st)
+**Planning:** (Finish before Tuesday, Jan. 28th)
 
 - [ ] Play the Minesweeper game using the provided oracle. This will help you see
-      how to run the program and allow you to see expected input / output for a
+      how to run the program and allow you to see expected input/output for a
 	  variety of scenarios.
 - [ ] Plan how you will represent the Minesweeper board. The internal representation
       should not contain all of the characters that the user sees when
@@ -122,10 +122,10 @@ exhaustive list of steps that you may need to take to complete the project.
 	  numbers in your array since they can be printed as you loop over your array).
       One idea of how to approach this is given under
 	  [suggestions](#suggestions).
-- [ ] Unsure of your chosen board representation? Feel free to come by office hours to discuss!
+- [ ] Unsure of your chosen board representation? Feel free to come by during office hours to discuss!
 - [ ] Write out test cases. Make sure to consider edge cases.
 
-**Documenting:** (Finish before Friday, Feb. 4th)
+**Documenting:** (Finish before Friday, Jan. 31st)
 
 - [ ] Type out the method signatures (not the full methods - just the signatures) for each method listed in the
       [functional requirements](#functional-requirements)
@@ -135,7 +135,7 @@ exhaustive list of steps that you may need to take to complete the project.
       a convenient reference while writing the code. Remember, if you
       can't describe, in detail, what each method does, you can't implement it.
 
-**Implementing:** (Finish before Monday, Feb. 7th)
+**Implementing:** (Finish before Monday, Feb. 3rd)
 
 - [ ] Start by declaring the instance variables of the `MinesweeperGame` class based
       on your chosen board representation.
@@ -146,21 +146,21 @@ exhaustive list of steps that you may need to take to complete the project.
 - [ ] Implement `printWelcome`, `printWin`, `printLoss` using the banners given
       later in this document.
 - [ ] Implement the main game loop and the commands one at a time, testing each as you go.
-- [ ] Double check all output formatting and error conditions.
+- [ ] Double-check all output formatting and error conditions.
 - [ ] Implement the `isWon` method with the proper win conditions.
 - [ ] Implement any remaining methods
 
-**Testing** (Finish before Tuesday, Feb. 8th)
+**Testing** (Finish before Tuesday, Feb. 4th)
 
 - [ ] Create seed files for testing. Be sure to vary the dimensions of the board,
-      the number of mines and the mine locations. Also be sure to include invalid
+      the number of mines, and the mine locations. Also, be sure to include invalid
 	  configurations.
 - [ ] Create input and output files for each seed file. Run your code as described
       later in this document. In the testing phase, try to avoid entering commands
 	  manually while playing the game. The commands should come
       from the input files at this point.
 
-**Review** (Finish before Wednesday, Feb. 9th)
+**Review** (Finish before Wednesday, Feb. 5th)
 
 - [ ] Do one final pass through the project document making sure you didn't
       miss anything.
@@ -169,21 +169,21 @@ exhaustive list of steps that you may need to take to complete the project.
 
 ## Project Description
 
-This first project is meant to ensure that you are able to apply and extend
+This first project is meant to ensure that you can apply and extend
 your prerequisite knowledge as well as introduce you to developing and testing
 a Java application in a Linux environment (i.e., the Odin development
 server). You should be familiar with the majority of aspects of this project through
 your introductory programming course and the work so far from 1302. However, you
 may also be asked to do things that you have never been given explicit directions for
 before. This is just a part of software development. Sometimes you need to research
-how to solve a problem in order to implement a solution. That being said,
+how to solve a problem to implement a solution. That being said,
 the material included in this document should hopefully answer the majority
 of your questions.
 
 Your goal is to develop a **non-recursive**, **non-GUI** (GUI = Graphical User
 Interface) version of the game called **Minesweeper**. The code for this game will
 be organized in such a way that the recursive elements of Minesweeper can
-be added at a later point in time, if desired. It will also be organized so that
+be added at a later point in time if desired. It will also be organized so that
 you can add a GUI to it later as well. Interestingly, the organization of some of the
 classes in this project will also introduce you to some elementary aspects of
 game programming.
@@ -831,10 +831,10 @@ The conditions for winning are outlined earlier in this document,
 
 ### Seed Files
 
-Each game is setup using seed files. Seed files have the following
+Each game is set up using seed files. Seed files have the following
 format:
 
- * The first two tokens are two integers (separated by white-space) indicating the
+ * The first two tokens are two integers (separated by white space) indicating the
    number of `rows` and `cols`, respectively, for the size
    of the mine board.
 
@@ -874,7 +874,7 @@ The following seed files are valid and contain the same information:
 0       0 1      1
 ```
 
-An example seed file is present in the project materials. In order to run
+An example seed file is present in the project materials. To run
 your program with the seed file, you should be able to use the following
 command (actual seed filename may differ):
 
@@ -884,7 +884,7 @@ $ java -cp bin cs1302.game.MinesweeperDriver tests/seed1.txt
 
 **Note:** The command you use to run your file from your main project directory
 (the directory containing `src` and `bin`) should **exactly match** the command above
-if you are passing in a seed file called `seed1.txt` containined in a `tests` directory
+if you are passing in a seed file called `seed1.txt` contained in a `tests` directory
 located directly within your main project directory.
 
 To read the file, let us assume that we have access to the seed file's path
@@ -919,9 +919,9 @@ You may need to import
 ### Displaying Errors
 
 All error messages should be printed to standard error (`System.err`)
-with one blank line preceeding the line with the error message.
+with one blank line preceding the line with the error message.
 In some cases, an error message should cause the program
-to terminate. In such cases, an integer will be specificied that
+to terminate. In such cases, an integer will be specified that
 you are required to use the specific exit status number in your call to
 [`System.exit`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/System.html#exit(int)).
 If you let `errorMessage` denote an error message and `exitStatus` denote
@@ -1042,11 +1042,11 @@ The actual functionality is tested using test cases.
   may be added, as needed, to keep track of object state.
 
   * **`MinesweeperGame(Scanner stdIn, String seedPath)`**: In this constructor,
-    you should intialize some of your instance variables and setup the game
+    you should initialize some of your instance variables and setup the game
     using the information in the seed file referred to by `seedPath`.
 
     * Keep in mind that this constructor will be called from your `Driver`
-      class, so that's where the iniitial values of `stdIn` and `seedPath`
+      class, so that's where the initial values of `stdIn` and `seedPath`
       come from. You should refer to the instructions for `Driver` for
       more information before you make any assumptions.
     * You will probably want to create a separate method for reading the seed file.
@@ -1060,7 +1060,7 @@ The actual functionality is tested using test cases.
 
       **SUGGESTION:** We said that you should assign `stdIn` to an instance
       variable, but **it's also perfectly okay for you to assign it to an instance
-      constant**. This will prevent you from reassigning it on accident. In Java,
+      constant**. This will prevent you from reassigning it by accident. In Java,
       you can leave an instance constant uninitialized on the line where it's
       declared so long as you initialize it exactly once inside your constructor.
       Here is the declaration (notice we didn't initialize it here):
