@@ -113,7 +113,8 @@ exhaustive list of steps you need to take to complete the project.
 
 **Planning:** (Finish before Tuesday, Jan. 28th)
 
-- [ ] Play the Minesweeper game using the provided oracle. This will help you see
+- [ ] Play the Minesweeper game using the provided [oracle](https://github.com/cs1302uga/cs1302-minesweeper-alpha/tree/master?tab=readme-ov-file#minesweeper-oracle).
+      This will help you see
       how to run the program and allow you to see expected input/output for a
 	  variety of scenarios.
 - [ ] Plan how you will represent the Minesweeper board. The internal representation
