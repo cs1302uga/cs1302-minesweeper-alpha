@@ -6,7 +6,7 @@
 ![Unrelated image of mine."](mine.jpg)
 
 This repository contains the skeleton code for the Minesweeper Alpha project
-assigned to the students in the Spring 2022 CSCI 1302 classes
+assigned to the students in the Spring 2025 CSCI 1302 classes
 at the University of Georgia.
 
 **Please read the entirety of this file before beginning your project.**
@@ -307,7 +307,7 @@ once and only once:
  /    \| | '_ \ / _ \/ __\ \ /\ / / _ \/ _ \ '_ \ / _ \ '__|
 / /\/\ \ | | | |  __/\__ \\ V  V /  __/  __/ |_) |  __/ |
 \/    \/_|_| |_|\___||___/ \_/\_/ \___|\___| .__/ \___|_|
-                             ALPHA EDITION |_| v2022.sp
+                             ALPHA EDITION |_| v2025.sp
 ```
 
 Take care when printing this message out to the screen. Depending on how you implement this
