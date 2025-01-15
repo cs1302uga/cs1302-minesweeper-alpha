@@ -541,7 +541,7 @@ blank. Also note that the second line (containing "oh no...") begins with a sing
 white space. A copy of this game over text, excluding the first and last blank
 lines, is contained in [`resources/gameover.txt`](resources/gameover.txt).
 
-<a id="graceful-exit">
+<span id="graceful-exit"></span>
 
 **Graceful Exit:** When we say that a program should exit *gracefully*, we mean that
 the *exit status* code used in the call to
@@ -954,7 +954,7 @@ Here is a list of the different errors that can occur in the program:
   text should be replaced with the `String` returned by the exception
   object's `getMessage()` method.
 
-* **Seed File Malformed Error:** <a id="badseed"/> If your program encounters a problem in the
+* **Seed File Malformed Error:** <span id="badseed"/> If your program encounters a problem in the
   format of a seed file, then the error message and exit status in the table
   near the end of this section should be used. Note that a seed file is
   considered *malformed* or not formatted correctly if any of the following
@@ -1036,7 +1036,7 @@ The actual functionality is tested using test cases.
 
 <!-- ![UML Class Diagram](uml_diagram.png) //-->
 
-* **`cs1302.game.MinesweeperGame` Class**: <a id="constructor"/> Instances of
+* **`cs1302.game.MinesweeperGame` Class**: <span id="constructor"/> Instances of
   this class represent a game of Minesweeper Alpha. You need to implement
   all of the methods listed below. Unless stated otherwise, each
   method is assumed to have public visibility. Instance variables
@@ -1138,7 +1138,7 @@ The actual functionality is tested using test cases.
        you create the object. Once the object is created, call its `play()`
        method.
 
-* **(60 points) Test Cases**: <a id="test-cases"/> The bulk of this project will be graded
+* **(60 points) Test Cases**: <span id="test-cases"/> The bulk of this project will be graded
   based on multiple test cases. A single test case can be described by three things:
 
   Some example test cases are provided with the project description; they
@@ -1203,7 +1203,7 @@ point total. That is, they are all or nothing (no partial credit).
   by your instructor. Graders are instructed not to modify source code in
   an attempt to to make a submission compile.
 
-* **(100 points) One Scanner for Standard Input:** <a id="stdin"/>Only one `Scanner`
+* **(100 points) One Scanner for Standard Input:** <span id="stdin"/>Only one `Scanner`
   object for `System.in` (i.e., for standard input) should be created.
   **You may create `Scanner` objects for other input sources as needed.**
   Please note that if you create a new  `Scanner` object at
