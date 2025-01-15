@@ -16,9 +16,9 @@ perform their final submission via the `submit` command before the date/times li
 below automatically receive the associated **Submission-Based (SB) extra credit**.
 The late penalty does not start applying until after the final date listed.
 
-* **WED 2025-02-03 (Feb 3rd) @ 11:55 PM EST (`+10` SB Extra Credit)**
-* **FRI 2025-02-04 (Feb 4th) @ 11:55 PM EST (`+5` SB Extra Credit)**
-* **SUN 2025-02-05 (Feb 5th) @ 11:55 PM EST (`+0` SB Extra Credit)**
+* **MON 2025-02-03 (Feb 3rd) @ 11:55 PM EST (`+10` SB Extra Credit)**
+* **TUE 2025-02-04 (Feb 4th) @ 11:55 PM EST (`+5` SB Extra Credit)**
+* **WED 2025-02-05 (Feb 5th) @ 11:55 PM EST (`+0` SB Extra Credit)**
 
 **Seriously. Read this entire file *before* starting.**
 
@@ -103,7 +103,7 @@ items in this checklist may not make sense until you have read the entire projec
 including the appendices. These steps are suggestions and, therefore, do not constitute an
 exhaustive list of steps you need to take to complete the project.
 
-**Preparation:** (Finish before Monday, Jan. 27th)
+**Preparation:** (Finish before Monday, Jan. 20th)
 
 - [x] Start reading the project description.
 - [ ] Read through the entire project description, including the appendices,
@@ -111,7 +111,7 @@ exhaustive list of steps you need to take to complete the project.
 - [ ] Read it again! This time, you may be able to answer some of your 
       questions.
 
-**Planning:** (Finish before Tuesday, Jan. 28th)
+**Planning:** (Finish before Wednesday, Jan. 22nd)
 
 - [ ] Play the Minesweeper game using the provided [oracle](https://github.com/cs1302uga/cs1302-minesweeper-alpha/tree/master?tab=readme-ov-file#minesweeper-oracle).
       This will help you see
@@ -126,7 +126,7 @@ exhaustive list of steps you need to take to complete the project.
 - [ ] Unsure of your chosen board representation? Feel free to come by during office hours to discuss!
 - [ ] Write out test cases. Make sure to consider edge cases.
 
-**Documenting:** (Finish before Friday, Jan. 31st)
+**Documenting:** (Finish before Friday, Jan. 24th)
 
 - [ ] Type out the method signatures (not the full methods - just the signatures) for each method listed in the
       [functional requirements](#functional-requirements)
@@ -136,7 +136,7 @@ exhaustive list of steps you need to take to complete the project.
       a convenient reference while writing the code. Remember, if you
       can't describe, in detail, what each method does, you can't implement it.
 
-**Implementing:** (Finish before Monday, Feb. 3rd)
+**Implementing:** (Finish before Wednesday, Jan. 29th)
 
 - [ ] Start by declaring the instance variables of the `MinesweeperGame` class based
       on your chosen board representation.
@@ -151,7 +151,7 @@ exhaustive list of steps you need to take to complete the project.
 - [ ] Implement the `isWon` method with the proper win conditions.
 - [ ] Implement any remaining methods
 
-**Testing** (Finish before Tuesday, Feb. 4th)
+**Testing** (Finish before Friday, Jan. 31st)
 
 - [ ] Create seed files for testing. Be sure to vary the dimensions of the board,
       the number of mines, and the mine locations. Also, be sure to include invalid
@@ -161,7 +161,7 @@ exhaustive list of steps you need to take to complete the project.
 	  manually while playing the game. The commands should come
       from the input files at this point.
 
-**Review** (Finish before Wednesday, Feb. 5th)
+**Review** (Finish before Monday, Feb. 3rd)
 
 - [ ] Do one final pass through the project document making sure you didn't
       miss anything.
