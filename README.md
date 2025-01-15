@@ -270,7 +270,7 @@ square should be marked. The user would then have to reveal this square again la
 not be consistent with how you've played Minesweeper in the past but it will make it easier
 to code. We will leave it up to the user to be smart about how they play!
 
-<a id="win-conditions">
+<span id="win-conditions"></span>
 
 The game is won only when **both** of the following conditions are met:
 
