@@ -95,6 +95,8 @@ updates your copy of the `README.md` file; however, it is possible for
 an update to affect other files as well. If other files are affected, then
 they will be mentioned in the update summary.
 
+2025-01-18 Changed mentions of `MineSweeperRunner` to `MinesweeperRunner`.
+
 ## Suggested Checklist
 
 To help you plan this project, here are some suggested steps you can take that
@@ -880,7 +882,7 @@ your program with the seed file, you should be able to use the following
 command (actual seed filename may differ):
 
 ```
-$ java -cp bin cs1302.game.MineSweeperRunner tests/seed1.txt
+$ java -cp bin cs1302.game.MinesweeperRunner tests/seed1.txt
 ```
 
 **Note:** The command you use to run your file from your main project directory
@@ -992,7 +994,7 @@ Here is the table that summarizes the different error messages and exit status c
 
 | Error                         | Error Message                             | Exit Status |
 |-------------------------------|-------------------------------------------|-------------|
-| **Invalid Usage Error**       | `Usage: MineSweeperRunner SEED_FILE_PATH` | `1`         |
+| **Invalid Usage Error**       | `Usage: MinesweeperRunner SEED_FILE_PATH` | `1`         |
 | **Seed File Not Found Error** | `Seed File Not Found Error: <message>`    | `2`         |
 | **Seed File Malformed Error** | `Seed File Malformed Error: <message>`    | `3`         |
 | **Invalid Command Error:**    | `Invalid Command: <message>`              | NA          |
@@ -1007,7 +1009,7 @@ need to provide the same command-line arguments that you would to your version o
 You only need to change the start of the command. Here is the exact syntax:
 
 ```
-$ minesweeper-oracle cs1302.game.MineSweeperRunner some/path/to/seed.txt < optional/path/to/input.txt
+$ minesweeper-oracle cs1302.game.MinesweeperRunner some/path/to/seed.txt < optional/path/to/input.txt
 ```
 
 where `some/path/to/seed.txt` and `optional/path/to/input.txt` are replaced with paths to real seed
@@ -1112,7 +1114,7 @@ The actual functionality is tested using test cases.
   to help with readability, code reuse, etc. In some cases, you may
   need to add other methods to meet the style requirement for method length.
 
-* **`cs1302.game.MineSweeperRunner` Class**: This class
+* **`cs1302.game.MinesweeperRunner` Class**: This class
   should only contain the `main` method:
 
   * `void main(String[] args)`: This public, static method should
@@ -1178,7 +1180,7 @@ point total. That is, they are all or nothing (no partial credit).
 
   ```
   $ javac -cp bin -d bin src/cs1302/game/MinesweeperGame.java
-  $ javac -cp bin -d bin src/cs1302/game/MineSweeperRunner.java
+  $ javac -cp bin -d bin src/cs1302/game/MinesweeperRunner.java
   ```
 
   The class path may be omitted in the first command if there are
@@ -1378,7 +1380,7 @@ When a regular user plays the game, they specify the seed file as a command-line
 argument, e.g.,
 
 ```
-$ java -cp bin cs1302.game.MineSweeperRunner some/path/to/seed.txt
+$ java -cp bin cs1302.game.MinesweeperRunner some/path/to/seed.txt
 ```
 
 In this scenario, the user enters their commands into standard input
@@ -1395,7 +1397,7 @@ might type the following to run the first test case provided
 in the [`tests`](tests/):
 
 ```
-$ java -cp bin cs1302.game.MineSweeperRunner tests/tc01.seed.txt < tests/tc01.in.txt
+$ java -cp bin cs1302.game.MinesweeperRunner tests/tc01.seed.txt < tests/tc01.in.txt
 ```
 
 Here is what each part of that command means:
@@ -1403,7 +1405,7 @@ Here is what each part of that command means:
 ```
   run with test/tc01.seed.txt
  +--------------------------------------------------------------+
-$ java -cp bin cs1302.game.MineSweeperRunner tests/tc01.seed.txt < tests/tc01.in.txt
+$ java -cp bin cs1302.game.MinesweeperRunner tests/tc01.seed.txt < tests/tc01.in.txt
                                                                 +-------------------+
                                         redirect standard input to tests/tc01.in.txt
 ```
@@ -1420,7 +1422,7 @@ You can run the same tests against [the oracle implementation](#minesweeper-orac
 Here is an example:
 
 ```
-$ minesweeper-oracle cs1302.game.MineSweeperRunner tests/tc01.seed.txt < tests/tc01.in.txt
+$ minesweeper-oracle cs1302.game.MinesweeperRunner tests/tc01.seed.txt < tests/tc01.in.txt
 ```
 
 #### Saving Output
