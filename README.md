@@ -1009,7 +1009,7 @@ need to provide the same command-line arguments that you would to your version o
 You only need to change the start of the command. Here is the exact syntax:
 
 ```
-$ minesweeper-oracle cs1302.game.MinesweeperRunner some/path/to/seed.txt < optional/path/to/input.txt
+$ minesweeper-oracle cs1302.game.MinesweeperDriver some/path/to/seed.txt < optional/path/to/input.txt
 ```
 
 where `some/path/to/seed.txt` and `optional/path/to/input.txt` are replaced with paths to real seed
