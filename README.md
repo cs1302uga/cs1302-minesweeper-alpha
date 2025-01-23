@@ -1101,8 +1101,8 @@ The actual functionality is tested using test cases.
     this document.
 
   * **`void printWin()` and ``void printLoss()``:** These
-    methods should print the win and game over emssages to standard
-    output, respectively, as described earler in this document.
+    methods should print the win and game over messages to standard
+    output, respectively, as described earlier in this document.
 
   * **`void play()`:** This method should provide the
     main game loop by invoking other instance methods, as needed.
