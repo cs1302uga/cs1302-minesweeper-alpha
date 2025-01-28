@@ -1333,8 +1333,7 @@ $ mutt -s "[cs1302] cs1302-minesweeper-alpha" -a cs1302-minesweeper-alpha.tar.gz
 -->
 
 If you have any problems submitting your project then please email your
-instructor as soon as possible. However, emailing him about something like this
-the day or night the project is due is probably not the best idea.
+instructor as soon as possible.
 
 ## Appendix
 
