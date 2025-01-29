@@ -16,9 +16,9 @@ perform their final submission via the `submit` command before the date/times li
 below automatically receive the associated **Submission-Based (SB) extra credit**.
 The late penalty does not start applying until after the final date listed.
 
-* **MON 2025-02-03 (Feb 3rd) @ 11:55 PM EST (`+10` SB Extra Credit)**
-* **TUE 2025-02-04 (Feb 4th) @ 11:55 PM EST (`+5` SB Extra Credit)**
-* **WED 2025-02-05 (Feb 5th) @ 11:55 PM EST (`+0` SB Extra Credit)**
+* **WED 2025-02-05 (Feb 5th) @ 11:55 PM EST (`+10` SB Extra Credit)**
+* **THU 2025-02-06 (Feb 6th) @ 11:55 PM EST (`+5` SB Extra Credit)**
+* **FRI 2025-02-07 (Feb 7th) @ 11:55 PM EST (`+0` SB Extra Credit)**
 
 **Seriously. Read this entire file *before* starting.**
 
