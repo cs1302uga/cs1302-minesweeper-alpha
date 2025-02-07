@@ -1421,7 +1421,7 @@ You can run the same tests against [the oracle implementation](#minesweeper-orac
 Here is an example:
 
 ```
-$ minesweeper-oracle cs1302.game.MinesweeperRunner tests/tc01.seed.txt < tests/tc01.in.txt
+$ minesweeper-oracle cs1302.game.MinesweeperDriver tests/tc01.seed.txt < tests/tc01.in.txt
 ```
 
 #### Saving Output
